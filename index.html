@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrangeUs - Choreography Planning App</title>
+    <meta name="description" content="Easy, fast and stylish app to plan formations for performances. Watch animated transitions, name dancers, customize stage. Available on Google Play & App Store.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem; text-align: center; }
+        h1 { font-size: 3rem; color: white; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .subtitle { font-size: 1.3rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .feature { background: rgba(255,255,255,0.95); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .feature h3 { color: #667eea; margin-bottom: 1rem; font-size: 1.4rem; }
+        .download-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 3rem 0; }
+        .btn { display: inline-block; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; font-size: 1.1rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-google { background: #4285f4; color: white; }
+        .btn-apple { background: #000; color: white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .stats { display: flex; justify-content: center; gap: 3rem; margin: 2rem 0; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: white; display: block; }
+        .stat-label { color: rgba(255,255,255,0.9); }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } .download-buttons { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 ArrangeUs</h1>
+        <p class="subtitle">Plan formations for your performances – easy, fast, and stylish</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number">100K+</span>
+                <span class="stat-label">Downloads</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">3.6⭐</span>
+                <span class="stat-label">Rating</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">369+</span>
+                <span class="stat-label">Reviews</span>
+            </div>
+        </div>
+
+        <div class="download-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.AndriyStefanchuk.ArrangeUs.main&hl=en" class="btn btn-google" target="_blank">
+                📱 Get on Google Play
+            </a>
+            <a href="https://apps.apple.com/us/app/arrangeus/id647xxxxxxx" class="btn btn-apple" target="_blank">
+                🍎 Get on App Store
+            </a>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>✨ Animated Transitions</h3>
+                <p>Watch your dancers move smoothly between formations in real-time animations.</p>
+            </div>
+            <div class="feature">
+                <h3>🎨 Customizable Dancers</h3>
+                <p>Name your dancers, change colors, add comments for each position.</p>
+            </div>
+            <div class="feature">
+                <h3>📐 Stage Builder</h3>
+                <p>Fully customizable stage with various settings including size and shape.</p>
+            </div>
+            <div class="feature">
+                <h3>↩️ Undo Anytime</h3>
+                <p>Never worry about mistakes – undo any action with confidence.</p>
+            </div>
+        </div>
+
+        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">
+            Bring your performances to the next level. Updated May 2025 with props, ghost dancers & more!
+        </p>
+    </div>
+</body>
+</html>
