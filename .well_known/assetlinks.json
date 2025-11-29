@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.AndriyStefanchuk.ArrangeUs.main",
+      "sha256_cert_fingerprints": [
+        "25:C0:E6:7A:6B:43:88:93:EE:F9:F0:15:F6:FA:CE:E3:66:4E:03:50:23:7A:44:95:B3:A3:99:8E:E8:8C:CE:6B"
+      ]
+    }
+  }
+]
