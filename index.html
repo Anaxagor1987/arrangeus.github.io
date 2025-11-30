@@ -1,102 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArrangeUs - Choreography Planning App</title>
-    <meta name="description" content="Easy, fast and stylish app to plan formations for performances. Watch animated transitions, name dancers, customize stage. iOS & Android.">
+    <title>ArrangeUs - Choreography Formation App</title>
+    <meta name="description"
+        content="Professional choreography formation app for dancers and choreographers. Create, visualize, and share formations in 2D and 3D.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#262628',
+                        primary: '#3b82f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem; text-align: center; }
-        h1 { font-size: 3rem; color: white; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .subtitle { font-size: 1.3rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0; }
-        .feature { background: rgba(255,255,255,0.95); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        .feature h3 { color: #667eea; margin-bottom: 1rem; font-size: 1.4rem; }
-        .download-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 3rem 0; }
-        .btn { display: inline-block; padding: 1.2rem 2.5rem; border-radius: 50px; font-weight: bold; font-size: 1.1rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .btn-google { background: #4285f4; color: white; }
-        .btn-apple { background: #000; color: white; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
-        .stats { display: flex; justify-content: center; gap: 3rem; margin: 2rem 0; flex-wrap: wrap; }
-        .stat { text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: bold; color: white; display: block; }
-        .stat-label { color: rgba(255,255,255,0.9); }
-        .reviews { background: rgba(255,255,255,0.95); margin: 3rem 0; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        .review { margin: 1.5rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 15px; border-left: 5px solid #667eea; }
-        .review-text { font-style: italic; margin-bottom: 0.5rem; }
-        .review-author { font-weight: bold; color: #667eea; }
-        @media (max-width: 768px) { h1 { font-size: 2rem; } .download-buttons { flex-direction: column; align-items: center; } .stats { gap: 2rem; } }
+        body {
+            background-color: #262628;
+            color: #ffffff;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-nav {
+            background: rgba(38, 38, 40, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, rgba(38, 38, 40, 0) 50%);
+        }
+
+        .feature-image-mask {
+            mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>🎭 ArrangeUs</h1>
-        <p class="subtitle">Planning formations for performances made easy, fast, and stylish – iOS & Android</p>
-        
-        <div class="stats">
-            <div class="stat">
-                <span class="stat-number">100K+</span>
-                <span class="stat-label">Downloads (Android)</span>
+
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="header_logo.png" alt="Logo" class="h-12 w-auto">
             </div>
-            <div class="stat">
-                <span class="stat-number">⭐⭐⭐⭐</span>
-                <span class="stat-label">iOS Rating</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">3.6⭐</span>
-                <span class="stat-label">Android Rating</span>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
+                <a href="#footer"
+                    class="px-5 py-2.5 bg-white text-dark font-semibold rounded-full hover:bg-slate-200 transition-colors text-sm">Get
+                    App</a>
             </div>
         </div>
+    </nav>
 
-        <div class="download-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.AndriyStefanchuk.ArrangeUs.main&hl=en" class="btn btn-google" target="_blank">
-                📱 Get on Google Play
-            </a>
-            <a href="https://apps.apple.com/ua/app/arrangeus/id1502182540" class="btn btn-apple" target="_blank">
-                🍎 Get on App Store
-            </a>
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full overflow-hidden">
+        <!-- Background Image (Full Width) -->
+        <div class="absolute inset-0 z-0">
+            <img src="hero_bg.png" alt="App Screenshot" class="w-full h-full object-cover opacity-40">
         </div>
+        <!-- Bottom Gradient Dim -->
+        <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#262628] to-transparent z-10"></div>
 
-        <div class="features">
-            <div class="feature">
-                <h3>✨ Animated Transitions</h3>
-                <p>Watch dancers move smoothly between formations in real-time animations.</p>
-            </div>
-            <div class="feature">
-                <h3>🎵 Music Sync</h3>
-                <p>Synchronize your performance perfectly with your music tracks.</p>
-            </div>
-            <div class="feature">
-                <h3>🎨 Custom Dancers</h3>
-                <p>Name dancers, change colors, add comments for each position.</p>
-            </div>
-            <div class="feature">
-                <h3>📐 Stage Builder</h3>
-                <p>Fully customizable stage with size, shape, and preset collections.</p>
-            </div>
-            <div class="feature">
-                <h3>↩️ Undo Anytime</h3>
-                <p>Never worry about mistakes – undo any action instantly.</p>
+        <!-- Hero Content -->
+        <div class="relative z-20 h-full flex items-center justify-center">
+            <div class="container mx-auto px-6 flex flex-col items-center justify-center gap-8">
+                <img src="downloads_image.png" alt="1M+ Downloads Worldwide" class="max-w-md w-full h-auto">
+                <img src="formation_easy_image.png" alt="Makes Formation Easy" class="max-w-2xl w-full h-auto">
             </div>
         </div>
+    </section>
 
-        <div class="reviews">
-            <h3 style="color: #667eea; margin-bottom: 1.5rem;">What Users Say</h3>
-            <div class="review">
-                <p class="review-text">"OMG🔥 This is exciting App! Saves my time, now I can be more productive and save my formation in one place. Highly recommended 🤩🔥🔥"</p>
-                <p class="review-author">– App Store User</p>
-            </div>
-            <div class="review">
-                <p class="review-text">"Це геніально! Це справжній порятунок для всіх танцівників... чекаю ще більше функцій"</p>
-                <p class="review-author">– Ukrainian User (translated)</p>
+    <!-- Sticky Feature Showcase -->
+    <section class="relative py-20 lg:py-32" id="features">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-20">
+
+                <!-- Left Column: Features List -->
+                <div class="w-full lg:w-1/2 space-y-32 py-10">
+                    <!-- Feature 1 -->
+                    <div class="feature-item group" data-image="2d_3d_view.png">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                            2D & 3D Views</h3>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Switch between views to visualize formations from every angle. See the big picture or dive
+                            into the details.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-item group" data-image="sync_with_music.png">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                            Sync with Music</h3>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Perfect timing for your choreography. Synchronize every movement with your music tracks for
+                            a flawless performance.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-item group" data-image="dancers_customization.png">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                            Dancers Customization</h3>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Style your dancers to match your vision. Assign names, colors, and specific attributes to
+                            keep your team organized.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-item group" data-image="stage_props.png">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                            Stage Props</h3>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Add props to your stage for realistic planning. Visualize how objects interact with your
+                            dancers and formations.
+                        </p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-item group" data-image="formation_comments.png">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                            Formation Comments</h3>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Add notes and details to every formation. Ensure everyone knows exactly what to do and when.
+                        </p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-item group" data-image="custom_backgrounds.png">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                            Custom Backgrounds</h3>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Set the scene with your own backgrounds. Import images to simulate the actual venue or
+                            create a specific mood.
+                        </p>
+                    </div>
+
+                    <!-- Feature 7 -->
+                    <div class="feature-item group" data-image="orginize_choreographies.png">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                            Organize Choreographies</h3>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Keep your projects structured and accessible. Manage multiple choreographies with ease.
+                        </p>
+                    </div>
+
+                    <!-- Feature 8 -->
+                    <div class="feature-item group" data-image="share_choreogeraphies.png">
+                        <h3
+                            class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                            Share Choreographies</h3>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Collaborate and share your work with ease. Send your formations to dancers or colleagues
+                            instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sticky Image -->
+                <div class="hidden lg:block w-1/2 relative">
+                    <div class="sticky top-32 h-[80vh] w-full flex items-center justify-center">
+                        <!-- Image Container -->
+                        <div class="relative w-full h-full">
+                            <img id="sticky-image" src="2d_3d_view.png" alt="Feature Preview"
+                                class="absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-100 feature-image-mask">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-top: 2rem;">
-            © 2017 Andriy Stefanchuk | Updated 2025 with smoother animations & new features
-        </p>
-    </div>
+    <!-- Footer -->
+    <footer id="footer" class="py-20 border-t border-white/5 bg-black/20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Download ArrangeUs</h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="https://apps.apple.com/ua/app/arrangeus/id1502182540" target="_blank"
+                    class="transition-transform hover:scale-105">
+                    <img src="app_store_badge.svg" alt="Download on the App Store" class="h-16 object-contain">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.AndriyStefanchuk.ArrangeUs.main&hl=en"
+                    target="_blank" class="transition-transform hover:scale-105">
+                    <img src="GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play"
+                        class="h-16 object-contain">
+                </a>
+            </div>
+            <p class="mt-12 text-slate-500 text-sm">© 2024 ArrangeUs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Image Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const features = document.querySelectorAll('.feature-item');
+            const stickyImage = document.getElementById('sticky-image');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-40% 0px -40% 0px', // Trigger when element is in the middle of the screen
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const imageSrc = entry.target.getAttribute('data-image');
+                        if (imageSrc && stickyImage.src !== imageSrc) {
+                            // Fade out
+                            stickyImage.style.opacity = '0';
+
+                            setTimeout(() => {
+                                stickyImage.src = imageSrc;
+                                // Fade in
+                                stickyImage.style.opacity = '1';
+                            }, 200);
+                        }
+
+                        // Highlight active feature
+                        features.forEach(f => f.classList.remove('opacity-100'));
+                        features.forEach(f => f.classList.add('opacity-40'));
+                        entry.target.classList.remove('opacity-40');
+                        entry.target.classList.add('opacity-100');
+                    }
+                });
+            }, observerOptions);
+
+            features.forEach(feature => {
+                feature.classList.add('transition-opacity', 'duration-500', 'opacity-40'); // Start dimmed
+                observer.observe(feature);
+            });
+
+            // Make first feature active initially
+            if (features.length > 0) {
+                features[0].classList.remove('opacity-40');
+                features[0].classList.add('opacity-100');
+            }
+        });
+    </script>
 </body>
+
 </html>
