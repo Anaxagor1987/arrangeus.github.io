@@ -14,7 +14,7 @@
                 extend: {
                     colors: {
                         dark: '#262628',
-                        primary: '#3b82f6',
+                        primary: '#E92E67',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -46,7 +46,7 @@
         }
 
         .hero-gradient {
-            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, rgba(38, 38, 40, 0) 50%);
+            background: radial-gradient(circle at 50% 50%, rgba(233, 46, 103, 0.15) 0%, rgba(38, 38, 40, 0) 50%);
         }
 
         .feature-image-mask {
@@ -68,7 +68,7 @@
                 <a href="#features"
                     class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
                 <a href="#footer"
-                    class="px-5 py-2.5 bg-white text-dark font-semibold rounded-full hover:bg-slate-200 transition-colors text-sm">Get
+                    class="px-5 py-2.5 bg-[#E92E67] text-white font-semibold rounded-full hover:bg-[#d12259] transition-colors text-sm">Get
                     App</a>
             </div>
         </div>
@@ -201,10 +201,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer" class="py-20 border-t border-white/5 bg-black/20">
+    <!-- Download CTA -->
+    <section id="footer" class="py-24 border-t border-white/5" style="background: radial-gradient(ellipse at 50% 100%, rgba(233,46,103,0.08) 0%, transparent 70%), #1a1a1c;">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">Download ArrangeUs</h2>
+            <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Available on iOS & Android</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Download ArrangeUs</h2>
+            <p class="text-slate-400 text-lg mb-10 max-w-md mx-auto">Start planning your next performance today. Free to get started.</p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <a href="https://apps.apple.com/ua/app/arrangeus/id1502182540" target="_blank"
                     class="transition-transform hover:scale-105">
@@ -216,14 +218,11 @@
                         class="h-16 object-contain">
                 </a>
             </div>
-            <div class="mt-10 flex items-center justify-center gap-6">
-                <a href="/privacy-policy.html" class="text-slate-500 text-sm hover:text-white transition-colors">Privacy Policy</a>
-                <span class="text-slate-700">|</span>
-                <a href="/terms-of-use.html" class="text-slate-500 text-sm hover:text-white transition-colors">Terms of Use</a>
-            </div>
-            <p class="mt-4 text-slate-500 text-sm">© 2024 ArrangeUs. All rights reserved.</p>
         </div>
-    </footer>
+    </section>
+
+    <site-footer></site-footer>
+    <script src="/footer.js"></script>
 
     <script>
         // Sticky Image Logic
