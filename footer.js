@@ -25,8 +25,7 @@
                     <!-- Follow Us -->
                     <div class="flex flex-col gap-4">
                         <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">Follow Us</p>
-                        <!-- EDIT: Replace # with your Instagram profile URL -->
-                        <a href="#" target="_blank" aria-label="Instagram"
+                        <a href="https://www.instagram.com/arrangeus.app" target="_blank" aria-label="Instagram"
                             class="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">
                             <span class="w-8 h-8 flex items-center justify-center rounded-full border border-white/10 hover:border-white/30 transition-colors flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -35,8 +34,7 @@
                             </span>
                             <span class="text-sm">Instagram</span>
                         </a>
-                        <!-- EDIT: Replace # with your TikTok profile URL -->
-                        <a href="#" target="_blank" aria-label="TikTok"
+                        <a href="https://www.tiktok.com/@arrangeusapp" target="_blank" aria-label="TikTok"
                             class="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">
                             <span class="w-8 h-8 flex items-center justify-center rounded-full border border-white/10 hover:border-white/30 transition-colors flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
