@@ -8,7 +8,7 @@ class SiteFooter extends HTMLElement {
 
                     <!-- Brand -->
                     <div class="flex flex-col items-center gap-2 text-center">
-                        <img src="/header_logo.png" alt="ArrangeUs" class="h-10 w-auto">
+                        <img src="/assets/images/header_logo.png" alt="ArrangeUs" class="h-10 w-auto">
                         <p class="text-slate-500 text-sm">Best friend of every choreographer<br>Easy, fast and powerful</p>
                     </div>
 
