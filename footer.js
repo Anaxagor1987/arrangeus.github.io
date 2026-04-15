@@ -18,8 +18,8 @@ class SiteFooter extends HTMLElement {
                         <!-- Legal -->
                         <div class="flex flex-col gap-4">
                             <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">Legal</p>
-                            <a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="terms-of-use.html" class="text-sm text-slate-400 hover:text-white transition-colors">Terms of Use</a>
+                            <a href="/privacy" class="text-sm text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="/terms" class="text-sm text-slate-400 hover:text-white transition-colors">Terms of Use</a>
                         </div>
 
                         <!-- Follow Us -->
