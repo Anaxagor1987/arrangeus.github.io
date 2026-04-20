@@ -15,6 +15,13 @@ class SiteFooter extends HTMLElement {
                     <!-- Right columns -->
                     <div class="flex gap-16">
 
+                        <!-- Resources -->
+                        <div class="flex flex-col gap-4">
+                            <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">Resources</p>
+                            <a href="/#faq" class="text-sm text-slate-400 hover:text-white transition-colors">FAQ</a>
+                            <a href="/tutorials" class="text-sm text-slate-400 hover:text-white transition-colors">Tutorials</a>
+                        </div>
+
                         <!-- Legal -->
                         <div class="flex flex-col gap-4">
                             <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">Legal</p>

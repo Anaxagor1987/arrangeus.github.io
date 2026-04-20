@@ -53,6 +53,14 @@
             mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
             -webkit-mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
         }
+
+        details[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        details[open] summary span {
+            color: #E92E67;
+        }
     </style>
 </head>
 
@@ -67,6 +75,10 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="#features"
                     class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
+                <a href="#faq"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
+                <a href="/tutorials"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Tutorials</a>
                 <a href="#download"
                     class="px-5 py-2.5 bg-[#E92E67] text-white font-semibold rounded-full hover:bg-[#d12259] transition-colors text-sm">Get
                     App</a>
@@ -201,6 +213,69 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="py-24 border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+            <p class="text-slate-400 text-center text-lg mb-14">Everything you need to know about ArrangeUs. Can't find the answer you're looking for? <a href="mailto:support@arrangeus.app?subject=Question%20about%20ArrangeUs&body=Hi%20ArrangeUs%20team%2C%0A%0A" class="text-white hover:text-[#E92E67] transition-colors">Reach out to us.</a></p>
+            <div class="space-y-3" id="faq-list">
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">Is ArrangeUs free to use?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Yes — ArrangeUs is free to download and use. A premium subscription unlocks advanced features like unlimited choreographies, 3D view, and more.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">Which platforms is ArrangeUs available on?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        ArrangeUs is available on both iOS (App Store) and Android (Google Play).
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">Can I share choreographies with my team?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Yes. You can share your formations and choreographies directly with dancers or colleagues, so everyone stays on the same page.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">Can I sync formations to music?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Yes. You can import your music tracks and sync each formation to a specific timestamp, making it easy to choreograph with perfect timing.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">How do I cancel my subscription?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        You can cancel anytime through your App Store or Google Play account settings. Your access continues until the end of the current billing period.
+                    </div>
+                </details>
+
+            </div>
+
+            <p class="text-center text-slate-500 mt-10">Still have questions? <a href="mailto:support@arrangeus.app?subject=Question%20about%20ArrangeUs&body=Hi%20ArrangeUs%20team%2C%0A%0A" class="text-white hover:text-[#E92E67] transition-colors">Contact us</a> and we'll be happy to help.</p>
+        </div>
+    </section>
+
     <!-- Download CTA -->
     <section id="download" class="py-24 border-t border-white/5 overflow-hidden"
         style="background: radial-gradient(ellipse at 30% 100%, rgba(233,46,103,0.08) 0%, transparent 70%), #1a1a1c;">
@@ -237,6 +312,17 @@
     <script src="footer.js"></script>
 
     <script>
+        // FAQ accordion — close others when one opens
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('toggle', () => {
+                if (item.open) {
+                    document.querySelectorAll('.faq-item').forEach(other => {
+                        if (other !== item) other.removeAttribute('open');
+                    });
+                }
+            });
+        });
+
         // Sticky Image Logic
         document.addEventListener('DOMContentLoaded', () => {
             const features = document.querySelectorAll('.feature-item');

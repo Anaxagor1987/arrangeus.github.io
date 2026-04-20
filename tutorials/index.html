@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials - ArrangeUs</title>
+    <meta name="description" content="Learn how to use ArrangeUs — guides and tips for choreographers to get the most out of the app.">
+    <meta property="og:title" content="Tutorials - ArrangeUs">
+    <meta property="og:description" content="Learn how to use ArrangeUs — guides and tips for choreographers to get the most out of the app.">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#262628',
+                        primary: '#E92E67',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #262628;
+            color: #ffffff;
+        }
+
+        .glass-nav {
+            background: rgba(38, 38, 40, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Topic section */
+        .topic-details summary {
+            list-style: none;
+        }
+        .topic-details summary::-webkit-details-marker {
+            display: none;
+        }
+        .topic-chevron {
+            transition: transform 0.3s ease;
+        }
+        .topic-details[open] .topic-chevron {
+            transform: rotate(180deg);
+        }
+        .topic-details[open] .topic-header {
+            border-color: #E92E67;
+        }
+        .topic-details[open] .topic-title {
+            color: #E92E67;
+        }
+
+        /* Q&A items inside a topic */
+        .qa-details summary {
+            list-style: none;
+        }
+        .qa-details summary::-webkit-details-marker {
+            display: none;
+        }
+        .qa-chevron {
+            transition: transform 0.3s ease;
+        }
+        .qa-details[open] .qa-chevron {
+            transform: rotate(180deg);
+            color: #E92E67;
+        }
+        .qa-details[open] .qa-question {
+            color: #E92E67;
+        }
+        .qa-details summary:hover .qa-question {
+            color: #E92E67;
+        }
+        .qa-details summary:hover .qa-chevron {
+            color: #E92E67;
+        }
+
+        /* Search highlight */
+        mark {
+            background: rgba(233, 46, 103, 0.25);
+            color: #fff;
+            border-radius: 2px;
+            padding: 0 2px;
+        }
+
+        /* Answer reveal animation */
+        .qa-answer {
+            animation: slideDown 0.2s ease-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <img src="/assets/images/header_logo.png" alt="Logo" class="h-12 w-auto">
+            </a>
+            <a href="/" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">← Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="container mx-auto px-6 pt-32 pb-24 max-w-3xl">
+
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold mb-3">Tutorials</h1>
+            <p class="text-slate-400 text-lg">Everything you need to master ArrangeUs. Pick a topic or expand them all.</p>
+        </div>
+
+        <!-- Search -->
+        <div class="relative mb-8">
+            <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+            <input id="search" type="text" placeholder="Search articles…" autocomplete="off"
+                class="w-full bg-white/5 border border-white/10 rounded-xl pl-11 pr-10 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#E92E67] transition-colors">
+            <button id="search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors hidden">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+
+        <!-- No results -->
+        <p id="no-results" class="hidden text-center text-slate-500 py-12">No articles found for "<span id="no-results-term"></span>".</p>
+
+        <!-- Expand / Collapse all -->
+        <div id="controls" class="flex items-center justify-between mb-6">
+            <p class="text-sm text-slate-500"><span id="open-count">0</span> of <span id="total-count">0</span> topics open</p>
+            <div class="flex gap-3">
+                <button id="expand-all" class="text-sm text-slate-400 hover:text-white transition-colors">Expand all</button>
+                <span class="text-slate-600">|</span>
+                <button id="collapse-all" class="text-sm text-slate-400 hover:text-white transition-colors">Collapse all</button>
+            </div>
+        </div>
+
+
+        <!-- Topics -->
+        <div class="space-y-3" id="topics">
+
+            <!-- Topic: Getting Started -->
+            <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🚀</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Getting Started</p>
+                            <p class="text-xs text-slate-500 mt-0.5">9 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is ArrangeUs?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">ArrangeUs is an app for dance teachers, choreographers, and directors who want a simple way to plan formations and transitions for their performances.</p>
+                            <p style="margin-bottom: 12px;">Instead of relying on paper or memory, you can design everything right in the app - move dancers around the stage, test different ideas, and instantly see how your formations connect.</p>
+                            <p style="margin-bottom: 12px;">Whether you're creating a small routine or a large-scale production, ArrangeUs gives you the right tools to bring your vision to life. Walk into rehearsals prepared and actually enjoy the planning process.</p>
+                            <p><strong>Trusted  and loved by choreographers worldwide ♥️</strong></p>
+
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does ArrangeUs work?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">ArrangeUs is built around a few simple elements:</p>
+                            <ul class="mb-4 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Stage</strong> - your main workspace, representing the area where your performance happens. Customize it to match your real venue.</li>
+                                <li><strong class="text-white">Dancers</strong> - the main elements you work with. Add them to the stage, move them around, and customize their appearance.</li>
+                                <li><strong class="text-white">Formations</strong> - a specific arrangement of dancers on stage. Each formation represents a moment or period in your performance.</li>
+                                <li><strong class="text-white">Transitions</strong> - the animated movement between formations. By default, dancers follow straight paths, but you can adjust them with curves for more natural motion.</li>
+                                <li><strong class="text-white">Choreography</strong> - your complete project. It holds all formations and transitions, dancers, stage setup, props, notes, and music in one place.</li>
+                            </ul>
+                            <p>You start by creating a choreography, setting up a stage, and adding your dancers. Then you build your performance formation by formation until everything feels right. Along the way, it's easy to make small adjustments, fine-tune positions, and capture your ideas as they come. Do it at a coffee shop, in the dance studio, or on your way home - it's all possible with ArrangeUs.</p>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create my first choreography?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">Tap the <strong class="text-white">+</strong> button on the home screen, give your piece a name, and set the number of dancers. The stage size is automatically adjusted based on the number of dancers you select. You'll then choose how to place dancers for the first formation:</p>
+                            <ul class="mb-4 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Backstage</strong> - ArrangeUs places all dancers off-stage automatically and drops you straight into the formation editor.</li>
+                                <li><strong class="text-white">Manual</strong> - tap the stage to place dancers one by one. Press <strong class="text-white">Let's Go</strong> and any remaining dancers would be moved to the backstage automatically.</li>
+                            </ul>
+                            <p style="margin-bottom: 16px;">Either way, the whole setup takes under a minute and you're ready to start choreographing.</p>
+                            <p>You can also create a new choreography using a predefined list of dancers from your <strong class="text-white">Crew</strong>, or reuse the stage setup from an existing choreography - we'll cover this later.</p>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Basic configuration of the stage</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">We recommend configuring the stage <strong class="text-white">before</strong> you start creating formations. If you change the stage size later, all dancer positions will shift proportionally - but they may no longer align perfectly with the grid and could need some manual fixes.</p>
+                            <p style="margin-bottom: 12px;">Open <strong class="text-white">Choreography Settings</strong> and focus on these three things first:</p>
+                            <ul class="mb-4 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Stage size</strong> - set the width and height to match your real venue. As a guideline, 1 unit equals approximately 1 meter. It's best to configure this early if you need an accurate stage layout.</li>
+                                <li><strong class="text-white">Backstage config</strong> - adjust the off-stage areas to match how much wing space you actually need.</li>
+                                <li><strong class="text-white">Custom background</strong> - if you have a floor plan or venue photo, add it now. You can also take advantage of our standard backgrounds like basktball field or cheerleading mats. Each default background has it's own recommended size, so we got you covered there.</li>
+                            </ul>
+                            <p>Other stage settings won't affect existing dancer positions, so they can be adjusted at any time without disrupting your work.</p>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I work with dancers?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">Dancers are set when you create the choreography, but you can add more at any time from the bottom actions bar <strong class="text-white">[Dancers → Add new]</strong>.</p>
+                            <p style="margin-bottom: 12px;">To move a dancer, drag them to any position on the stage - they snap to the grid automatically when you release. If you drag dancer out of stage it will return to it's original position.</p>
+                            <p style="margin-bottom: 12px;">Tap a dancer to select them. Once selected, you can edit properties like <strong class="text-white">color</strong>, <strong class="text-white">shape</strong>, <strong class="text-white">name</strong>, or <strong class="text-white">short name</strong>. <strong class="text-white">Names</strong> are set once per choreography, while <strong class="text-white">colors</strong> and <strong class="text-white">shapes</strong> can vary between formations, so you can visually highlight different moments. Select multiple dancers to move them together or update their properties at the same time.</p>
+                            <p>If you work with the same group regularly, consider creating a <strong class="text-white">Crew</strong> - a reusable roster of dancers. When you create a choreography from a crew you can skip writing all the names again.</p>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create formations?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">Your choreography starts with one formation already in place - on stage or off stage, depending on what you chose at setup. To add the next one, tap <strong class="text-white">Add Formation</strong> in the formations slider at the bottom of the editor.</p>
+                            <p style="margin-bottom: 12px;">Each new formation is a copy of the previous one, so all dancers keep their positions, colors and shapes. You only need to move or edit the ones that change somehow.</p>
+                            <p>One key habit: <strong class="text-white">always create a new formation before moving dancers</strong>. If you reposition dancers on the current formation instead, you'll overwrite it rather than extend the sequence.</p>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How to watch formation transitions?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">To preview a transition, tap any formation in the formations slider at the bottom - dancers will animate from their current positions to the new ones automatically.</p>
+                            <p>You can also navigate between formations by swiping left or right on the stage, or using the <strong class="text-white">Navigation</strong> section in the bottom actions bar.</p>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I share my work with others?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">There are a few ways to share your choreography depending on what the other person needs:</p>
+                            <ul class="mb-4 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">ArrangeUs file</strong> - share a copy of the full project. The recipient can open it in the app and work on their own version. Changes on either side won't sync - it's a snapshot, not a live connection.</li>
+                                <li><strong class="text-white">PDF export</strong> - generates a document with all formations laid out. Useful for sharing with dancers or keeping as a reference.</li>
+                                <li><strong class="text-white">Screen recording</strong> - many choreographers record their screen while tapping through formations to share a quick visual overview as a video.</li>
+                            </ul>
+                            <p>Real-time collaboration - where multiple people can edit the same choreography with synced changes - is currently in the works.</p>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Where to go from here?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <p style="margin-bottom: 12px;">The sections below cover everything in more detail. A few areas worth exploring next:</p>
+                            <ul class="mb-4 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Stage configurations</strong> - all the settings for stage and different display options.</li>
+                                <li><strong class="text-white">Working with formations</strong> - duplicating, reordering, adding comments, multiple formations actions, and fine-tuning positions.</li>
+                                <li><strong class="text-white">Dancer customization</strong> - names, colors, shapes, and how they can be used to full potential.</li>
+                                <li><strong class="text-white">Quick position editing</strong> - faster ways to adjust dancer positions without dragging one by one.</li>
+                                <li><strong class="text-white">Choreographies management</strong> - organise your choreographies better with tags and learn best practices for sharing.</li>
+                            </ul>
+                            <p>And when you're ready to go deeper, there are more advanced features to discover - <strong class="text-white">Music Sync</strong>, <strong class="text-white">Props</strong>, <strong class="text-white">Curved pathways</strong>, and more.</p>
+                        </div>
+                    </details>
+                </div>
+            </details>
+
+            <!-- Topic: Core Basics -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🧱</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Core Basics</p>
+                            <p class="text-xs text-slate-500 mt-0.5">11 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I select and manage dancers?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap any dancer icon to select them — a highlight ring appears and the action bar at the bottom updates to show dancer-specific actions. To select multiple dancers, tap one to enter selection mode then tap additional icons; each tapped dancer joins the selection. Tap an empty area of the stage to deselect all.<br><br>
+                            With one or more dancers selected you can drag the whole group at once, apply a color to all of them simultaneously, or remove them from the current formation. Long-press a dancer for a quick-action menu with shortcuts to the Dancer Panel and removal options.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I edit dancer properties?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap a dancer to select them, then tap the <strong class="text-white">Edit</strong> button in the action bar, or double-tap the dancer icon directly to open the <strong class="text-white">Dancer Panel</strong>. From there you can update:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Full name</strong> — used in lists, comments, and exports.</li>
+                                <li><strong class="text-white">Short name</strong> — 1–3 characters shown on the dancer icon on stage.</li>
+                                <li><strong class="text-white">Color</strong> — applies to the icon across all formations.</li>
+                            </ul>
+                            Changes take effect across the entire choreography immediately. They do not affect the crew roster the choreography was created from.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do undo and redo work?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap the <strong class="text-white">Undo</strong> (↩) and <strong class="text-white">Redo</strong> (↪) buttons in the editor toolbar to step backwards or forwards through your changes. Undo and redo cover dancer moves, formation additions and deletions, property edits, and stage configuration changes. The history is per-session — it resets when you close the choreography, so there is no undo across separate editing sessions.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I work with formations?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The formation timeline runs along the bottom of the editor. Each card in the timeline represents one formation. Common operations:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Add</strong> — tap <strong class="text-white">+</strong> to insert a new formation after the current one; it copies all dancer positions from it.</li>
+                                <li><strong class="text-white">Rename</strong> — tap the formation name on the card to type a custom label.</li>
+                                <li><strong class="text-white">Reorder</strong> — long-press a card and drag it left or right in the timeline.</li>
+                                <li><strong class="text-white">Duplicate</strong> — long-press a card and choose Duplicate to insert an identical copy next to it.</li>
+                                <li><strong class="text-white">Delete</strong> — long-press a card and choose Delete. A choreography must always have at least one formation.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I navigate between formations?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap any formation card in the timeline to jump directly to it — the stage updates instantly to show that formation's dancer positions. You can also swipe left or right on the stage canvas itself to step through formations one at a time. In playback mode, ArrangeUs advances through them automatically at their set durations or music timestamps.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do basic transitions work?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            A transition is the movement that happens between two consecutive formations. ArrangeUs draws each dancer's path as a straight line from their position in the current formation to their position in the next one. You can see these paths drawn on the stage as faint lines when you view the transition between two formations. The duration of each transition — how long dancers have to travel — is set on the formation card and can be adjusted independently for each formation pair.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I move around the stage?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The stage canvas supports standard touch gestures for navigation:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Pinch in / out</strong> — zoom into a tight cluster of dancers or zoom out for a full-stage overview.</li>
+                                <li><strong class="text-white">Two-finger drag</strong> — pan across the stage while zoomed in.</li>
+                                <li><strong class="text-white">Double-tap</strong> — reset zoom and center the stage to the default fit-all view.</li>
+                                <li><strong class="text-white">3D mode swipe</strong> — in 3D view, single-finger swipe rotates the camera; pinch still controls zoom.</li>
+                            </ul>
+                            These gestures are always active and do not interfere with dancer dragging — the app distinguishes between a drag that starts on a dancer (moves the dancer) and one that starts on empty stage space (pans the view).
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are ghost dancers and how do I use them?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Ghost dancers are semi-transparent overlays showing where each dancer stood in the <strong class="text-white">previous formation</strong>. They appear automatically when you are editing a formation and help you see at a glance how far each dancer needs to travel to reach their new position. Ghosts are visual aids only — they cannot be selected or moved. Toggle their visibility using the ghost icon in the editor toolbar if they make the canvas too busy on complex formations.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are the different screen states and modes?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The formation editor has several toggleable states that combine independently:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">2D / 3D</strong> — 2D is the default top-down editing view; 3D switches to a rotatable perspective camera for previewing the performance. Editing is only possible in 2D.</li>
+                                <li><strong class="text-white">Edit / Music mode</strong> — Edit mode is for placing dancers and managing formations. Music mode expands the timeline into a full waveform scrubber so you can set formation timestamps precisely against the track.</li>
+                                <li><strong class="text-white">Expanded / Minimal timeline</strong> — tap the timeline handle to collapse it down to a slim strip, giving the stage canvas more vertical space. Tap again to restore the full timeline with formation thumbnails.</li>
+                            </ul>
+                            These states are independent — for example you can be in 2D + Music mode + Minimal timeline all at once.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does applying a change across multiple formations work?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            By default, any edit you make — moving a dancer, changing a color — affects only the formation you are currently viewing. When you need a change to carry forward, ArrangeUs offers an <strong class="text-white">Apply to following formations</strong> option that appears in the action bar after certain edits. Tapping it propagates the change to all formations from the current one to the end of the sequence, leaving earlier formations untouched.<br><br>
+                            This is useful for corrections like moving a dancer who was placed slightly off-center in every formation from a certain point onward — you fix it once and apply it forward rather than editing each formation individually.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What do the different symbols in the action bar mean?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The action bar at the bottom of the editor changes contextually based on what is selected. Common icons and what they do:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Person + (Add Dancer)</strong> — add a new dancer to the choreography.</li>
+                                <li><strong class="text-white">Pencil (Edit)</strong> — open the Dancer Panel for the selected dancer.</li>
+                                <li><strong class="text-white">Eye / Ghost</strong> — toggle ghost dancer overlay visibility.</li>
+                                <li><strong class="text-white">Trash (Remove)</strong> — remove the selected dancer from the current formation only, or from the choreography entirely (confirmed via prompt).</li>
+                                <li><strong class="text-white">Arrow forward (Apply forward)</strong> — propagate the last change to all following formations.</li>
+                                <li><strong class="text-white">Layers (Formation options)</strong> — access duplicate, rename, and delete for the current formation.</li>
+                                <li><strong class="text-white">Gear (Stage Settings)</strong> — open stage size, grid, background, and backstage configuration.</li>
+                            </ul>
+                            Tap and hold any icon to see its label if you are unsure what it does.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Working with Choreographies -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🗃️</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Working with Choreographies</p>
+                            <p class="text-xs text-slate-500 mt-0.5">9 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How many choreographies can I have on the free plan?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The free plan allows up to <strong class="text-white">6 choreographies</strong>, each with an <strong class="text-white">unlimited number of formations</strong>. There is no cap on how many formations, dancers, or music tracks you add within a single choreography — the limit is only on how many separate choreography projects you can have active at once. Once you hit 6, the <strong class="text-white">+</strong> button is disabled until you archive, delete, or upgrade to Pro.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is the Archive and when should I use it?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The <strong class="text-white">Archive</strong> is a built-in folder for choreographies you want to keep but no longer need in your main list — finished season pieces, past events, or work you've put on hold. Long-press a choreography card and tap <strong class="text-white">Archive</strong> to move it there. Archived choreographies still count toward your plan limit, but stay out of the way. You can unarchive at any time by opening the Archive folder, long-pressing the card, and tapping <strong class="text-white">Unarchive</strong>.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What happens when I delete a choreography?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Deleting a choreography moves it to the <strong class="text-white">Trash</strong> folder rather than erasing it immediately. Items in Trash are automatically and permanently deleted after <strong class="text-white">30 days</strong>, giving you a safety net to recover anything deleted by mistake. To restore a choreography, open the Trash folder, long-press the card, and tap <strong class="text-white">Restore</strong>. To free up a plan slot right away, tap <strong class="text-white">Empty Trash</strong> — this permanently removes everything in the folder and cannot be undone.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I duplicate a choreography?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Long-press a choreography card and tap <strong class="text-white">Duplicate</strong>. ArrangeUs creates a complete independent copy — all formations, dancer positions, music link, tags, and description — and appends <em>"Copy"</em> to the name. Changes to the copy never affect the original. This is handy for creating a variation of an existing piece or kickstarting a new season's version of a recurring routine.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I reuse a stage setup without copying the choreography?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Yes — use <strong class="text-white">Duplicate Stage</strong>. Long-press a choreography card and choose this option to create a new blank choreography that inherits only the stage configuration: size, grid cell size, backstage zones, and background image. No formations or dancer positions are copied. You then pick a fresh set of dancers for the new piece, which is ideal when you choreograph multiple pieces for the same venue.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does search work on the choreography list?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The search bar filters by <strong class="text-white">choreography name only</strong> — it does not search inside formations, dancer names, or descriptions. Type any part of the name and the list narrows in real time. For filtering by category, status, or any other attribute, use <strong class="text-white">tags</strong> instead of the search bar.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I perform actions on multiple choreographies at once?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Yes. Long-press any choreography card to enter <strong class="text-white">multi-select mode</strong>, then tap additional cards to build your selection. An action bar appears at the bottom with the following bulk operations:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Share</strong> — send all selected choreographies at once.</li>
+                                <li><strong class="text-white">Archive</strong> — move all selected items to the Archive folder.</li>
+                                <li><strong class="text-white">Delete</strong> — send all selected items to Trash.</li>
+                                <li><strong class="text-white">Edit Tags</strong> — attach or detach tags across all selected choreographies simultaneously.</li>
+                            </ul>
+                            Tap <strong class="text-white">Cancel</strong> or tap outside the selection to exit multi-select without making changes.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I sort the choreography list?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap the <strong class="text-white">Sort</strong> button at the top of the list to choose an ordering. Available options are:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Last modified</strong> — most recently edited first (default)</li>
+                                <li><strong class="text-white">Date created</strong> — newest or oldest first</li>
+                                <li><strong class="text-white">Name</strong> — alphabetical A → Z or Z → A</li>
+                            </ul>
+                            Your preference is remembered and applied automatically each time you open the app.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do tags work and what are they useful for?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tags are custom labels you create and attach to choreographies for filtering and organisation. To create one, go to <strong class="text-white">menu → Tags → New Tag</strong>, type a name, and pick a color. To attach a tag, long-press a choreography card and tap <strong class="text-white">Edit Tags</strong>. Active tag filters appear as pill buttons below the search bar — tap a pill to show only choreographies with that tag.<br><br>
+                            Tags work best when grouped by theme. Common groupings include:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Season</strong> — Spring Recital, Summer Camp, Winter Show</li>
+                                <li><strong class="text-white">Status</strong> — Draft, In Progress, Ready, Archived</li>
+                                <li><strong class="text-white">Style</strong> — Ballet, Jazz, Hip-Hop, Contemporary</li>
+                                <li><strong class="text-white">Team type</strong> — Juniors, Teens, Adults, Competition</li>
+                            </ul>
+                            You can reorder tags by opening <strong class="text-white">menu → Tags → Reorder</strong> and dragging each tag to the position you want — the order here determines the order they appear in the filter row on the home screen, so put your most-used tags first.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Choreography Creation & Configuration -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🎬</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Choreography Creation & Configuration</p>
+                            <p class="text-xs text-slate-500 mt-0.5">8 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create a new choreography from my crew?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open your <strong class="text-white">Crew</strong> and tap the <strong class="text-white">+</strong> button to start a new choreography. The crew's dancer roster is used automatically — you choose which dancers to include and the app pre-fills their names, short names, and colors from the crew profile. This saves you from re-entering dancer details every time you start a new piece.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How is the stage set up after I pick the number of dancers?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Once you confirm the dancer count, ArrangeUs generates a first formation automatically. Dancers are distributed evenly across the stage in a default arrangement so you have something to work from straight away. The stage dimensions, grid, and backstage area all use the defaults set in your choreography configuration, which you can adjust at any time from <strong class="text-white">Stage Settings</strong>.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I choose where dancers start or place them in the backstage?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Yes. During creation you can switch the initial placement mode before confirming:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Auto-place on stage</strong> — ArrangeUs spreads dancers evenly across the performance area.</li>
+                                <li><strong class="text-white">Place in backstage</strong> — all dancers start off-stage and you drag each one onto the stage manually in the first formation.</li>
+                            </ul>
+                            You can also move any dancer to the backstage at any point by dragging them off the stage edges in the formation editor.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I configure dancer names and short names?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap any dancer in the formation editor to open the <strong class="text-white">Dancer Panel</strong>. You can set two labels:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Full name</strong> — shown in lists, comments, and the dancer detail view.</li>
+                                <li><strong class="text-white">Short name</strong> — a 1–3 character abbreviation displayed on the dancer icon on stage, keeping the canvas readable even with many dancers.</li>
+                            </ul>
+                            If the choreography was created from a crew, both fields are pre-filled from the crew roster and can be overridden per choreography without affecting the crew data.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I edit the choreography description?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open the choreography and tap the <strong class="text-white">Info</strong> icon in the header, or go to <strong class="text-white">Choreography Settings → Details</strong>. Tap the description field to type or paste any notes — song name, event date, director notes, or rehearsal reminders. The description is visible only to you and anyone you share the choreography with in edit mode.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I set a background image for the stage?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Go to <strong class="text-white">Stage Settings → Background</strong>. Tap <strong class="text-white">Choose Image</strong> to import a photo from your library — a floor plan, a venue photo, or a lighting plot all work well. You can adjust the image opacity so it sits behind the dancer icons without obscuring them. To remove the background, tap <strong class="text-white">Clear</strong> in the same panel.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I change the stage size and configure the backstage area?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open <strong class="text-white">Stage Settings → Stage Size</strong>. Enter the width and depth in your preferred unit (metres or feet). Below that, the <strong class="text-white">Backstage</strong> toggle lets you enable off-stage zones — left wing, right wing, and upstage — and set how wide each zone appears on screen. Dancers dragged into a backstage zone are shown slightly faded to distinguish them from on-stage positions during editing.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What does the grid cell size setting do?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Found in <strong class="text-white">Stage Settings → Grid</strong>, the cell size controls how finely dancers snap to the grid when you drag them. A smaller cell (e.g. 0.5 m) gives precise positioning for tight formations, while a larger cell (e.g. 2 m) speeds up rough layout work. You can also <strong class="text-white">hide the grid lines</strong> entirely while keeping snap-to-grid active, or disable snapping altogether for free-form placement.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Choreographies List Actions & Folders -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🗂</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Choreographies List Actions & Folders</p>
+                            <p class="text-xs text-slate-500 mt-0.5">7 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is the Archive folder and how do I use it?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The <strong class="text-white">Archive</strong> is a built-in folder for choreographies you want to keep but no longer need in your main list — finished season pieces, past events, or work you've put on hold. Long-press a choreography card and tap <strong class="text-white">Archive</strong> to move it there. Archived choreographies still count toward your total but stay out of the way until you need them. You can unarchive at any time by opening the Archive folder, long-pressing the card, and tapping <strong class="text-white">Unarchive</strong>.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does the Trash folder work?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Deleting a choreography moves it to <strong class="text-white">Trash</strong> rather than erasing it immediately, giving you a safety net. Items in Trash are automatically purged after <strong class="text-white">30 days</strong>. To recover something before then, open the Trash folder, long-press the card, and tap <strong class="text-white">Restore</strong>. To free up space right away, tap <strong class="text-white">Empty Trash</strong> — this permanently deletes everything in the folder and cannot be undone.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What does the Sync action do and what does it require?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <strong class="text-white">Sync</strong> pushes the latest version of a choreography to iCloud so it is available on all your devices signed in with the same Apple ID. Tap the sync icon on any card or pull down to refresh the list to trigger a sync for all choreographies. Sync requires:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li>An active <strong class="text-white">internet connection</strong></li>
+                                <li>iCloud Drive <strong class="text-white">enabled</strong> for ArrangeUs in your device settings</li>
+                                <li>An <strong class="text-white">ArrangeUs Pro</strong> subscription — sync is a Pro-only feature</li>
+                            </ul>
+                            A sync indicator on the card shows the current status: synced, pending, or error.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does the Duplicate action work?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Long-press a choreography card and tap <strong class="text-white">Duplicate</strong>. ArrangeUs creates a full copy — all formations, dancer assignments, music link, tags, and description — and appends <em>"Copy"</em> to the name. The duplicate appears at the top of your list as a new independent choreography; changes to it never affect the original. This is useful for creating a variation of an existing piece or starting a new season's version of a recurring routine.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is Duplicate Stage and how is it different from Duplicate?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <strong class="text-white">Duplicate Stage</strong> copies only the stage configuration — size, grid cell size, backstage zones, and background image — into a new blank choreography, without copying any formations or dancer positions. Use it when you want to start a fresh piece on the same physical stage as an existing one, so you don't have to re-enter the venue dimensions manually. You'll find it in the long-press menu alongside the regular Duplicate action.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What actions can I perform on multiple choreographies at once?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Long-press any card to enter <strong class="text-white">multi-select mode</strong>, then tap additional cards to build your selection. An action bar appears at the bottom with the following bulk operations:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Edit Tags</strong> — attach or detach tags across all selected choreographies at once</li>
+                                <li><strong class="text-white">Archive</strong> — move all selected items to the Archive folder</li>
+                                <li><strong class="text-white">Delete</strong> — send all selected items to Trash</li>
+                            </ul>
+                            Tap anywhere outside the selection or press <strong class="text-white">Cancel</strong> to exit multi-select mode without making changes.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How many choreographies can I have on the free plan?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The free plan allows up to <strong class="text-white">3 active choreographies</strong>. Once you reach the limit, the <strong class="text-white">+</strong> button is disabled and a prompt appears offering an upgrade to Pro. Choreographies in the <strong class="text-white">Archive</strong> and <strong class="text-white">Trash</strong> folders still count toward this limit, so moving finished work to Trash and emptying it is the quickest way to free up a slot without upgrading.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Tags & Sorting & Search -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🏷</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Tags & Sorting & Search</p>
+                            <p class="text-xs text-slate-500 mt-0.5">10 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What does the search field look for?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The search field matches against <strong class="text-white">choreography names only</strong>. As you type, the list filters in real time to show only choreographies whose name contains your query. To narrow results by category or status, use tags and the tag filter instead of the search bar.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What sort options are available on the choreography list?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap the <strong class="text-white">Sort</strong> button at the top of the choreography list to choose an ordering. Available options are:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Last modified</strong> — most recently edited first (default)</li>
+                                <li><strong class="text-white">Date created</strong> — newest or oldest first</li>
+                                <li><strong class="text-white">Name</strong> — alphabetical A → Z or Z → A</li>
+                            </ul>
+                            Your sort preference is saved and applied each time you open the app.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create a new tag?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tags are created from the <strong class="text-white">Tags</strong> screen, accessible via the menu in the top-right corner of the home screen. Tap <strong class="text-white">New Tag</strong>, type a name, choose a color, and tap <strong class="text-white">Save</strong>. The tag is then available to attach to any choreography.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I attach or detach a tag from a choreography?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Long-press any choreography card and tap <strong class="text-white">Edit Tags</strong>, or open the choreography and tap the tag icon in the header. A tag picker appears showing all your tags — tap a tag to attach it (a checkmark appears), tap it again to detach it. Changes are saved automatically when you close the picker.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does tag filtering work?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tag pills are shown in a horizontal scrollable row below the search bar. Tapping a tag pill activates it and the list immediately shows only choreographies that have that tag attached. The active tag is highlighted in its assigned color. Tap it again to deactivate the filter and show all choreographies.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I filter by multiple tags at once?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Yes. Tapping additional tag pills adds them to the active filter. You can choose between two filter strategies by tapping the filter mode icon next to the tag row:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Match any (OR)</strong> — shows choreographies that have at least one of the selected tags. Useful for broad browsing.</li>
+                                <li><strong class="text-white">Match all (AND)</strong> — shows only choreographies that have every selected tag attached. Useful for precise filtering.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I reorder tags in the filter row?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open the <strong class="text-white">Tags</strong> screen from the menu, then tap <strong class="text-white">Reorder</strong>. Drag each tag row up or down using the handle on the right. The order you set here is the order tags appear in the filter row on the home screen. Put your most-used tags first so they're always visible without scrolling.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are the recommended ways to name and use tags?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            A few practices that keep tags useful as your library grows:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li>Keep tag names <strong class="text-white">short and consistent</strong> — "In Progress" is better than "Currently Working On This One".</li>
+                                <li>Use <strong class="text-white">title case</strong> so tags look uniform in the filter row.</li>
+                                <li>Assign a <strong class="text-white">distinct color per group</strong> (e.g. all status tags in blue, all season tags in green) so you can visually scan tags on cards at a glance.</li>
+                                <li>Avoid creating near-duplicate tags like "Done" and "Finished" — consolidate into one.</li>
+                                <li>Review and clean up unused tags periodically from the Tags screen.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What kinds of tag groups can I create?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tags are free-form, so you can organise them in whatever way fits your workflow. Common groupings include:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Season / Event</strong> — Spring Recital, Summer Camp, Winter Show</li>
+                                <li><strong class="text-white">Project status</strong> — Draft, In Progress, Ready, Archived</li>
+                                <li><strong class="text-white">Age group</strong> — Juniors, Teens, Adults</li>
+                                <li><strong class="text-white">Dance style</strong> — Ballet, Jazz, Hip-Hop, Contemporary</li>
+                                <li><strong class="text-white">Venue / Stage</strong> — Main Stage, Studio, Outdoor</li>
+                                <li><strong class="text-white">Client or project</strong> — useful if you choreograph for multiple studios or clients</li>
+                            </ul>
+                            You can combine tags from different groups on a single choreography, so a piece can be "Spring Recital + Teens + Jazz" all at once.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I attach multiple tags to multiple choreographies at once?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Use <strong class="text-white">multi-select mode</strong>: long-press any choreography card to enter selection mode, then tap each additional choreography you want to include. Once you have your selection, tap <strong class="text-white">Edit Tags</strong> in the action bar that appears at the bottom. The tag picker will show the union of tags across your selection — toggle any tag on or off to apply it to all selected choreographies simultaneously.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Sharing & Collaboration -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🤝</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Sharing & Collaboration</p>
+                            <p class="text-xs text-slate-500 mt-0.5">2 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I share a choreography with my dancers?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open the choreography and tap the <strong class="text-white">Share</strong> icon. You can send a link via any messaging app. Recipients can view the formations and music playback directly in ArrangeUs.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I add comments to a specific formation?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Yes. Tap any formation in the timeline and select <strong class="text-white">Add Comment</strong>. Comments are visible to everyone you share the choreography with and are great for leaving cues or instructions.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Backups -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">💾</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Backups</p>
+                            <p class="text-xs text-slate-500 mt-0.5">8 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are the prerequisites for the backup feature?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Before backups can work you need three things in place:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">iCloud Drive enabled</strong> for ArrangeUs — go to iOS Settings → your name → iCloud → iCloud Drive and make sure ArrangeUs is toggled on.</li>
+                                <li><strong class="text-white">Sufficient iCloud storage</strong> — backup files are stored in your iCloud container, so your iCloud plan needs free space.</li>
+                                <li><strong class="text-white">ArrangeUs Pro</strong> — the backup feature is available to Pro subscribers only.</li>
+                            </ul>
+                            Without all three, the Backups section in the app will remain locked or inactive.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How are backups created and where are they stored?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            ArrangeUs automatically creates a backup each time you open or close the app, as long as the prerequisites above are met. Each backup is a single file containing a snapshot of all your choreographies at that moment. Backup files are stored in your personal <strong class="text-white">iCloud Drive → ArrangeUs</strong> folder, so they are private to your Apple ID and accessible from the Files app. The app retains a rolling set of the most recent backups and removes older ones automatically to conserve space.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What scenarios are backups useful for?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Backups cover several common situations:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Accidental deletion</strong> — restore choreographies you deleted before emptying the Trash.</li>
+                                <li><strong class="text-white">Rolling back unwanted changes</strong> — revert to an earlier version of a choreography after an edit you want to undo.</li>
+                                <li><strong class="text-white">Device migration</strong> — move your entire library to a new iPhone or iPad quickly.</li>
+                                <li><strong class="text-white">Device loss or damage</strong> — recover your full library from iCloud after replacing a broken device.</li>
+                                <li><strong class="text-white">Multi-device setup</strong> — seed a second device with your existing choreographies as a starting point.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I sync existing choreographies across multiple devices?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            On the primary device, open <strong class="text-white">menu → Backups</strong> and tap <strong class="text-white">Back Up Now</strong> to create a fresh backup. On the second device — signed in with the same Apple ID — open the same Backups screen and tap <strong class="text-white">Import</strong>. The latest backup will appear in the list; select it and choose which choreographies to bring across. This is a one-time transfer, not a live continuous sync; for ongoing sync between devices use the per-choreography <strong class="text-white">Sync</strong> action instead.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create a backup manually?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Go to <strong class="text-white">menu → Backups</strong> and tap <strong class="text-white">Back Up Now</strong>. A new backup file is created immediately and uploaded to iCloud. Manual backups are useful before making large structural changes, before a major performance, or anytime you want a named checkpoint you can return to. Manual backups follow the same rolling retention policy as automatic ones — if you want to keep a backup permanently, export the file from the <strong class="text-white">Files</strong> app to a location outside the ArrangeUs iCloud folder.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I choose which choreographies to import from a backup?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            When you tap a backup file in the Backups list, a selection screen shows every choreography contained in that backup. Tap individual items to check or uncheck them — only the checked ones will be imported. Once you're happy with your selection, tap <strong class="text-white">Import Selected</strong>. Imported choreographies are added to your library as new entries; they do not overwrite anything that already exists on the device.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Which choreographies are filtered out and not shown in the import list?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            The import selection screen automatically hides choreographies that are already present on the device — identified by their unique internal ID. This prevents creating accidental duplicates when you import the same backup twice or restore on a device that already has some of the same work. If you intentionally want a second copy of an existing choreography, use the <strong class="text-white">Duplicate</strong> action on the choreography list instead.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I manually import a backup file or delete old backups?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            <strong class="text-white">To import a file manually</strong> — if you have a backup file stored outside the default iCloud folder (for example one you exported or received), open <strong class="text-white">menu → Backups</strong> and tap <strong class="text-white">Import from Files</strong>. Navigate to the file in the Files app, select it, and ArrangeUs will load it into the import selection screen.<br><br>
+                            <strong class="text-white">To delete old backups</strong> — swipe left on any backup entry in the Backups list and tap <strong class="text-white">Delete</strong>, or manage files directly in the Files app under <strong class="text-white">iCloud Drive → ArrangeUs</strong>. Deleting a backup is permanent and cannot be undone, so make sure you no longer need it before removing it.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Subscription Management -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">💳</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Subscription Management</p>
+                            <p class="text-xs text-slate-500 mt-0.5">7 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What plans does ArrangeUs offer?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            ArrangeUs offers a <strong class="text-white">Free</strong> plan and a <strong class="text-white">Pro</strong> subscription. The Free plan lets you create and edit up to 3 choreographies with core features. Pro unlocks unlimited choreographies, advanced export options, priority support, and all future features as they ship. Pro is available as a monthly or annual subscription — the annual plan works out significantly cheaper per month.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Is there a free trial for Pro?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Yes. New users can try Pro free for <strong class="text-white">7 days</strong>. You won't be charged until the trial ends and you can cancel at any time during the trial period without being billed. The trial is available once per Apple ID or Google account.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I subscribe to Pro?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open the app, tap the <strong class="text-white">menu</strong> in the top-right corner, and select <strong class="text-white">Upgrade to Pro</strong>. Choose the monthly or annual plan and confirm the purchase through your Apple ID or Google account. Pro features are activated instantly after the transaction completes.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I cancel my subscription?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Subscriptions are managed through the App Store or Google Play, not inside ArrangeUs itself.
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">iOS:</strong> Settings → your name → Subscriptions → ArrangeUs → Cancel Subscription.</li>
+                                <li><strong class="text-white">Android:</strong> Google Play → Profile → Payments & subscriptions → Subscriptions → ArrangeUs → Cancel.</li>
+                            </ul>
+                            You keep Pro access until the end of your current billing period. Your choreographies and data are never deleted when you cancel.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What happens to my choreographies if I cancel Pro?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Your choreographies are <strong class="text-white">never deleted</strong>. When your Pro period ends, the app switches back to the Free plan. If you have more than 3 choreographies, the extras become <strong class="text-white">read-only</strong> — you can still open and view them but not edit them until you resubscribe. Resubscribing instantly restores full access to everything.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I restore a purchase on a new device?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Sign in to the new device with the same Apple ID or Google account you used to purchase Pro. Open ArrangeUs, go to <strong class="text-white">menu → Upgrade to Pro</strong>, and tap <strong class="text-white">Restore Purchases</strong>. The app will verify your subscription with the store and unlock Pro features at no extra charge.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I switch between monthly and annual billing?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Yes. Cancel your current plan (you keep access until the period ends), then resubscribe on the other billing cycle when it expires. On iOS you can also upgrade directly from monthly to annual through <strong class="text-white">Settings → Subscriptions</strong> — the App Store will prorate the remaining days of your monthly plan automatically.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Crew -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">👥</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Crew</p>
+                            <p class="text-xs text-slate-500 mt-0.5">6 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I add, edit, or delete dancers in a crew?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open a crew and tap the <strong class="text-white">+</strong> button to add a new dancer. Fill in the full name, short name (1–3 characters shown on stage), and pick a color, then tap <strong class="text-white">Save</strong>.<br><br>
+                            To <strong class="text-white">edit</strong> a dancer, tap their row in the crew list and update any field. Changes apply to the crew profile immediately — choreographies already created from this crew are not affected retroactively, since dancer details are copied at creation time.<br><br>
+                            To <strong class="text-white">delete</strong> a dancer, swipe left on their row and tap <strong class="text-white">Delete</strong>, or open the dancer and tap <strong class="text-white">Remove from Crew</strong>. Deleted dancers are removed from the crew roster but remain in any choreographies they were already part of.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create a new crew?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            From the home screen, open the <strong class="text-white">Crews</strong> tab and tap <strong class="text-white">New Crew</strong>. Give the crew a name — something like the group, company, or class name — and tap <strong class="text-white">Create</strong>. You'll land on the empty crew roster where you can start adding dancers. There is no limit on the number of crews or dancers per crew.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I delete a crew?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            On the Crews tab, swipe left on the crew you want to remove and tap <strong class="text-white">Delete</strong>. You'll be asked to confirm, since deleting a crew is permanent. Only the crew profile and its roster are deleted — choreographies previously created from that crew are unaffected and remain in your library intact.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I share a crew with another choreographer?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open the crew and tap the <strong class="text-white">Share</strong> icon in the top-right corner. ArrangeUs generates a crew file that you can send via any messaging or email app. The recipient opens the file on their device and ArrangeUs imports the crew — including all dancer names, short names, and colors — into their Crews list. Sharing is one-way and point-in-time: later changes you make to your crew are not pushed to the recipient automatically.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I connect two or more crews together?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Connecting crews — so that multiple choreographers can share a single live roster — is planned for a future release. When it ships, it will let you and a co-choreographer or assistant both manage the same crew without manually re-syncing changes. For now, the closest workaround is to share a crew file whenever the roster changes so the other person can re-import the updated version.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How can I use crews in my workflow?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Crews are most valuable when you choreograph repeatedly for the same group of people. Some common patterns:
+                            <ul class="mt-2 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">One crew per class or group</strong> — keep a separate crew for each dance class, team, or age group you work with, so starting a new piece always takes seconds.</li>
+                                <li><strong class="text-white">Season crew</strong> — duplicate a crew at the start of each season, update the roster for any cast changes, and keep the previous season's crew for reference.</li>
+                                <li><strong class="text-white">Shared crew for co-choreographers</strong> — export and share the crew file with an assistant or co-director so you both work from the same dancer list.</li>
+                                <li><strong class="text-white">Audition crew</strong> — build a temporary crew of all candidates, create choreographies for audition pieces, then archive the crew once casting is final.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Customization -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🎨</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Customization</p>
+                            <p class="text-xs text-slate-500 mt-0.5">3 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I assign names and colors to dancers?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap any dancer icon on the stage to open the dancer panel. From there you can type a name and pick a color. The name and color persist across all formations in that choreography.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I add a custom background to the stage?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Go to <strong class="text-white">Stage Settings</strong> and tap <strong class="text-white">Background</strong>. You can import any image from your photo library. This is useful for simulating the actual venue your performance will take place in.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I add stage props?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Tap <strong class="text-white">Add Prop</strong> in the stage toolbar. Choose from the built-in prop library or import a custom image. Props can be resized and repositioned just like dancers.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+            <!-- Topic: Music & Timing -->
+            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🎵</span>
+                        <div>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Music & Timing</p>
+                            <p class="text-xs text-slate-500 mt-0.5">3 articles</p>
+                        </div>
+                    </div>
+                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I import a music track?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Open your choreography, tap the <strong class="text-white">Music</strong> icon in the toolbar, then select <strong class="text-white">Import Track</strong>. You can choose a file from your device or pick from your music library. Supported formats include MP3, AAC, and WAV.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I sync a formation to a specific timestamp?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            With a track imported, scrub the timeline to the moment you want a formation to start. Then tap <strong class="text-white">Set Timestamp</strong> on that formation. During playback, ArrangeUs will transition to it automatically at that point in the track.
+                        </div>
+                    </details>
+                    <div class="border-t border-white/5"></div>
+                    <details class="qa-details group">
+                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I preview the full performance with music?</span>
+                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
+                            Yes. Tap the <strong class="text-white">Play</strong> button in the timeline toolbar. The music will play and formations will transition at their synced timestamps, giving you a full rehearsal preview.
+                        </div>
+                    </details>
+                </div>
+            </details> -->
+
+        </div>
+
+        <!-- Footer note -->
+        <p class="text-center text-slate-500 text-sm mt-12">
+            Can't find what you're looking for?
+            <a href="mailto:support@arrangeus.app?subject=Tutorial%20Request&body=Hi%20ArrangeUs%20team%2C%0A%0A" class="text-white hover:text-[#E92E67] transition-colors">Contact us</a> and we'll help you out.
+        </p>
+
+    </main>
+
+    <site-footer></site-footer>
+    <script src="/footer.js"></script>
+
+    <script>
+        const topics = document.querySelectorAll('.topic-details');
+        const openCountEl = document.getElementById('open-count');
+        const totalCountEl = document.getElementById('total-count');
+        const searchInput = document.getElementById('search');
+        const searchClear = document.getElementById('search-clear');
+        const noResults = document.getElementById('no-results');
+        const noResultsTerm = document.getElementById('no-results-term');
+        const controls = document.getElementById('controls');
+
+        totalCountEl.textContent = topics.length;
+
+        function updateCount() {
+            openCountEl.textContent = [...topics].filter(t => t.open).length;
+        }
+
+        topics.forEach(topic => topic.addEventListener('toggle', updateCount));
+
+        document.getElementById('expand-all').addEventListener('click', () => {
+            topics.forEach(t => t.open = true);
+            updateCount();
+        });
+
+        document.getElementById('collapse-all').addEventListener('click', () => {
+            topics.forEach(t => t.open = false);
+            updateCount();
+        });
+
+        // Store original HTML for each text node so we can restore it
+        const qaItems = document.querySelectorAll('.qa-details');
+        const originals = new Map();
+        qaItems.forEach(qa => {
+            const q = qa.querySelector('.qa-question');
+            const a = qa.querySelector('.qa-answer');
+            originals.set(qa, { q: q.innerHTML, a: a.innerHTML });
+        });
+
+        function highlight(text, term) {
+            if (!term) return text;
+            const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark>$1</mark>');
+        }
+
+        function runSearch(term) {
+            const q = term.trim().toLowerCase();
+            searchClear.classList.toggle('hidden', !term);
+            controls.classList.toggle('hidden', !!q);
+
+            let anyVisible = false;
+
+            topics.forEach(topic => {
+                const topicTitle = topic.querySelector('.topic-title').textContent.toLowerCase();
+                let topicHasMatch = false;
+
+                qaItems.forEach(qa => {
+                    if (!topic.contains(qa)) return;
+                    const { q: origQ, a: origA } = originals.get(qa);
+                    const questionEl = qa.querySelector('.qa-question');
+                    const answerEl = qa.querySelector('.qa-answer');
+
+                    if (!q) {
+                        // Reset
+                        questionEl.innerHTML = origQ;
+                        answerEl.innerHTML = origA;
+                        qa.style.display = '';
+                        qa.open = false;
+                        // restore dividers
+                        qa.nextElementSibling && qa.nextElementSibling.classList.contains('border-t') && (qa.nextElementSibling.style.display = '');
+                        return;
+                    }
+
+                    const qText = questionEl.textContent.toLowerCase();
+                    const aText = answerEl.textContent.toLowerCase();
+                    const matches = qText.includes(q) || aText.includes(q) || topicTitle.includes(q);
+
+                    if (matches) {
+                        topicHasMatch = true;
+                        qa.style.display = '';
+                        qa.open = true;
+                        questionEl.innerHTML = highlight(origQ, term.trim());
+                        answerEl.innerHTML = highlight(origA, term.trim());
+                        // show adjacent divider
+                        qa.nextElementSibling && qa.nextElementSibling.classList.contains('border-t') && (qa.nextElementSibling.style.display = '');
+                    } else {
+                        qa.style.display = 'none';
+                        // hide adjacent divider
+                        qa.nextElementSibling && qa.nextElementSibling.classList.contains('border-t') && (qa.nextElementSibling.style.display = 'none');
+                    }
+                });
+
+                if (!q) {
+                    topic.style.display = '';
+                    topic.open = false;
+                } else if (topicHasMatch) {
+                    topic.style.display = '';
+                    topic.open = true;
+                    anyVisible = true;
+                } else {
+                    topic.style.display = 'none';
+                }
+            });
+
+            if (q) {
+                noResults.classList.toggle('hidden', anyVisible);
+                noResultsTerm.textContent = term.trim();
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            updateCount();
+        }
+
+        searchInput.addEventListener('input', () => runSearch(searchInput.value));
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            runSearch('');
+            searchInput.focus();
+        });
+    </script>
+
+</body>
+</html>
