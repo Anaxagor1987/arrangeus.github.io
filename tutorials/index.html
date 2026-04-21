@@ -82,6 +82,30 @@
             color: #E92E67;
         }
 
+        /* Sub-topic grouping within a topic */
+        .subtopic-details summary {
+            list-style: none;
+        }
+        .subtopic-details summary::-webkit-details-marker {
+            display: none;
+        }
+        .subtopic-chevron {
+            transition: transform 0.3s ease;
+        }
+        .subtopic-details[open] .subtopic-chevron {
+            transform: rotate(180deg);
+            color: #E92E67;
+        }
+        .subtopic-details[open] .subtopic-title {
+            color: #E92E67;
+        }
+        .subtopic-details summary:hover .subtopic-title {
+            color: #E92E67;
+        }
+        .subtopic-details summary:hover .subtopic-chevron {
+            color: #E92E67;
+        }
+
         /* Search highlight */
         mark {
             background: rgba(233, 46, 103, 0.25);
@@ -463,10 +487,10 @@
             </details> -->
 
             <!-- Topic: Working with Choreographies -->
-            <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
+            <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
                 <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
                     <div class="flex items-center gap-4">
-                        <span class="text-2xl">🗃️</span>
+                        <span class="text-2xl">📝</span>
                         <div>
                             <p class="topic-title font-semibold text-white transition-colors duration-300">Working with Choreographies</p>
                             <p class="text-xs text-slate-500 mt-0.5">9 articles</p>
@@ -481,7 +505,7 @@
                             <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            The free plan allows up to <strong class="text-white">6 choreographies</strong>, each with an <strong class="text-white">unlimited number of formations</strong>. There is no cap on how many formations, dancers, or music tracks you add within a single choreography — the limit is only on how many separate choreography projects you can have active at once. Once you hit 6, the <strong class="text-white">+</strong> button is disabled until you archive, delete, or upgrade to Pro.
+                            The free plan allows up to <strong class="text-white">6 choreographies</strong>, each with an <strong class="text-white">unlimited number of formations</strong>. Once you reach the limit, you won't be able to create new ones until you delete some existing ones - or upgrade to <strong class="text-white">Premium</strong> with no limits.
                         </div>
                     </details>
                     <div class="border-t border-white/5"></div>
@@ -527,16 +551,6 @@
                     <div class="border-t border-white/5"></div>
                     <details class="qa-details group">
                         <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does search work on the choreography list?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            The search bar filters by <strong class="text-white">choreography name only</strong> — it does not search inside formations, dancer names, or descriptions. Type any part of the name and the list narrows in real time. For filtering by category, status, or any other attribute, use <strong class="text-white">tags</strong> instead of the search bar.
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
                             <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I perform actions on multiple choreographies at once?</span>
                             <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
@@ -554,39 +568,142 @@
                     <div class="border-t border-white/5"></div>
                     <details class="qa-details group">
                         <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I sort the choreography list?</span>
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does search work on the choreography list?</span>
                             <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            Tap the <strong class="text-white">Sort</strong> button at the top of the list to choose an ordering. Available options are:
-                            <ul class="mt-2 space-y-1 list-disc list-inside">
-                                <li><strong class="text-white">Last modified</strong> — most recently edited first (default)</li>
-                                <li><strong class="text-white">Date created</strong> — newest or oldest first</li>
-                                <li><strong class="text-white">Name</strong> — alphabetical A → Z or Z → A</li>
-                            </ul>
-                            Your preference is remembered and applied automatically each time you open the app.
+                            <p style="margin-bottom: 12px;">The search bar filters by <strong class="text-white">choreography name only</strong> - it does not search inside formations, dancer names, or descriptions. Type any part of the name and the list narrows in real time.</p>
+                            <p style="margin-bottom: 12px;">Search only applies to your <strong class="text-white">active choreographies</strong> - items in the Archive or Trash are not included.</p>
+                            <p>If a search returns fewer results than expected, check whether any <strong class="text-white">tag filters are active</strong>. Search and tags combine, so only choreographies that match both the name query and the selected tags will appear. Deactivate any active tag pills to broaden the results.</p>
                         </div>
                     </details>
                     <div class="border-t border-white/5"></div>
                     <details class="qa-details group">
                         <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do tags work and what are they useful for?</span>
+                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I sort the choreography list?</span>
                             <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            Tags are custom labels you create and attach to choreographies for filtering and organisation. To create one, go to <strong class="text-white">menu → Tags → New Tag</strong>, type a name, and pick a color. To attach a tag, long-press a choreography card and tap <strong class="text-white">Edit Tags</strong>. Active tag filters appear as pill buttons below the search bar — tap a pill to show only choreographies with that tag.<br><br>
-                            Tags work best when grouped by theme. Common groupings include:
-                            <ul class="mt-2 space-y-1 list-disc list-inside">
-                                <li><strong class="text-white">Season</strong> — Spring Recital, Summer Camp, Winter Show</li>
-                                <li><strong class="text-white">Status</strong> — Draft, In Progress, Ready, Archived</li>
-                                <li><strong class="text-white">Style</strong> — Ballet, Jazz, Hip-Hop, Contemporary</li>
-                                <li><strong class="text-white">Team type</strong> — Juniors, Teens, Adults, Competition</li>
+                            <p style="margin-bottom: 12px;">Tap the <strong class="text-white">Filter</strong> button at the top of the list and select the <strong class="text-white">Sort By</strong> row to pick a sorting option. Available options are:</p>
+                            <ul class="mb-4 space-y-1 list-disc list-inside">
+                                <li><strong class="text-white">Last modified</strong> - most recently edited first (default)</li>
+                                <li><strong class="text-white">Last opened</strong> - most recently viewed first</li>
+                                <li><strong class="text-white">Date created</strong> - newest or oldest first</li>
+                                <li><strong class="text-white">Name</strong> - alphabetical A to Z or Z to A</li>
+                                <li><strong class="text-white">Formations count</strong> - by number of formations in the choreography</li>
+                                <li><strong class="text-white">Dancers count</strong> - by number of dancers in the choreography</li>
                             </ul>
-                            You can reorder tags by opening <strong class="text-white">menu → Tags → Reorder</strong> and dragging each tag to the position you want — the order here determines the order they appear in the filter row on the home screen, so put your most-used tags first.
+                            <p style="margin-bottom: 12px;">Each option can be sorted ascending or descending. When a non-default sort is active, the Filter button is highlighted so you can tell at a glance that sorting has been changed. Tap it to open the menu and use the <strong class="text-white">Reset</strong> button to quickly go back to the default.</p>
+                            <p>Your preference is remembered and applied automatically each time you open the app.</p>
+                        </div>
+                    </details>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden mt-6 mb-4">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-5 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-2">
+                                <span class="text-base">🏷️</span>
+                                <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Tags</span>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are tags for?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Tags are custom labels you create and attach to choreographies to keep your list organised and easy to filter. As your library grows, scrolling through everything becomes slow - tags let you instantly narrow the list to exactly what you need.</p>
+                                    <p style="margin-bottom: 12px;">You can attach multiple tags to a single choreography, so a piece can be labelled "🌸 Spring Recital", "👧 Teens", and "🔄 In Progress" all at once - then filter by any combination of those.</p>
+                                    <p>A simple trick: <strong class="text-white">start tag names with an emoji</strong>. It makes tags instantly recognisable in the filter row without having to read the full label.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does tag filtering work?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Tap a tag pill to activate it - the list immediately narrows to choreographies that have that tag. Tapping the <strong class="text-white">All</strong> pill always resets any active tag selection. Tag filtering applies to active choreographies only - items in Archive or Trash are not included.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create a new tag?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    Tap the <strong class="text-white">+</strong> button at the end of the tags row on the home screen. Type a name and tap <strong class="text-white">Create</strong>. The tag is immediately available to attach to any choreography.
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Best ideas for naming tags</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Tags are free-form, so you can organise them however fits your workflow. Common groupings - with emoji examples:</p>
+                                    <ul class="mb-4 space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Season / Event</strong> - 🌸 Spring Recital, ☀️ Summer Camp, ❄️ Winter Show</li>
+                                        <li><strong class="text-white">Project status</strong> - 📝 Draft, 🔄 In Progress, ✅ Ready, 📦 Archived</li>
+                                        <li><strong class="text-white">Age group</strong> - 🐣 Juniors, 👧 Teens, 👩 Adults</li>
+                                        <li><strong class="text-white">Dance style</strong> - 🩰 Ballet, 🎷 Jazz, 🎤 Hip-Hop, 🌊 Contemporary</li>
+                                        <li><strong class="text-white">Venue / Stage</strong> - 🎭 Main Stage, 🏠 Studio, 🌳 Outdoor</li>
+                                    </ul>
+                                    <p style="margin-bottom: 12px;">A few practices that keep tags useful as your library grows:</p>
+                                    <ul class="space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Start with an emoji</strong> - it makes tags instantly recognisable in the filter row at a glance.</li>
+                                        <li>Keep names <strong class="text-white">short and consistent</strong> - "🔄 In Progress" is better than "Currently Working On This One".</li>
+                                        <li>Use <strong class="text-white">emoji consistently per group</strong> - all status tags with a status emoji, all season tags with a season emoji.</li>
+                                        <li>Avoid near-duplicates like "Done" and "Finished" - consolidate into one.</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I attach or detach a tag?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Tap the <strong class="text-white">···</strong> button on the right side of a choreography card, select <strong class="text-white">Manage Tags</strong>, and tap any tag in the list to attach or detach it. Previously attached tags are already highlighted. Changes apply instantly - no confirmation needed.</p>
+                                    <p style="margin-bottom: 12px;">You can also select multiple choreographies and attach tags for all of them at the same time.</p>
+                                    <p style="margin-bottom: 12px;">To detach a tag from all choreographies at once, long-press the tag pill in the filter row and select <strong class="text-white">Detach from all choreographies</strong>.</p>
+                                    <p>When a tag is deleted it is automatically removed from all choreographies. When importing or restoring from a backup, tags are applied automatically - tags with the same name are merged rather than duplicated.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I reorder tags?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Long-press any tag pill and select <strong class="text-white">Reorder Tags</strong>. Then hold the pill you want to move and drag it to a new position. When you're happy with the order, tap <strong class="text-white">Done</strong>.</p>
+                                    <p>The order here determines how tags appear in the filter row - put your most-used ones first so they're always visible. If you have a lot of tags, an expand button will appear to give you more room, which makes reordering easier.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are tag selection strategies?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">When you tap multiple tags, you can control how they combine. Open <strong class="text-white">Filter → Tags Selection</strong> to pick a mode:</p>
+                                    <ul class="space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Single</strong> - only one tag active at a time.</li>
+                                        <li><strong class="text-white">Match any (OR)</strong> - show choreographies with at least one of the selected tags.</li>
+                                        <li><strong class="text-white">Match all (AND)</strong> - show only choreographies that have all selected tags.</li>
+                                    </ul>
+                                </div>
+                            </details>
                         </div>
                     </details>
                 </div>
-            </details> -->
+            </details>
 
             <!-- Topic: Choreography Creation & Configuration -->
             <!-- <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
