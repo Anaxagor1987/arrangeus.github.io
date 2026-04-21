@@ -1536,6 +1536,9 @@
                         qa.open = false;
                         // restore dividers
                         qa.nextElementSibling && qa.nextElementSibling.classList.contains('border-t') && (qa.nextElementSibling.style.display = '');
+                        // close parent subtopic
+                        const parentSubtopic = qa.closest('.subtopic-details');
+                        if (parentSubtopic) parentSubtopic.open = false;
                         return;
                     }
 
@@ -1551,6 +1554,9 @@
                         answerEl.innerHTML = highlight(origA, term.trim());
                         // show adjacent divider
                         qa.nextElementSibling && qa.nextElementSibling.classList.contains('border-t') && (qa.nextElementSibling.style.display = '');
+                        // open parent subtopic if this qa is inside one
+                        const parentSubtopic = qa.closest('.subtopic-details');
+                        if (parentSubtopic) parentSubtopic.open = true;
                     } else {
                         qa.style.display = 'none';
                         // hide adjacent divider
