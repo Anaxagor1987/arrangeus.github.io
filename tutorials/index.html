@@ -83,6 +83,10 @@
         }
 
         /* Sub-topic grouping within a topic */
+        .subtopic-details {
+            margin-top: 0.75rem !important;
+            margin-bottom: 0.75rem !important;
+        }
         .subtopic-details summary {
             list-style: none;
         }
@@ -186,125 +190,163 @@
                     <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </summary>
                 <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is ArrangeUs?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🧭</span>
+                                <div>
+                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Start Here</span>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Understand the basics before you begin</p>
+                                </div>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">ArrangeUs is an app for dance teachers, choreographers, and directors who want a simple way to plan formations and transitions for their performances.</p>
-                            <p style="margin-bottom: 12px;">Instead of relying on paper or memory, you can design everything right in the app - move dancers around the stage, test different ideas, and instantly see how your formations connect.</p>
-                            <p style="margin-bottom: 12px;">Whether you're creating a small routine or a large-scale production, ArrangeUs gives you the right tools to bring your vision to life. Walk into rehearsals prepared and actually enjoy the planning process.</p>
-                            <p style="margin-bottom: 12px;">ArrangeUs is designed to be simple and approachable from day one - but the more you explore, the more it can do. When you're ready to dig deeper, it's capable of some truly amazing things that take your planning process above and beyond.</p>
-                            <p class="text-[#E92E67] font-medium">Over 1 million downloads worldwide.</p>
-
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is ArrangeUs?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">ArrangeUs is an app for dance teachers, choreographers, and directors who want a simple way to plan formations and transitions for their performances.</p>
+                                    <p style="margin-bottom: 12px;">Instead of relying on paper or memory, you can design everything right in the app - move dancers around the stage, test different ideas, and instantly see how your formations connect.</p>
+                                    <p style="margin-bottom: 12px;">Whether you're creating a small routine or a large-scale production, ArrangeUs gives you the right tools to bring your vision to life. Walk into rehearsals prepared and actually enjoy the planning process.</p>
+                                    <p style="margin-bottom: 12px;">ArrangeUs is designed to be simple and approachable from day one - but the more you explore, the more it can do. When you're ready to dig deeper, it's capable of some truly amazing things that take your planning process above and beyond.</p>
+                                    <p class="text-[#E92E67] font-medium">Trusted and loved worldwide ❤️</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Is ArrangeUs free?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Yes - ArrangeUs is free to download and the free plan is genuinely powerful. You can run full choreography projects without spending anything:</p>
+                                    <ul class="mb-4 space-y-1 list-disc list-inside">
+                                        <li>Create <strong class="text-white">complete choreographies</strong> with unlimited formations each</li>
+                                        <li>Add <strong class="text-white">comments</strong> to formations to capture every detail</li>
+                                        <li>Customise dancer <strong class="text-white">names and colors</strong> to match your real cast</li>
+                                        <li>Preview transitions and experience the full <strong class="text-white">3D view</strong></li>
+                                    </ul>
+                                    <p>When you're ready to go further, <strong class="text-white">ArrangeUs Premium</strong> unlocks even more - music sync, custom backgrounds, props, curved paths, and much more.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does ArrangeUs work?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">ArrangeUs is built around a few simple elements:</p>
+                                    <ul class="mb-4 space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Stage</strong> - your main workspace, representing the area where your performance happens. Customize it to match your real venue.</li>
+                                        <li><strong class="text-white">Dancers</strong> - the main elements you work with. Add them to the stage, move them around, and customize their appearance.</li>
+                                        <li><strong class="text-white">Formations</strong> - a specific arrangement of dancers on stage. Each formation represents a moment or period in your performance.</li>
+                                        <li><strong class="text-white">Transitions</strong> - the animated movement between formations. By default, dancers follow straight paths, but you can adjust them with curves for more natural motion.</li>
+                                        <li><strong class="text-white">Choreography</strong> - your complete project. It holds all formations and transitions, dancers, stage setup, props, notes, and music in one place.</li>
+                                    </ul>
+                                    <p>You start by creating a choreography, setting up a stage, and adding your dancers. Then you build your performance formation by formation until everything feels right. Along the way, it's easy to make small adjustments, fine-tune positions, and capture your ideas as they come. Do it at a coffee shop, in the dance studio, or on your way home - it's all possible with ArrangeUs.</p>
+                                </div>
+                            </details>
                         </div>
                     </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Is ArrangeUs free?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">✨</span>
+                                <div>
+                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Create Your First Choreography</span>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Set up your stage and get started</p>
+                                </div>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">Yes - ArrangeUs is free to download and the free plan is genuinely powerful. You can run full choreography projects without spending anything:</p>
-                            <ul class="mb-4 space-y-1 list-disc list-inside">
-                                <li>Create <strong class="text-white">complete choreographies</strong> with unlimited formations each</li>
-                                <li>Add <strong class="text-white">comments</strong> to formations to capture every detail</li>
-                                <li>Customise dancer <strong class="text-white">names and colors</strong> to match your real cast</li>
-                                <li>Preview transitions and experience the full <strong class="text-white">3D view</strong></li>
-                            </ul>
-                            <p>When you're ready to go further, <strong class="text-white">ArrangeUs Premium</strong> unlocks even more - music sync, custom backgrounds, props, curved paths, and much more.</p>
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create my first choreography?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Tap the <strong class="text-white">+</strong> button on the home screen, give your piece a name, and set the number of dancers. The stage size is automatically adjusted based on the number of dancers you select. You'll then choose how to place dancers for the first formation:</p>
+                                    <ul class="mb-4 space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Backstage</strong> - ArrangeUs places all dancers off-stage automatically and drops you straight into the formation editor.</li>
+                                        <li><strong class="text-white">Manual</strong> - tap the stage to place dancers one by one. Press <strong class="text-white">Let's Go</strong> and any remaining dancers would be moved to the backstage automatically.</li>
+                                    </ul>
+                                    <p style="margin-bottom: 16px;">Either way, the whole setup takes under a minute and you're ready to start choreographing.</p>
+                                    <p>You can also create a new choreography using a predefined list of dancers from your <strong class="text-white">Crew</strong>, or reuse the stage setup from an existing choreography - we'll cover this later.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Basic configuration of the stage</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">We recommend configuring the stage <strong class="text-white">before</strong> you start creating formations. If you change the stage size later, all dancer positions will shift proportionally - but they may no longer align perfectly with the grid and could need some manual fixes.</p>
+                                    <p style="margin-bottom: 12px;">Open <strong class="text-white">Choreography Settings</strong> and focus on these three things first:</p>
+                                    <ul class="mb-4 space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Stage size</strong> - set the width and height to match your real venue. As a guideline, 1 unit equals approximately 1 meter. It's best to configure this early if you need an accurate stage layout.</li>
+                                        <li><strong class="text-white">Backstage config</strong> - adjust the off-stage areas to match how much wing space you actually need.</li>
+                                        <li><strong class="text-white">Custom background</strong> - if you have a floor plan or venue photo, add it now. You can also take advantage of our standard backgrounds like basktball field or cheerleading mats. Each default background has it's own recommended size, so we got you covered there.</li>
+                                    </ul>
+                                    <p>Other stage settings won't affect existing dancer positions, so they can be adjusted at any time without disrupting your work.</p>
+                                </div>
+                            </details>
                         </div>
                     </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does ArrangeUs work?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🕺</span>
+                                <div>
+                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Bring Your Formations to Life</span>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Arrange dancers, build formations, and see them come to life</p>
+                                </div>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">ArrangeUs is built around a few simple elements:</p>
-                            <ul class="mb-4 space-y-1 list-disc list-inside">
-                                <li><strong class="text-white">Stage</strong> - your main workspace, representing the area where your performance happens. Customize it to match your real venue.</li>
-                                <li><strong class="text-white">Dancers</strong> - the main elements you work with. Add them to the stage, move them around, and customize their appearance.</li>
-                                <li><strong class="text-white">Formations</strong> - a specific arrangement of dancers on stage. Each formation represents a moment or period in your performance.</li>
-                                <li><strong class="text-white">Transitions</strong> - the animated movement between formations. By default, dancers follow straight paths, but you can adjust them with curves for more natural motion.</li>
-                                <li><strong class="text-white">Choreography</strong> - your complete project. It holds all formations and transitions, dancers, stage setup, props, notes, and music in one place.</li>
-                            </ul>
-                            <p>You start by creating a choreography, setting up a stage, and adding your dancers. Then you build your performance formation by formation until everything feels right. Along the way, it's easy to make small adjustments, fine-tune positions, and capture your ideas as they come. Do it at a coffee shop, in the dance studio, or on your way home - it's all possible with ArrangeUs.</p>
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I work with dancers?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Dancers are set when you create the choreography, but you can add more at any time from the bottom actions bar <strong class="text-white">[Dancers → Add new]</strong>.</p>
+                                    <p style="margin-bottom: 12px;">To move a dancer, drag them to any position on the stage - they snap to the grid automatically when you release. If you drag dancer out of stage it will return to it's original position.</p>
+                                    <p style="margin-bottom: 12px;">Tap a dancer to select them. Once selected, you can edit properties like <strong class="text-white">color</strong>, <strong class="text-white">shape</strong>, <strong class="text-white">name</strong>, or <strong class="text-white">short name</strong>. <strong class="text-white">Names</strong> are set once per choreography, while <strong class="text-white">colors</strong> and <strong class="text-white">shapes</strong> can vary between formations, so you can visually highlight different moments. Select multiple dancers to move them together or update their properties at the same time.</p>
+                                    <p>If you work with the same group regularly, consider creating a <strong class="text-white">Crew</strong> - a reusable roster of dancers. When you create a choreography from a crew you can skip writing all the names again.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create formations?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Your choreography starts with one formation already in place - on stage or off stage, depending on what you chose at setup. To add the next one, tap <strong class="text-white">Add Formation</strong> in the formations slider at the bottom of the editor.</p>
+                                    <p style="margin-bottom: 12px;">Each new formation is a copy of the previous one, so all dancers keep their positions, colors and shapes. You only need to move or edit the ones that change somehow.</p>
+                                    <p>One key habit: <strong class="text-white">always create a new formation before moving dancers</strong>. If you reposition dancers on the current formation instead, you'll overwrite it rather than extend the sequence.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How to watch formation transitions?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">To preview a transition, tap any formation in the formations slider at the bottom - dancers will animate from their current positions to the new ones automatically.</p>
+                                    <p>You can also navigate between formations by swiping left or right on the stage, or using the <strong class="text-white">Navigation</strong> section in the bottom actions bar.</p>
+                                </div>
+                            </details>
                         </div>
                     </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create my first choreography?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">Tap the <strong class="text-white">+</strong> button on the home screen, give your piece a name, and set the number of dancers. The stage size is automatically adjusted based on the number of dancers you select. You'll then choose how to place dancers for the first formation:</p>
-                            <ul class="mb-4 space-y-1 list-disc list-inside">
-                                <li><strong class="text-white">Backstage</strong> - ArrangeUs places all dancers off-stage automatically and drops you straight into the formation editor.</li>
-                                <li><strong class="text-white">Manual</strong> - tap the stage to place dancers one by one. Press <strong class="text-white">Let's Go</strong> and any remaining dancers would be moved to the backstage automatically.</li>
-                            </ul>
-                            <p style="margin-bottom: 16px;">Either way, the whole setup takes under a minute and you're ready to start choreographing.</p>
-                            <p>You can also create a new choreography using a predefined list of dancers from your <strong class="text-white">Crew</strong>, or reuse the stage setup from an existing choreography - we'll cover this later.</p>
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Basic configuration of the stage</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">We recommend configuring the stage <strong class="text-white">before</strong> you start creating formations. If you change the stage size later, all dancer positions will shift proportionally - but they may no longer align perfectly with the grid and could need some manual fixes.</p>
-                            <p style="margin-bottom: 12px;">Open <strong class="text-white">Choreography Settings</strong> and focus on these three things first:</p>
-                            <ul class="mb-4 space-y-1 list-disc list-inside">
-                                <li><strong class="text-white">Stage size</strong> - set the width and height to match your real venue. As a guideline, 1 unit equals approximately 1 meter. It's best to configure this early if you need an accurate stage layout.</li>
-                                <li><strong class="text-white">Backstage config</strong> - adjust the off-stage areas to match how much wing space you actually need.</li>
-                                <li><strong class="text-white">Custom background</strong> - if you have a floor plan or venue photo, add it now. You can also take advantage of our standard backgrounds like basktball field or cheerleading mats. Each default background has it's own recommended size, so we got you covered there.</li>
-                            </ul>
-                            <p>Other stage settings won't affect existing dancer positions, so they can be adjusted at any time without disrupting your work.</p>
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I work with dancers?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">Dancers are set when you create the choreography, but you can add more at any time from the bottom actions bar <strong class="text-white">[Dancers → Add new]</strong>.</p>
-                            <p style="margin-bottom: 12px;">To move a dancer, drag them to any position on the stage - they snap to the grid automatically when you release. If you drag dancer out of stage it will return to it's original position.</p>
-                            <p style="margin-bottom: 12px;">Tap a dancer to select them. Once selected, you can edit properties like <strong class="text-white">color</strong>, <strong class="text-white">shape</strong>, <strong class="text-white">name</strong>, or <strong class="text-white">short name</strong>. <strong class="text-white">Names</strong> are set once per choreography, while <strong class="text-white">colors</strong> and <strong class="text-white">shapes</strong> can vary between formations, so you can visually highlight different moments. Select multiple dancers to move them together or update their properties at the same time.</p>
-                            <p>If you work with the same group regularly, consider creating a <strong class="text-white">Crew</strong> - a reusable roster of dancers. When you create a choreography from a crew you can skip writing all the names again.</p>
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create formations?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">Your choreography starts with one formation already in place - on stage or off stage, depending on what you chose at setup. To add the next one, tap <strong class="text-white">Add Formation</strong> in the formations slider at the bottom of the editor.</p>
-                            <p style="margin-bottom: 12px;">Each new formation is a copy of the previous one, so all dancers keep their positions, colors and shapes. You only need to move or edit the ones that change somehow.</p>
-                            <p>One key habit: <strong class="text-white">always create a new formation before moving dancers</strong>. If you reposition dancers on the current formation instead, you'll overwrite it rather than extend the sequence.</p>
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How to watch formation transitions?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">To preview a transition, tap any formation in the formations slider at the bottom - dancers will animate from their current positions to the new ones automatically.</p>
-                            <p>You can also navigate between formations by swiping left or right on the stage, or using the <strong class="text-white">Navigation</strong> section in the bottom actions bar.</p>
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
                     <details class="qa-details group">
                         <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
                             <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I share my work with others?</span>
@@ -630,7 +672,7 @@
                             <p>Your preference is remembered and applied automatically each time you open the app.</p>
                         </div>
                     </details>
-                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden mt-6 mb-4">
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
                         <summary class="flex items-center justify-between gap-4 px-4 py-5 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
                             <div class="flex items-center gap-2">
                                 <span class="text-base">🏷️</span>
