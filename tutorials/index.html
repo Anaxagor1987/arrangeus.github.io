@@ -645,73 +645,116 @@
                             </details>
                         </div>
                     </details>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How many choreographies can I have on the free plan?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">📁</span>
+                                <div>
+                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Keep Your Library Tidy</span>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Archive, delete, and understand your library limits · 3 topics</p>
+                                </div>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            The free plan allows up to <strong class="text-white">6 choreographies</strong>, each with an <strong class="text-white">unlimited number of formations</strong>. Once you reach the limit, you won't be able to create new ones until you delete some existing ones - or upgrade to <strong class="text-white">Premium</strong> with no limits.
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How many choreographies can I have on the free plan?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    The free plan allows up to <strong class="text-white">6 choreographies</strong>, each with an <strong class="text-white">unlimited number of formations</strong>. Once you reach the limit, you won't be able to create new ones until you delete some existing ones - or upgrade to <strong class="text-white">Premium</strong> with no limits.
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is the Archive and when should I use it?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">The <strong class="text-white">Archive</strong> is a built-in folder for choreographies you want to keep but no longer need in your main list - finished season pieces, past events, or work you've put on hold. Tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on a choreography card and tap <strong class="text-white">Archive</strong> to move it there.</p>
+                                    <p>You can still open and edit archived choreographies or share them - but extended actions like duplicate and manage tags are not available in the Archive folder. To access those, unarchive first by tapping the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on the card and tapping <strong class="text-white">Unarchive</strong>.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What happens when I delete a choreography?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Deleting a choreography moves it to the <strong class="text-white">Trash</strong> folder rather than erasing it immediately. Each card in Trash shows the time remaining before permanent deletion — items are automatically removed after <strong class="text-white">30 days</strong>.</p>
+                                    <p style="margin-bottom: 12px;">To view a choreography's formations you need to restore it first. Open the Trash folder, tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on the card, and tap <strong class="text-white">Restore</strong>.</p>
+                                    <p>To remove a choreography immediately, use the <strong class="text-white">Delete</strong> action from the same menu. This is permanent and cannot be undone.</p>
+                                </div>
+                            </details>
                         </div>
                     </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is the Archive and when should I use it?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">📋</span>
+                                <div>
+                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Choreography Actions</span>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Create, copy, and work with multiple choreographies · 4 topics</p>
+                                </div>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">The <strong class="text-white">Archive</strong> is a built-in folder for choreographies you want to keep but no longer need in your main list - finished season pieces, past events, or work you've put on hold. Tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on a choreography card and tap <strong class="text-white">Archive</strong> to move it there.</p>
-                            <p>You can still open and edit archived choreographies or share them - but extended actions like duplicate and manage tags are not available in the Archive folder. To access those, unarchive first by tapping the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on the card and tapping <strong class="text-white">Unarchive</strong>.</p>
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What happens when I delete a choreography?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">Deleting a choreography moves it to the <strong class="text-white">Trash</strong> folder rather than erasing it immediately. Each card in Trash shows the time remaining before permanent deletion — items are automatically removed after <strong class="text-white">30 days</strong>.</p>
-                            <p style="margin-bottom: 12px;">To view a choreography's formations you need to restore it first. Open the Trash folder, tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on the card, and tap <strong class="text-white">Restore</strong>.</p>
-                            <p>To remove a choreography immediately, use the <strong class="text-white">Delete</strong> action from the same menu. This is permanent and cannot be undone.</p>
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I duplicate a choreography?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            Tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on a choreography card and tap <strong class="text-white">Duplicate</strong>. ArrangeUs creates a complete independent copy — all formations, dancer positions, music link, tags, and description — and appends <em>"Copy"</em> to the name. Changes to the copy never affect the original. This is handy for creating a variation of an existing piece or kickstarting a new season's version of a recurring routine.
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I reuse a stage setup without copying the choreography?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            Yes - use <strong class="text-white">Duplicate Stage</strong> action. Tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on a choreography card and choose this action to create a new blank choreography that inherits only the stage configuration: size, backstage zones, background image, and other settings. No formations or dancer positions are copied. You then pick a fresh set of dancers for the new piece, which is ideal when you choreograph multiple pieces for the same venue.
-                        </div>
-                    </details>
-                    <div class="border-t border-white/5"></div>
-                    <details class="qa-details group">
-                        <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer">
-                            <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I perform actions on multiple choreographies at once?</span>
-                            <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed pl-1">
-                            <p style="margin-bottom: 12px;">Yes. To enter multi-select mode, tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on any choreography card and tap <strong class="text-white">Select</strong>. You can also activate it from the <strong class="text-white">Filter</strong> button. Then tap cards to build your selection. An action bar appears at the bottom with bulk operations:</p>
-                            <ul class="mb-4 space-y-1 list-disc list-inside">
-                                <li><strong class="text-white">Manage Tags</strong> - attach tags across all selected choreographies at once.</li>
-                                <li><strong class="text-white">Archive</strong> - move all selected items to the Archive folder.</li>
-                                <li><strong class="text-white">Share</strong> - send all selected choreographies at once.</li>
-                                <li><strong class="text-white">Delete</strong> - send all selected items to Trash.</li>
-                            </ul>
-                            <p>Tap <strong class="text-white">Done</strong> to exit multi-select without making changes.</p>
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I duplicate a choreography?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    Tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on a choreography card and tap <strong class="text-white">Duplicate</strong>. ArrangeUs creates a complete independent copy — all formations, dancer positions, music link, tags, and description — and appends <em>"Copy"</em> to the name. Changes to the copy never affect the original. This is handy for creating a variation of an existing piece or kickstarting a new season's version of a recurring routine.
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I reuse a stage setup without copying the choreography?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    Yes - use <strong class="text-white">Duplicate Stage</strong> action. Tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on a choreography card and choose this action to create a new blank choreography that inherits only the stage configuration: size, backstage zones, background image, and other settings. No formations or dancer positions are copied. You then pick a fresh set of dancers for the new piece, which is ideal when you choreograph multiple pieces for the same venue.
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I perform actions on multiple choreographies at once?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Yes. To enter multi-select mode, tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on any choreography card and tap <strong class="text-white">Select</strong>. You can also activate it from the <strong class="text-white">Filter</strong> button. Then tap cards to build your selection. An action bar appears at the bottom with bulk operations:</p>
+                                    <ul class="mb-4 space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Manage Tags</strong> - attach tags across all selected choreographies at once.</li>
+                                        <li><strong class="text-white">Archive</strong> - move all selected items to the Archive folder.</li>
+                                        <li><strong class="text-white">Share</strong> - send all selected choreographies at once.</li>
+                                        <li><strong class="text-white">Delete</strong> - send all selected items to Trash.</li>
+                                    </ul>
+                                    <p>Tap <strong class="text-white">Done</strong> to exit multi-select without making changes.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What's the fastest way to start a new choreography?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">A few approaches depending on your situation:</p>
+                                    <ul class="mb-4 space-y-2 list-disc list-inside">
+                                        <li><strong class="text-white">Use a Crew</strong> - if you work with the same group of dancers regularly, create a Crew once with their names. When starting a new choreography, pick the Crew and your roster is ready instantly - no re-entering names.</li>
+                                        <li><strong class="text-white">Duplicate Stage</strong> - if you're choreographing another piece for the same venue, use <strong class="text-white">Duplicate Stage</strong> on an existing choreography. You get a fresh blank piece with the stage already configured - size, background, backstage zones - and just pick your dancers.</li>
+                                        <li><strong class="text-white">Combine both</strong> - Duplicate Stage and Crews work great together. Reuse the stage from a previous piece and populate it from a Crew - the whole setup takes under a minute.</li>
+                                        <li><strong class="text-white">Keep a template choreography</strong> - create a "master" piece with your ideal stage setup, preferred starting formation layout, and your usual dancer list. Keep it untouched and duplicate it whenever you start something new. Unlike Duplicate Stage, this preserves your formations too - useful if you always begin from the same starting position.</li>
+                                    </ul>
+                                </div>
+                            </details>
                         </div>
                     </details>
                     <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
