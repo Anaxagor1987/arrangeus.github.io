@@ -126,6 +126,30 @@
             from { opacity: 0; transform: translateY(-6px); }
             to   { opacity: 1; transform: translateY(0); }
         }
+
+        /* Tip callout */
+        .tip {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            background: rgba(233, 46, 103, 0.07);
+            border: 1px solid rgba(233, 46, 103, 0.25);
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin-top: 12px;
+            font-size: 0.8125rem;
+            line-height: 1.55;
+            color: #cbd5e1;
+        }
+        .tip::before {
+            content: "💡";
+            font-size: 0.875rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .tip strong {
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -285,7 +309,7 @@
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Basic configuration of the stage</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What should I configure on the stage first?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
@@ -347,13 +371,13 @@
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p style="margin-bottom: 12px;">Your choreography starts with one formation already in place - on stage or off stage, depending on what you chose at setup. To add the next one, tap <strong class="text-white">Add Formation</strong> in the formations slider at the bottom of the editor.</p>
                                     <p style="margin-bottom: 12px;">Each new formation is a copy of the previous one, so all dancers keep their positions, colors and shapes. You only need to move or edit the ones that change somehow.</p>
-                                    <p>One key habit: <strong class="text-white">always create a new formation before moving dancers</strong>. If you reposition dancers on the current formation instead, you'll overwrite it rather than extend the sequence.</p>
+                                    <div class="tip"><strong>Always create a new formation before moving dancers.</strong> If you reposition dancers on the current formation instead, you'll overwrite it rather than extend the sequence.</div>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How to watch formation transitions?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I preview transitions?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
@@ -399,13 +423,13 @@
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p style="margin-bottom: 12px;">The sections below cover everything in more detail. A few areas worth exploring next:</p>
                                     <ul class="mb-4 space-y-1 list-disc list-inside">
-                                        <li><strong class="text-white">Stage configurations</strong> - all the settings for stage and different display options.</li>
-                                        <li><strong class="text-white">Working with formations</strong> - duplicating, reordering, adding comments, multiple formations actions, and fine-tuning positions.</li>
-                                        <li><strong class="text-white">Dancer customization</strong> - names, colors, shapes, and how they can be used to full potential.</li>
-                                        <li><strong class="text-white">Quick position editing</strong> - faster ways to adjust dancer positions without dragging one by one.</li>
-                                        <li><strong class="text-white">Choreographies management</strong> - organise your choreographies better with tags and learn best practices for sharing.</li>
+                                        <li><strong class="text-white">Customise Your Stage</strong> - all the settings for stage size, grid, backgrounds, and display options.</li>
+                                        <li><strong class="text-white">Formations</strong> - duplicating, reordering, adding comments, multiple formation actions, and fine-tuning positions.</li>
+                                        <li><strong class="text-white">Dancers</strong> - names, colors, shapes, and how they can be used to their full potential.</li>
+                                        <li><strong class="text-white">Quick Positions Actions</strong> - faster ways to adjust dancer positions without dragging one by one.</li>
+                                        <li><strong class="text-white">Managing Your Choreographies</strong> - organise your library better with tags and learn best practices for sharing.</li>
                                     </ul>
-                                    <p>And when you're ready to go deeper, there are more advanced features to discover - <strong class="text-white">Music Sync</strong>, <strong class="text-white">Props</strong>, <strong class="text-white">Curved pathways</strong>, and more.</p>
+                                    <p>And when you're ready to go deeper, there are more advanced features to discover - <strong class="text-white">Music Mode</strong>, <strong class="text-white">Props</strong>, <strong class="text-white">Transition Paths</strong>, and more.</p>
                                 </div>
                             </details>
                         </div>
