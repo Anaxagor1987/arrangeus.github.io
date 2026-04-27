@@ -129,9 +129,6 @@
 
         /* Tip callout */
         .tip {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
             background: rgba(233, 46, 103, 0.07);
             border: 1px solid rgba(233, 46, 103, 0.25);
             border-radius: 10px;
@@ -141,11 +138,18 @@
             line-height: 1.55;
             color: #cbd5e1;
         }
-        .tip::before {
+        .tip-question {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .tip-question::before {
             content: "💡";
             font-size: 0.875rem;
             flex-shrink: 0;
-            margin-top: 1px;
         }
         .tip strong {
             color: #fff;
@@ -371,7 +375,10 @@
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p style="margin-bottom: 12px;">Your choreography starts with one formation already in place - on stage or off stage, depending on what you chose at setup. To add the next one, tap <strong class="text-white">Add Formation</strong> in the formations slider at the bottom of the editor.</p>
                                     <p style="margin-bottom: 12px;">Each new formation is a copy of the previous one, so all dancers keep their positions, colors and shapes. You only need to move or edit the ones that change somehow.</p>
-                                    <div class="tip"><strong>Always create a new formation before moving dancers.</strong> If you reposition dancers on the current formation instead, you'll overwrite it rather than extend the sequence.</div>
+                                    <div class="tip">
+                                        <div class="tip-question">Always create a new formation before moving dancers.</div>
+                                        If you reposition dancers on the current formation instead, you'll overwrite it rather than extend the sequence.
+                                    </div>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
