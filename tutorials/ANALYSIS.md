@@ -122,7 +122,7 @@ Last updated: 2026-04-26
 
 | Gap | Suggested home |
 |---|---|
-| PDF Export - how to trigger, what's included, layout options | Sharing & Backups → Sharing, or Working with Your Choreography |
+| ~~PDF Export - how to trigger, what's included, layout options~~ | ✅ Added to Sharing & Backups → Sharing |
 | Playback (non-music) - controls, looping, speed | Working with Your Choreography → new Playback subtopic |
 | Transition duration in non-music mode | Working with Your Choreography → Transition Paths |
 | Importing a received .arrangeus file | Sharing & Backups → Sharing |
