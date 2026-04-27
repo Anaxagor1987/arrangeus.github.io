@@ -1,6 +1,6 @@
 # Tutorials Page Analysis
 
-Last updated: 2026-04-26
+Last updated: 2026-04-27
 
 ---
 
@@ -23,19 +23,18 @@ Last updated: 2026-04-26
 
 ### 1. Getting Started ✅ reviewed
 
-**Status:** Mostly good. Small fixes applied or pending.
+**Status:** Clean and complete.
 
 **Fixed:**
 - "Basic configuration of the stage" → renamed to "What should I configure on the stage first?"
 - "How to watch formation transitions?" → renamed to "How do I preview transitions?"
 - "Where to go from here?" bullet labels updated to match real section/subtopic names
 - Added `.tip` callout UI for the "always create a new formation before moving dancers" advice
+- Added "What do I see when I first open the app?" topic to Start Here (tab bar orientation)
+- "What should I configure on the stage first?" moved to Working with Your Choreography → Customise Your Stage
 
 **Still to consider:**
 - Add a topic: **What platforms is ArrangeUs available on?** (Start Here has no mention of iOS/Android)
-- Add a topic: **What do I see when I first open the app?** - brief home screen orientation for first-timers
-- "Is my work saved automatically?" is very thin (one sentence) - could be merged into the creation topic
-- "How do I preview transitions?" is also thin - could be expanded or merged into "How do I create formations?"
 
 ---
 
@@ -43,21 +42,26 @@ Last updated: 2026-04-26
 
 **Status:** Solid section. Minor structural and title issues, a few missing topics.
 
-**Issues to fix:**
-- "Choreographies list structure" is a statement title — rename to a question: "How is the choreography list organised?"
-- Tags subtopic group structure: "Filtering" group header appears before "What are tags for?" so the intro topic is mislabelled as a filter topic. Move intro topic above the first group header.
-- "Best ideas for naming tags" is a statement title in a Tips group — consider "What are some good ideas for naming tags?"
+**Fixed:**
+- Tags group structure reorganised: intro topic moved above group headers, groups are now Filtering / Managing / Tips
+- "Best ideas for naming tags" → renamed to "What are some good ideas for naming tags?"
+- Crews subtopic restructured: groups removed (flat list), factual corrections applied throughout (no colors in crews, no duplicate/archive, correct UI for delete/share/add dancer)
+- Presets subtopic expanded: system vs. own presets, no names, long-press actions, editor-only limitation
+- Added "What do I see when I first open the app?" to Getting Started → Start Here (tab bar orientation including Crews/Presets/Settings tabs)
+- Crews and Presets kept in this section (not split to top-level) as helper features
+
+**Still to fix:**
+- "Choreographies list structure" is a statement title — rename to "How is the choreography list organised?"
 
 **Missing topics:**
-- **Do archived or trashed choreographies count toward the free plan limit?** — obvious free-plan user question, not answered anywhere. Add to Keep Your Library Tidy.
-- **How do I rename a choreography?** — mentioned in passing in list structure topic but never explained. Add to Choreography Actions.
-- **What is the choreography description field?** — mentioned on cards but never explained. Add to Choreography Actions or Browse & Navigate.
-- **Can I reorder dancers within a Crew?** — small gap in Crews subtopic.
+- **Do archived or trashed choreographies count toward the free plan limit?** — Add to Keep Your Library Tidy.
+- **How do I rename a choreography?** — Add to Choreography Actions.
+- **What is the choreography description field?** — Add to Choreography Actions or Browse & Navigate.
 
 **What's working well:**
 - Tags coverage is comprehensive (intro, filtering, multi-tag logic, create, naming tips, attach/detach, reorder)
-- Crews subtopic is the strongest in the section — 6 well-structured topics with patterns of use, shortcuts, sharing, and future feature note
-- "What's the fastest way to start a new choreography?" is a valuable meta-topic tying Crews + Duplicate Stage together
+- Crews is well-structured with accurate UI details after corrections
+- "What's the fastest way to start a new choreography?" ties Crews + Duplicate Stage together effectively
 
 ---
 
@@ -80,8 +84,10 @@ Last updated: 2026-04-26
 
 ### 4. Sharing & Backups — not yet reviewed
 
+**Fixed:**
+- Added "How does PDF export work?" topic to Sharing subtopic (layout options, backgrounds, comments panel, paths, markers, page labels)
+
 **Known gaps:**
-- No explanation of the PDF export workflow (how to trigger, what's included)
 - Sharing subtopic mentions screen recording as an option but doesn't explain how
 
 ---
@@ -129,6 +135,7 @@ Last updated: 2026-04-26
 | Choreography description/notes field | Managing Your Choreographies |
 | Adding a dancer mid-sequence behavior | Working with Your Choreography → Dancers |
 | Backstage - what it represents, can dancers be placed there | Working with Your Choreography → Customise Your Stage |
+| ~~What do I see when I first open the app?~~ | ✅ Added to Getting Started → Start Here |
 | What platforms is ArrangeUs on? | Getting Started → Start Here |
 | What happens to choreographies after cancelling Premium? | Subscription Management → Managing Your Subscription |
 | What happens when the free trial ends? | Subscription Management → Plans & Pricing |
