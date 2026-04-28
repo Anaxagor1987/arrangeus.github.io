@@ -94,33 +94,33 @@ Last updated: 2026-04-27
 
 ### 5. Subscription Management ✅ reviewed
 
-**Status:** Content is good. Several structural and duplication issues identified.
+**Status:** Clean and complete.
 
-**Issues to fix:**
-- "Can I switch between billing plans?" repeats the same iOS/Android navigation paths already covered in "How do I check my current plan" - trim the duplicate navigation steps
-- "I paid but can't access Premium features" - statement title, should be a question: **"Why can't I access Premium features after paying?"**
-- Reinstall advice in the same topic says "send files to cloud storage or messenger" as backup - vague, inconsistent with the Backups section. Should point there instead.
+**Fixed:**
+- "Can I switch between billing plans?" - removed duplicate iOS/Android navigation steps (already in "How do I check my current plan")
+- "I paid but can't access Premium features" → renamed to "Why can't I access Premium features after paying?"
+- Reinstall advice updated to point to Settings → Backups → Back Up Now instead of vague "cloud storage or messenger"
+- Added "What happens to my choreographies if I cancel?" to Managing Your Subscription
+- Added "What happens when the free trial ends?" to Plans & Pricing
 
-**Missing topics:**
-- **What happens to my choreographies if I cancel?** - users need to know concretely: does music become inaccessible? are props hidden? are extra choreographies deleted?
-- **What happens when the free trial ends?** - auto-charge, warning, feature access
-
-**Duplicates in FAQ (weaker versions, should be removed from FAQ):**
-- "How do I cancel my subscription?" — canonical answer is in Managing Your Subscription
-- "How do I request a refund?" — canonical answer is in Help & Troubleshooting (with direct links)
-- "How do I activate my subscription on another device?" — covered in Access Across Devices + Help & Troubleshooting
-
-**Structural suggestion:**
+**Structural suggestion (still open):**
 - Access Across Devices (2 topics, both essentially the same answer) is very thin. Consider merging into Help & Troubleshooting, reducing to 4 subtopics.
 
 ---
 
-### 6. Frequently Asked Questions — not yet reviewed
+### 6. Frequently Asked Questions ✅ reviewed
 
-**Known issues:**
-- Most of its 12 topics already have better, more detailed coverage elsewhere in the tutorials
-- 3 confirmed duplicates identified (cancel, refund, activate on another device) - all have canonical answers in Subscription Management
-- Remaining unique topics worth keeping: cross-device sync (accounts feature context), collaboration, video export, computer version, custom stage shape, Apple Messages delivery bug
+**Status:** Cleaned up. Subscription duplicate group removed.
+
+**Fixed:**
+- Removed 3 duplicate Subscription group topics from FAQ: "How do I cancel my subscription?", "How do I request a refund?", "How do I activate my subscription on another device?" - canonical answers are in Subscription Management
+- FAQ article count updated: 12 → 9
+
+**Remaining unique topics:** cross-device sync (accounts feature context), collaboration, video export, computer version, custom stage shape, Apple Messages delivery bug, How do I share, How do I change music track, Can I add more dancers
+
+**Still to consider:**
+- "How do I share a choreography?" in FAQ Sharing group is weaker than Sharing subtopic - could remove
+- "How do I change the music track?" in FAQ Features is a duplicate of Music Mode subtopic
 
 ---
 
@@ -131,14 +131,14 @@ Last updated: 2026-04-27
 | ~~PDF Export - how to trigger, what's included, layout options~~ | ✅ Added to Sharing & Backups → Sharing |
 | Playback (non-music) - controls, looping, speed | Working with Your Choreography → new Playback subtopic |
 | Transition duration in non-music mode | Working with Your Choreography → Transition Paths |
-| Importing a received .arrangeus file | Sharing & Backups → Sharing |
+| ~~Importing a received .arrangeus file~~ | ✅ Added to Sharing & Backups → Sharing |
 | Choreography description/notes field | Managing Your Choreographies |
 | Adding a dancer mid-sequence behavior | Working with Your Choreography → Dancers |
 | Backstage - what it represents, can dancers be placed there | Working with Your Choreography → Customise Your Stage |
 | ~~What do I see when I first open the app?~~ | ✅ Added to Getting Started → Start Here |
 | What platforms is ArrangeUs on? | Getting Started → Start Here |
-| What happens to choreographies after cancelling Premium? | Subscription Management → Managing Your Subscription |
-| What happens when the free trial ends? | Subscription Management → Plans & Pricing |
+| ~~What happens to choreographies after cancelling Premium?~~ | ✅ Added to Subscription Management → Managing Your Subscription |
+| ~~What happens when the free trial ends?~~ | ✅ Added to Subscription Management → Plans & Pricing |
 
 ---
 
@@ -147,9 +147,9 @@ Last updated: 2026-04-27
 | Duplicate topic | Locations |
 |---|---|
 | How do I share a choreography? | Sharing subtopic + FAQ |
-| How do I cancel my subscription? | Managing Your Subscription + FAQ |
-| How do I request a refund? | Help & Troubleshooting + FAQ |
+| ~~How do I cancel my subscription?~~ | ~~Managing Your Subscription + FAQ~~ — FAQ copy removed |
+| ~~How do I request a refund?~~ | ~~Help & Troubleshooting + FAQ~~ — FAQ copy removed |
+| ~~Activate subscription on another device~~ | ~~Access Across Devices + FAQ~~ — FAQ copy removed |
 | How do I change the music track? | Music Mode subtopic + FAQ |
-| Activate subscription on another device | Access Across Devices + FAQ |
 | How do I add a comment to a formation? | Formations subtopic + Comments subtopic |
 | Split Formation | Music Mode subtopic + Formations subtopic |
