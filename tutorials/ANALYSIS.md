@@ -1,6 +1,6 @@
 # Tutorials Page Analysis
 
-Last updated: 2026-04-27
+Last updated: 2026-04-29
 
 ---
 
@@ -82,13 +82,43 @@ Last updated: 2026-04-27
 
 ---
 
-### 4. Sharing & Backups — not yet reviewed
+### 4. Sharing & Backups ✅ reviewed
+
+**Status:** Clean and complete.
+
+#### Sharing subtopic (9 topics, 4 groups)
+
+**Groups:** Formats / Sending / Receiving / Team workflow
 
 **Fixed:**
-- Added "How does PDF export work?" topic to Sharing subtopic (layout options, backgrounds, comments panel, paths, markers, page labels)
+- Added PDF export topic (layout options, backgrounds, comments panel, paths, markers, page labels)
+- Added full Receiving group: open a received file, Apple Messages tip, batch import flow, duplicate skipping behavior
+- Added team workflow topic with shared cloud folder pattern and file naming convention
+- All file extensions corrected throughout: single choreography → `.arrus`, batch / crew → `.aubkp`, preset → `Preset.arrus`
+- Cross-platform topic moved into Sending group
+- Formats group reordered: best format → no ArrangeUs → PDF export
 
-**Known gaps:**
-- Sharing subtopic mentions screen recording as an option but doesn't explain how
+**Still to consider:**
+- Screen recording is mentioned as a sharing format but never explained (how to trigger it, where to find the recording)
+
+---
+
+#### Backups subtopic (6 topics, 3 groups)
+
+**Groups:** How it works / Restoring & Sync / Managing
+
+**Fixed:**
+- Split into iOS and Android topics (Android: system backup, auto-restore on reinstall, no UI)
+- iOS topic expanded: overwrites previous backup on each run, includes presets/crews/tags, check last timestamp in Settings, Back Up Now as force trigger, iCloud storage size context (2-4 MB), Apple ID requirement
+- Removed incorrect Premium-only claim - backups are available to all users
+- Removed incorrect "rolling set of recent backups" claim - one backup per device, overwritten each time
+- Restore topic expanded: device folder naming (ArrangeUs_timestamp.aubkp), device selection logic (auto with 2 devices, picker with 3+), reinstall creates new folder, empty library shows restore button on choreography list screen
+- Added sync topic: per-choreography, triggers on open, newer/older/multiple variants all require confirmation, local version moves to Trash on override
+- Back Up Now topic clarified: same trigger as automatic, overwrites previous, no separate manual backup type; added portable backup options (multi-select share or copy from iCloud folder)
+- Import/delete topic rewritten: no in-app import button - use system share sheet; no in-app delete - iCloud folder only; caution tip about not renaming/moving folder contents
+
+**Still to consider:**
+- Android backup section is intentionally thin - no UI means no extra topics needed there
 
 ---
 
@@ -108,19 +138,24 @@ Last updated: 2026-04-27
 
 ---
 
-### 6. Frequently Asked Questions ✅ reviewed
+### 6. Frequently Asked Questions — removed
 
-**Status:** Cleaned up. Subscription duplicate group removed.
+**Status:** Entire FAQ section removed from tutorials page. Will be added to the main site page (index.html) instead.
 
 **Fixed:**
-- Removed 3 duplicate Subscription group topics from FAQ: "How do I cancel my subscription?", "How do I request a refund?", "How do I activate my subscription on another device?" - canonical answers are in Subscription Management
-- FAQ article count updated: 12 → 9
+- Removed 3 duplicate Subscription topics before removal: cancel, refund, activate on another device
+- Full section then removed from tutorials page
 
-**Remaining unique topics:** cross-device sync (accounts feature context), collaboration, video export, computer version, custom stage shape, Apple Messages delivery bug, How do I share, How do I change music track, Can I add more dancers
-
-**Still to consider:**
-- "How do I share a choreography?" in FAQ Sharing group is weaker than Sharing subtopic - could remove
-- "How do I change the music track?" in FAQ Features is a duplicate of Music Mode subtopic
+**Content preserved in git history on feature/tutorials branch. Topics to carry over to main site:**
+- Is there a way to log in and sync across devices?
+- Can I collaborate on a choreography with a colleague?
+- How do I change the music track in a choreography?
+- How do I export my choreography as a video?
+- Can I add more dancers than the limit?
+- Can I get ArrangeUs on my computer?
+- Can I create a custom stage shape?
+- How do I share a choreography?
+- I shared an ArrangeUs file via Apple Messages but my colleague can't open it
 
 ---
 

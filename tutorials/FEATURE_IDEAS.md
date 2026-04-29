@@ -25,6 +25,8 @@ Collected while writing tutorials content. Grouped by theme.
 - **Back Up Now as a non-overwriting checkpoint** - currently Back Up Now runs the same backup and overwrites the previous one. A way to create a named checkpoint that survives the next automatic backup cycle would be handy before major changes.
 - **In-app backup deletion** - currently requires going into iCloud Drive manually. A delete action inside the Backups screen would be safer and more accessible.
 - **Import from Files button inside Backups screen** - currently importing a backup file stored outside iCloud requires going through the system share sheet. A dedicated import button inside the app would be more discoverable.
+- **Split backup selection screen into two groups** - the restore selection screen currently only shows choreographies not already on the device. Showing already-on-device choreographies in a separate group as sync candidates would make the connection between restore and sync more discoverable, and give users a single place to handle both in one flow.
+- **Selectively restore tags, presets, and crews from backup** - backups include everything, but the restore screen only lets users select choreographies. Adding the ability to pick which tags, presets, and crews to restore would give full control over what comes back, rather than always restoring all-or-nothing for those items.
 - **Android backup UI** - Android users have no way to browse, select, or restore individual choreographies from a backup. Everything restores automatically on reinstall, with no control over what comes back.
 - **Presets, crews, and tags in Back Up Now** - currently Back Up Now only includes choreographies. Automatic backups include everything. Making Back Up Now equally complete would remove a surprising limitation.
 
@@ -50,9 +52,16 @@ Collected while writing tutorials content. Grouped by theme.
 
 ## Crews
 
-- **Crew color** - crews currently store only name and short name. A default color per crew member, applied when creating a choreography from the crew, would save setup time.
+- **Crew color and shape** - crews currently store only name and short name. A default color and shape per crew member, applied when creating a choreography from the crew, would save setup time and let choreographers pre-assign visual identifiers to their dancers once rather than per choreography.
 - **Duplicate and archive for crews** - choreographies support both, but crews don't. Useful for managing seasonal roster changes without losing previous versions.
 - **Retroactive crew sync** - updating a crew has no effect on choreographies already created from it. An opt-in sync to push name changes to existing choreographies would help when a dancer's name changes mid-season.
+- **Merge multiple crews** - currently you can only pick one crew when creating a choreography. Being able to combine two or more crews would cover joint performances or mixed-group pieces without having to rebuild the roster manually.
+- **Reorder dancers inside a crew** - dancer order in a crew is currently fixed. Being able to reorder them would let choreographers control the default layout when applying the crew to a new choreography.
+- **Recently deleted crews** - crews are permanently deleted with no recovery option. A trash or recently deleted list, similar to choreographies, would prevent accidental loss.
+- **Crew avatar and description** - crews currently have only a name. An avatar image and a short description field would help distinguish crews at a glance and add useful context (e.g. group age range, school, season notes).
+- **Apply a crew to an existing choreography** - currently crews can only be used at creation time. Being able to apply a crew to a choreography that already exists - matching dancers by name or mapping them manually - would be useful when the roster is finalised after the piece has already been started.
+- **Create a crew from selected dancers** - currently crews must be built from scratch. Being able to select dancers in an existing choreography and save them as a new crew would make it easy to capture a roster that was assembled ad-hoc.
+- **Auto-tag with crew name on creation** - when creating a choreography from a crew, suggest adding a tag matching the crew name (or apply it automatically if that tag already exists). Would keep the library organised without extra manual steps.
 
 ---
 

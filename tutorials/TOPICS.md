@@ -52,6 +52,29 @@
 
 ---
 
+## Sharing & Backups
+
+- **What's the best format to share in?**
+- **How do I share a choreography?**
+- **How do I open a choreography file I received?**
+- **How do backups work on iOS?**
+- **How do I restore choreographies from a backup?**
+- **How does sync work?**
+
+---
+
+- Can I share with someone who doesn't have ArrangeUs?
+- How does PDF export work?
+- What apps can I use to send a choreography file?
+- Can I share choreographies between iOS and Android?
+- How does importing multiple choreographies work?
+- How do I manage sharing a choreography with a whole team?
+- How do backups work on Android?
+- How do I back up right now or export a portable backup?
+- Can I import a backup file from outside iCloud?
+
+---
+
 ## Subscription Management
 
 - **What Premium unlocks**
