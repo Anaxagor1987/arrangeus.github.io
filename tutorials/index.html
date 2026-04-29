@@ -2160,63 +2160,96 @@
                                 <span class="text-xl">💾</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Backups</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Protect your work and move it across devices · 4 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Protect your work and move it across devices · 6 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">How it works</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <div class="flex items-center gap-2 min-w-0">
-                                        <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do backups work?</span>
+                                        <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do backups work on iOS?</span>
                                         <span class="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-[#E92E67]/10 text-[#E92E67] flex-shrink-0">Key</span>
                                     </div>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">ArrangeUs automatically creates a backup each time you open or close the app. Each backup is a <strong class="text-white">.aubkp</strong> file - a snapshot of your entire library at that moment - stored in your <strong class="text-white">iCloud Drive → ArrangeUs</strong> folder, private to your Apple ID and accessible from the Files app. The app keeps a rolling set of recent backups and removes older ones automatically to conserve space.</p>
-                                    <p style="margin-bottom: 12px;">Three things need to be in place for backups to work:</p>
+                                    <p style="margin-bottom: 12px;">ArrangeUs automatically backs up your library each time you close the app or send it to the background. Each automatic backup overwrites the previous one, so there is always one current backup per device. It's stored as a <strong class="text-white">.aubkp</strong> file inside <strong class="text-white">iCloud Drive → ArrangeUs</strong>, in a folder named after your device model - private to your Apple ID and accessible from the Files app.</p>
+                                    <p style="margin-bottom: 12px;">Each backup includes everything: choreographies, presets, crews, and tags. You can check when the last backup ran at the top of <strong class="text-white">Settings → Backups</strong>. If no timestamp is shown, the backup hasn't completed or something went wrong - tap <strong class="text-white">Back Up Now</strong> to trigger one immediately and check again.</p>
+                                    <p style="margin-bottom: 12px;">Two things need to be in place for backups to work:</p>
                                     <ul class="space-y-1 list-disc list-inside" style="margin-bottom: 12px;">
                                         <li><strong class="text-white">iCloud Drive enabled</strong> for ArrangeUs - go to <strong class="text-white">iOS Settings → your name → iCloud → iCloud Drive</strong> and make sure ArrangeUs is toggled on.</li>
-                                        <li><strong class="text-white">Sufficient iCloud storage</strong> - backup files are stored in your iCloud container, so your iCloud plan needs free space.</li>
-                                        <li><strong class="text-white">ArrangeUs Premium</strong> - the backup feature is available to Premium subscribers only.</li>
+                                        <li><strong class="text-white">Sufficient iCloud storage</strong> - backup files are stored in your iCloud container. In practice they're small - typically 2-4 MB depending on how many choreographies you have - so this is rarely an issue.</li>
                                     </ul>
-                                    <p>Backups are useful for recovering accidentally deleted choreographies, reverting unwanted changes, moving your library to a new or replacement device, and seeding a second device with your existing work.</p>
+                                    <p>Backups are most useful for moving your library to a new or replacement device, and for syncing choreographies between devices sharing the same Apple ID.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I create a manual backup?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do backups work on Android?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Go to <strong class="text-white">menu → Backups</strong> and tap <strong class="text-white">Back Up Now</strong>. A new backup file is created immediately and uploaded to iCloud. Useful before making large changes, before a performance, or whenever you want a specific checkpoint you can return to.</p>
-                                    <p>Manual backups follow the same rolling retention policy as automatic ones - if you want to keep a backup permanently, export the file from the <strong class="text-white">Files</strong> app to a location outside the ArrangeUs iCloud folder.</p>
+                                    <p style="margin-bottom: 12px;">On Android, ArrangeUs uses the system backup mechanism. Your choreographies are saved automatically to a system folder managed by Google - there's no backup screen inside the app, and the files aren't directly accessible.</p>
+                                    <p>When you reinstall ArrangeUs or install it on a new Android device signed into the same Google Play account, your choreographies are automatically restored to the library. No selection screen, no extra steps - everything comes back on its own.</p>
+                                </div>
+                            </details>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Restoring & Sync</p>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I restore choreographies from a backup?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Open <strong class="text-white">Settings → Backups</strong>. Backups are organised by device - each device has its own folder named after the device model, containing files named <strong class="text-white">ArrangeUs_timestamp.aubkp</strong>. If you reinstall ArrangeUs, a new folder is created for the current device, so older backups from before the reinstall remain available in the previous folder.</p>
+                                    <p style="margin-bottom: 12px;">If you have backups from two devices, the app automatically selects the backup from the other device - no picker needed. If there are backups from three or more devices, a device selection screen appears first so you can choose which device to restore from.</p>
+                                    <p style="margin-bottom: 12px;">Tap a backup to open its contents. The selection screen shows choreographies not already on the device - anything with a matching internal ID is filtered out automatically, so you won't see duplicates of work you already have. Select what you want and tap <strong class="text-white">Import Selected</strong>. The imported items are added as new entries and nothing existing is affected.</p>
+                                    <p>To move your library to a new device, tap <strong class="text-white">Back Up Now</strong> on the old device first, then sign into the same Apple ID on the new device. If your library is empty, a restore button appears directly on the choreographies list screen - no need to go into Settings.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I restore or move choreographies from a backup?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does sync work?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Open <strong class="text-white">menu → Backups</strong> and tap any backup in the list. A selection screen shows every choreography in that backup - tap items to check or uncheck them, then tap <strong class="text-white">Import Selected</strong>. Only checked items are imported and added as new entries - nothing already on the device is overwritten.</p>
-                                    <p style="margin-bottom: 12px;">Choreographies already present on the device are hidden from the selection screen (matched by internal ID), so you won't accidentally create duplicates when importing the same backup twice. If you intentionally want a second copy, use the <strong class="text-white">Duplicate</strong> action on the choreography list instead.</p>
-                                    <p>To move your library to a new device, create a fresh backup on the old device with <strong class="text-white">Back Up Now</strong>, then sign into the same Apple ID on the new device and import from the Backups screen.</p>
+                                    <p style="margin-bottom: 12px;">Sync keeps an individual choreography up to date across devices. Every time you open a choreography, ArrangeUs quietly checks all available backups for a version with the same internal ID.</p>
+                                    <p style="margin-bottom: 12px;">What happens next depends on what's found:</p>
+                                    <ul class="mb-4 space-y-2 list-disc list-inside">
+                                        <li><strong class="text-white">Newer version found</strong> - you get a confirmation dialog: pull the newer version or keep what you have locally.</li>
+                                        <li><strong class="text-white">Older version found</strong> - you're offered the option to override your local version with it. The wording makes clear it's an older version - confirm to apply it or keep local.</li>
+                                        <li><strong class="text-white">Multiple versions found across backups</strong> - a picker shows all options so you can choose which one to pull from. You can also skip syncing and just open the local version.</li>
+                                    </ul>
+                                    <p>If you override your local version, it's moved to <strong class="text-white">Trash</strong> first - so if you change your mind, you can recover it from there.</p>
+                                </div>
+                            </details>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Managing</p>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I back up right now or export a portable backup?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Go to <strong class="text-white">Settings → Backups</strong> and tap <strong class="text-white">Back Up Now</strong>. This runs the same full backup immediately - identical to what happens automatically when you close the app - and overwrites the previous backup. Useful before making large changes or before a performance.</p>
+                                    <p style="margin-bottom: 12px;">If you want a portable backup file you fully control - one that lives outside the automatic cycle and won't get overwritten - go to the choreographies list, enter multi-select mode, select all, and tap <strong class="text-white">Share</strong>. Save the exported <strong class="text-white">.aubkp</strong> file anywhere you like: a cloud folder, your computer, a chat thread.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I import a backup file manually or delete old backups?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I import a backup file from outside iCloud?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;"><strong class="text-white">To import a file manually</strong> - if you have a backup stored outside the default iCloud folder, open <strong class="text-white">menu → Backups</strong> and tap <strong class="text-white">Import from Files</strong>. Navigate to the file in the Files app, select it, and ArrangeUs will load it into the import selection screen.</p>
-                                    <p><strong class="text-white">To delete old backups</strong> - swipe left on any entry in the Backups list and tap <strong class="text-white">Delete</strong>, or manage files directly in the Files app under <strong class="text-white">iCloud Drive → ArrangeUs</strong>. Deletion is permanent and cannot be undone.</p>
+                                    <p style="margin-bottom: 12px;">Yes. Find the <strong class="text-white">.aubkp</strong> file wherever it's stored - in the Files app, a cloud folder, a message thread, or anywhere else. Open it and share it to ArrangeUs the same way you'd open any ArrangeUs file: tap the share icon, find ArrangeUs in the share sheet, and tap it. The backup import flow then works exactly as described above.</p>
+                                    <div class="tip">
+                                        <div class="tip-question">Be careful with the ArrangeUs iCloud folder.</div>
+                                        Avoid renaming or moving anything inside <strong>iCloud Drive → ArrangeUs</strong> - the backup feature relies on that folder structure being intact. You can delete an old device folder if you're completely sure you no longer need any backups inside it, but treat it as a one-way action: there's no undo.
+                                    </div>
                                 </div>
                             </details>
                         </div>
@@ -2550,7 +2583,7 @@
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p style="margin-bottom: 12px;">First, try tapping <strong class="text-white">Already paid?</strong> on the paywall screen - this tells the app to re-check your subscription status with the App Store or Google Play and usually resolves it right away.</p>
-                                    <p style="margin-bottom: 12px;">If that doesn't help, reinstall the app and try restoring again. Reinstalling is safe since your data is stored in iCloud - but to be extra cautious, create a manual backup first (Settings → Backups → Back Up Now) before reinstalling.</p>
+                                    <p style="margin-bottom: 12px;">If that doesn't help, reinstall the app and try restoring again. Reinstalling is safe since your data is stored in iCloud - but to be extra cautious, trigger a backup first (Settings → Backups → Back Up Now) before reinstalling.</p>
                                     <p>If the issue persists after that, contact us and we'll look into it.</p>
                                 </div>
                             </details>
