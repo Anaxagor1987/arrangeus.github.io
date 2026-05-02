@@ -1091,7 +1091,7 @@
                                 <span class="text-xl">🕺</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Dancers</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Select, style, move, and manage dancers on stage · 26 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Select, style, move, and manage dancers on stage · 23 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -1100,52 +1100,31 @@
                             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Dancers Selection</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I select a dancer?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I select dancers?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Tap a dancer on the stage to select them. A selection indicator appears around the dancer and the actions bar at the bottom updates to show options for that dancer.</p>
-                                    <p>To add another dancer to the selection, tap them while the first is still selected. To remove a dancer from a multi-selection, tap them again.</p>
+                                    <p style="margin-bottom: 12px;">There are several ways to select dancers on stage:</p>
+                                    <ul class="mb-4 space-y-2 list-disc list-inside">
+                                        <li><strong class="text-white">Tap</strong> - select a single dancer. Tap additional dancers to add them to the selection. Tap a selected dancer again to remove them.</li>
+                                        <li><strong class="text-white">Drag a dancer</strong> - dragging an unselected dancer picks it up as a single selection, clearing any previous selection. If the dancer is already part of a multi-selection, all selected dancers move together.</li>
+                                        <li><strong class="text-white">Area multi-select</strong> - long press on empty space, then drag to draw a rectangle. Any dancer within the area is selected when you lift your finger. The long press also clears any current selection before the rectangle starts.</li>
+                                        <li><strong class="text-white">Select All</strong> - available in the <strong class="text-white">Dancers</strong> section of the bottom actions bar. Selects every dancer in the current formation at once.</li>
+                                        <li><strong class="text-white">Select Same Color / Shape</strong> - select one or more dancers first, then open the <strong class="text-white">Dancers</strong> section of the bottom actions bar and tap <strong class="text-white">Select Same Color</strong> or <strong class="text-white">Select Same Shape</strong>. All dancers matching any color or shape in the current selection are added.</li>
+                                    </ul>
+                                    <p>To clear the selection, tap any empty area of the stage.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I select multiple dancers using area selection?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Any tips for working with selection?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Drag on an empty area of the stage to draw a selection rectangle. Any dancer whose position falls within the rectangle is selected when you lift your finger. Area selection is the fastest way to grab a cluster of nearby dancers in one gesture.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I select all dancers at once?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the <strong class="text-white">Select All</strong> button in the actions bar, or use the select all option from the stage menu. All dancers in the current formation are selected instantly - useful before applying a bulk action like rotating or flipping the whole group.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I select all dancers with the same color or shape?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Select one dancer first, then tap <strong class="text-white">Select Same Color</strong> or <strong class="text-white">Select Same Shape</strong> from the actions bar. All dancers in the formation matching that color or shape are added to the selection. Useful for targeting a specific group - for example, all lead dancers who share a color - without tapping each one individually.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I deselect dancers and reset the selection?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap an empty area of the stage to clear the selection entirely. You can also tap a selected dancer individually to remove them from the current selection without affecting the others.</p>
+                                    <p style="margin-bottom: 12px;"><strong class="text-white">Use color and shape as group identifiers.</strong> If you assign the same color to all lead dancers and another to the chorus, Select Same Color becomes a one-tap way to always grab the right group across every formation. The more intentionally you use colors and shapes, the more useful this action becomes.</p>
+                                    <p style="margin-bottom: 12px;"><strong class="text-white">Fix a wrong tap without starting over.</strong> On a dense stage it's easy to accidentally include the wrong dancer. Rather than clearing the whole selection, just tap that dancer again to remove only them from the current selection.</p>
+                                    <p><strong class="text-white">Long press a dancer to jump straight to dancer actions.</strong> Instead of tapping to select and then opening the actions bar, a long press on any dancer selects them and opens the Dancers section of the actions bar in one step.</p>
                                 </div>
                             </details>
                             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Dancers Styling</p>
@@ -1629,8 +1608,8 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Yes - when you share a <strong class="text-white">.arrus</strong> file, the music track is embedded in it. The recipient gets the full choreography with music included and doesn't need to have the track on their device separately.</p>
-                                    <p>Keep in mind that embedding audio increases the file size, so tracks over a few minutes can make the shared file noticeably larger.</p>
+                                    <p style="margin-bottom: 12px;">No - music is not included in shared <strong class="text-white">.arrus</strong> files or backups for legal reasons. The choreography file contains the formation data and timestamps, but the music track itself must be shared separately. The recipient will need to have the same track on their device and attach it manually.</p>
+                                    <p>Custom stage backgrounds, however, are included in the file - the recipient gets the background image automatically without any extra steps.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -2076,6 +2055,7 @@
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p style="margin-bottom: 12px;">To share a single choreography, tap the <strong class="text-white inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></strong> button on its card and tap <strong class="text-white">Share</strong>. ArrangeUs exports it as a <strong class="text-white">.arrus</strong> file named after the choreography. To share several at once, enter multi-select mode, pick the choreographies you want, and tap <strong class="text-white">Share</strong> in the action bar - they are bundled into a single <strong class="text-white">.aubkp</strong> file. In both cases you can send the file via any app - Messages, WhatsApp, Telegram, email, AirDrop, and so on.</p>
                                     <p style="margin-bottom: 12px;">The recipient opens the file in ArrangeUs on their device and gets their own independent copy. Changes on either side won't affect the other.</p>
+                                    <p style="margin-bottom: 12px;">Note that <strong class="text-white">music is not included</strong> in shared files for legal reasons - the recipient needs to have the track on their device and attach it manually. Custom stage backgrounds are included and will appear automatically on the recipient's device.</p>
                                     <p>Sharing a <strong class="text-white">preset</strong> exports a <strong class="text-white">Preset.arrus</strong> file. Sharing a <strong class="text-white">crew</strong> exports a <strong class="text-white">.aubkp</strong> file. The recipient imports both using the same steps as a choreography file.</p>
                                 </div>
                             </details>
@@ -2177,7 +2157,7 @@
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p style="margin-bottom: 12px;">ArrangeUs automatically backs up your library each time you close the app or send it to the background. Each automatic backup overwrites the previous one, so there is always one current backup per device. It's stored as a <strong class="text-white">.aubkp</strong> file inside <strong class="text-white">iCloud Drive → ArrangeUs</strong>, in a folder named after your device model - private to your Apple ID and accessible from the Files app.</p>
-                                    <p style="margin-bottom: 12px;">Each backup includes everything: choreographies, presets, crews, and tags. You can check when the last backup ran at the top of <strong class="text-white">Settings → Backups</strong>. If no timestamp is shown, the backup hasn't completed or something went wrong - tap <strong class="text-white">Back Up Now</strong> to trigger one immediately and check again.</p>
+                                    <p style="margin-bottom: 12px;">Each backup includes everything: choreographies, presets, crews, tags - but not music files (excluded for legal reasons). You can check when the last backup ran at the top of <strong class="text-white">Settings → Backups</strong>. If no timestamp is shown, the backup hasn't completed or something went wrong - tap <strong class="text-white">Back Up Now</strong> to trigger one immediately and check again.</p>
                                     <p style="margin-bottom: 12px;">Two things need to be in place for backups to work:</p>
                                     <ul class="space-y-1 list-disc list-inside" style="margin-bottom: 12px;">
                                         <li><strong class="text-white">iCloud Drive enabled</strong> for ArrangeUs - go to <strong class="text-white">iOS Settings → your name → iCloud → iCloud Drive</strong> and make sure ArrangeUs is toggled on.</li>
