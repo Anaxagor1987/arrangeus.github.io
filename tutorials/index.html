@@ -864,7 +864,7 @@
                                 <span class="text-xl">🧭</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">General</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Core concepts and interface basics for the choreography editor · 5 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Core concepts and interface basics for the choreography editor · 6 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -901,6 +901,17 @@
                                         <li><strong class="text-white">Playback</strong> - the choreography animates through formations. Editing is disabled during playback; tap anywhere to stop.</li>
                                         <li><strong class="text-white">Previews screen</strong> - all formations shown as a thumbnail grid. Tap a card to return to that formation in the editor.</li>
                                     </ul>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do the formations slider and music timeline work?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">In the default <strong class="text-white">edit mode</strong>, the bottom of the screen shows the formations slider - a horizontal row of pills, one per formation, with an add button at the end. Tapping a pill makes that formation active: it is highlighted and its dancer positions load on stage. Only one formation can be active at a time. Tapping the active pill again does not deselect it - to move to a different formation, tap another pill.</p>
+                                    <p>When <strong class="text-white">Music Mode</strong> is active, the formations slider is replaced by the music timeline. This shows a seconds ruler, the music waveform, and a set of formation and transition blocks placed along the timeline - each block's width represents its duration. Instead of tapping pills to switch formations, you scroll the timeline: as the playhead moves through a formation block, that formation's positions are shown on stage. When the playhead is inside a transition block, the stage shows the intermediate positions between the two surrounding formations.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1047,7 +1058,7 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Select the formation, then tap <strong class="text-white">Add Comment</strong> in the actions area. Type your note and confirm. Comments are shown below the stage while editing and are included in PDF exports. See the <strong class="text-white">Comments</strong> subtopic for more on editing and viewing comments.</p>
+                                    <p>The quickest way is to open the comments panel from the actions bar - it lets you write a comment while keeping the stage visible. For the full details, see the <strong class="text-white">Comments</strong> subtopic.</p>
                                 </div>
                             </details>
                             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Organising & Selecting</p>
@@ -1428,7 +1439,7 @@
                                 <span class="text-xl">💬</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Comments</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Add notes and cues to formations · 6 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Add notes and cues to formations · 5 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -1440,7 +1451,9 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the formation card in the timeline to select it, then tap <strong class="text-white">Add Comment</strong> in the actions area. A text input appears where you can type your note. Comments are attached to that specific formation and stay with it when you reorder, duplicate, or share the choreography.</p>
+                                    <p style="margin-bottom: 12px;">There are two ways to add a comment:</p>
+                                    <p style="margin-bottom: 12px;"><strong class="text-white">Via the comments panel</strong> (recommended) - open the comments panel from the actions bar. The panel slides up while keeping the stage visible, showing any existing comments for the current formation at the top and an <strong class="text-white">Add comment</strong> text field at the bottom. This is the preferred way because you can see both the dancers and previous comments while writing.</p>
+                                    <p>Via <strong class="text-white">Add Comment</strong> action - tap the active formation pill in the formations slider or a formation block in the Music Mode timeline and select <strong class="text-white">Add Comment</strong>. The same action is available in <strong class="text-white">Formations › Add Comment</strong> in the actions bar, or from a formation card in the Previews screen. This opens a popup text field over the stage - useful for quickly jotting something down without opening the full comments panel.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1450,7 +1463,7 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the comment text in the comments area to open it for editing. Make your changes and confirm. To delete a comment, open it for editing and clear the text entirely - an empty comment is removed automatically.</p>
+                                    <p>In the comments panel, long press a comment or tap the <strong class="text-white">⋮</strong> button next to it to reveal <strong class="text-white">Edit</strong> and <strong class="text-white">Delete</strong> options. Choosing Edit loads the comment text into the Add comment field at the bottom of the panel - edit it there and confirm to save.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1460,17 +1473,18 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Comments are shown in a panel below the stage when a formation is selected. Navigate between formations using the timeline and the comment for each one appears automatically. You can scroll the comment panel if the text is long.</p>
+                                    <p style="margin-bottom: 12px;">Open the comments panel from the actions bar, or tap the comment count badge on a formation pill if one is visible. The panel shows all comments for the currently active formation. Switching formations while the panel is open updates the list automatically.</p>
+                                    <p>The panel has two height modes. <strong class="text-white">Compact</strong> takes up part of the screen, letting you see the stage and comments at the same time. <strong class="text-white">Full</strong> expands the panel to the full screen height - useful when reviewing longer notes. Drag the panel up or down to switch between them. Comments are never truncated in either mode.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is the comment count label on formation cards?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is the comment count label on formation pills?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Formation cards in the timeline show a small comment indicator when that formation has a comment attached. This gives you a quick visual overview of which formations have notes without needing to tap through each one.</p>
+                                    <p>In edit mode, formation pills in the formations slider show a small comment count badge when that formation has comments attached. It gives you a quick visual overview of which formations have notes, and tapping the badge opens the comments panel directly for that formation.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1481,17 +1495,6 @@
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p>Yes. When you export a choreography as PDF, comments are included alongside each formation. This makes the PDF useful as a full rehearsal document - dancers and directors can read the notes for each position directly from the export.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is the difference between compact and full comments view?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;"><strong class="text-white">Compact view</strong> shows a truncated preview of the comment - enough to see there's a note and get the gist without taking up much screen space. Good for everyday editing when you want to keep the focus on the stage.</p>
-                                    <p><strong class="text-white">Full view</strong> expands the comment panel to show the complete text. Useful when reading longer notes or when you're in a review or rehearsal context and want everything visible at once. Toggle between them using the expand icon on the comment panel.</p>
                                 </div>
                             </details>
                         </div>
@@ -1518,7 +1521,7 @@
                                 <span class="text-xl">🕺</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Dancers</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Select, style, move, and manage dancers on stage · 16 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Select, style, move, and manage dancers on stage · 15 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -1536,8 +1539,8 @@
                                         <li><strong class="text-white">Tap</strong> - select a single dancer. Tap additional dancers to add them to the selection. Tap a selected dancer again to remove them.</li>
                                         <li><strong class="text-white">Drag a dancer</strong> - dragging an unselected dancer picks it up as a single selection, clearing any previous selection. If the dancer is already part of a multi-selection, all selected dancers move together.</li>
                                         <li><strong class="text-white">Area multi-select</strong> - long press on empty space, then drag to draw a rectangle. Any dancer within the area is selected when you lift your finger. The long press also clears any current selection before the rectangle starts.</li>
-                                        <li><strong class="text-white">Select All</strong> - available in the <strong class="text-white">Dancers</strong> section of the bottom actions bar. Selects every dancer in the current formation at once.</li>
-                                        <li><strong class="text-white">Select Same Color / Shape</strong> - select one or more dancers first, then open the <strong class="text-white">Dancers</strong> section of the bottom actions bar and tap <strong class="text-white">Select Same Color</strong> or <strong class="text-white">Select Same Shape</strong>. All dancers matching any color or shape in the current selection are added.</li>
+                                        <li><strong class="text-white">Select All</strong> - tap <strong class="text-white">Dancers › Select All</strong> in the actions bar. Selects every dancer in the current formation at once.</li>
+                                        <li><strong class="text-white">Select Same Color / Shape</strong> - select one or more dancers first, then tap <strong class="text-white">Dancers › Select Same Color</strong> or <strong class="text-white">Dancers › Select Same Shape</strong> in the actions bar. All dancers matching any color or shape in the current selection are added.</li>
                                     </ul>
                                     <p>To clear the selection, tap any empty area of the stage.</p>
                                 </div>
@@ -1637,8 +1640,8 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Tap a dancer to select them, then drag to move. When multiple dancers are selected, dragging any one of them moves the entire selection together, preserving their relative spacing.</p>
-                                    <p>Movement only affects the current formation by default. To propagate a position change forward, use <strong class="text-white">Apply to following formations</strong> from the actions bar after moving.</p>
+                                    <p style="margin-bottom: 12px;">Select one or more dancers using any of the selection methods, then drag to move. A single dancer moves independently. When multiple dancers are selected, dragging any one of them moves the whole group together, preserving their relative spacing. Dropping a dancer outside the stage boundary returns them to their original position.</p>
+                                    <p>Movement only affects the current formation. If you want the same positions in following formations, use <strong class="text-white">Copy and Paste Positions</strong> to replicate them manually where needed.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1648,7 +1651,8 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>When snap to grid is on, dancers lock to the nearest grid intersection as you drag them. This makes alignment fast and consistent - dancers line up exactly on grid cells without needing to be precise by eye. Toggle it using the snap icon in the editor toolbar. The grid cell size is configurable in stage settings.</p>
+                                    <p style="margin-bottom: 12px;">Snap to grid is enabled by default. When on, dancers snap to the nearest grid cell edge or center point when you drop them - not while dragging, only on release. Toggle it via <strong class="text-white">Settings › Snap to grid</strong> in the actions bar.</p>
+                                    <p>Disabling it gives you free positioning anywhere on stage - useful for circular or curved formations where exact radial positions don't fall on grid points, or when fine-tuning spacing that the grid would round off.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1658,18 +1662,7 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Resnap moves all selected dancers to the nearest grid intersection without you having to drag them manually. It's useful after changing the grid cell size - positions that were on-grid before may no longer align exactly, and resnap corrects them in one tap. Select the dancers you want to realign and tap <strong class="text-white">Resnap</strong> from the actions bar.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Is moving a single dancer different from moving multiple dancers?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">For a <strong class="text-white">single dancer</strong>, dragging moves only that dancer. Their position updates and any transition path to or from that position updates with it.</p>
-                                    <p>For <strong class="text-white">multiple dancers</strong>, dragging any dancer in the selection moves all selected dancers as a rigid group - their spacing and relative positions are preserved. This is useful for repositioning an entire row or cluster without breaking their alignment.</p>
+                                    <p>Resnap snaps all selected dancers to the nearest grid point in one go, without dragging them manually. Select the dancers you want to realign and tap <strong class="text-white">Dancers › Resnap positions</strong> in the actions bar. It's useful after freeform positioning with snap to grid disabled, after rotation or stretch actions that leave dancers off-grid, or after applying a preset whose positions don't land exactly on grid points.</p>
                                 </div>
                             </details>
                             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Dancers Management</p>
@@ -1679,8 +1672,10 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Tap <strong class="text-white">Dancers</strong> in the bottom actions bar and tap <strong class="text-white">Add Dancer</strong>. Set their name, short name, color, and shape, then confirm. The new dancer is added to all formations from the current one onwards, placed at a default position that you can then move.</p>
-                                    <p>You can also add multiple dancers at once by tapping <strong class="text-white">Add Multiple</strong> and entering the count - ArrangeUs creates them with auto-assigned names and colors that you can edit afterwards.</p>
+                                    <p style="margin-bottom: 12px;">Tap <strong class="text-white">Dancers › Add New</strong> in the actions bar. This enters addition mode - tap any empty spot on the stage to place a dancer there. You can keep tapping to add multiple dancers one by one. Each new dancer is placed at the nearest grid point and added with a default pink color, circle shape, and no name.</p>
+                                    <p style="margin-bottom: 12px;">To exit addition mode, tap <strong class="text-white">Add New</strong> again, close the Dancers section, tap an existing dancer to select them, or use area multi-select.</p>
+                                    <p style="margin-bottom: 12px;">A new dancer is placed at the same position in all existing formations - not just the current one. For this reason it's best to add dancers early. If you add a dancer later, you'll need to adjust their position in each formation individually. To save time, move them to the <strong class="text-white">backstage</strong> area in formations where they're not yet on stage, or use <strong class="text-white">Copy and Paste Positions</strong> if the same position repeats across multiple formations.</p>
+                                    <p>Name, color, and shape can all be set after placing the dancer.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1690,7 +1685,9 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap <strong class="text-white">Dancers</strong> in the bottom actions bar and swipe left on the dancer you want to remove, then tap <strong class="text-white">Delete</strong>. The dancer is removed from all formations in the choreography. This action cannot be undone, so confirm you no longer need them before deleting.</p>
+                                    <p style="margin-bottom: 12px;">Select the dancers you want to remove, then tap <strong class="text-white">Dancers › Delete</strong> in the actions bar. The dancers are removed from all formations in the choreography.</p>
+                                    <p style="margin-bottom: 12px;">Deletion can be undone, but the undo history can be overwritten by later actions or lost if you close the choreography - so treat it with care.</p>
+                                    <p>If you only want dancers absent from certain formations rather than removed entirely, move them to the <strong class="text-white">backstage</strong> area instead. They stay in the choreography but are hidden from the visible stage for those formations.</p>
                                 </div>
                             </details>
                         </div>

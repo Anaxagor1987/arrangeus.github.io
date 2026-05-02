@@ -65,20 +65,42 @@ Last updated: 2026-04-29
 
 ---
 
-### 3. Working with Your Choreography — not yet reviewed
+### 3. Working with Your Choreography ✅ reviewed (partial)
 
-**Known gaps identified during build:**
-- No topic explaining **PDF Export** properly (mentioned in passing in Sharing and Comments but never dedicated coverage: how to trigger, what's included, layout options)
+**Status:** General, Formations, Comments, and Dancers subtopics reviewed and corrected. Music Mode, Customise Your Stage not yet reviewed.
+
+**Section restructure:**
+- Dancers, Quick Position Actions, Transition Paths & Ghost Dancers moved to new **Dancers & Props** top-level section
+- Props also moved to Dancers & Props
+- Working with Your Choreography now contains: General, Formations, Music Mode, Customise Your Stage, Comments
+
+**Fixed:**
+- Added "How do formations slider and music timeline work?" topic to General
+- Dancers: merged 5 selection topics into 2 (mechanics + tips), corrected selection mechanics (long press for area select, Dancers section location, drag behavior, Select Same Color/Shape with multi-selection)
+- Dancers: rewrote Add dancer topic (Add New tap-to-place flow, default pink/circle, grid snapping on drop, all-formations placement caveat, backstage recommendation)
+- Dancers: rewrote Delete dancer topic (select then Dancers › Delete, confirm prompt, undo caveat, backstage alternative)
+- Dancers: rewrote Move dancers topic (selection reference, drop outside stage returns to original, copy/paste for propagating forward)
+- Dancers: rewrote Snap to grid topic (on by default, snaps on drop not drag, Settings › Snap to grid, free positioning use cases)
+- Dancers: rewrote Resnap topic (Dancers › Resnap positions, useful after freeform/rotation/stretch/presets)
+- Dancers: removed redundant "Is moving single dancer different from multiple?" topic
+- Comments: rewrote Add comment topic (two methods: panel vs. Add Comment action)
+- Comments: rewrote Edit comment topic (long press or ⋮, uses Add comment field)
+- Comments: merged "How do I view comments?" and "compact/full view" into one topic (drag to resize, never truncated)
+- Comments: updated comment count badge topic (edit mode only, formation pills)
+- Applied `Section › Action` shorthand pattern throughout Dancers topics
+- `Section › Action` pattern introduced: `Dancers › Add New`, `Dancers › Delete`, `Dancers › Select All`, `Dancers › Resnap positions`, `Settings › Snap to grid`
+
+**Still to fix:**
+- "How do I add a comment to a formation?" still exists in Formations subtopic (now a brief pointer - acceptable)
+- "Split Formation" appears in both Music Mode and Formations subtopics - still to deduplicate
+- Music Mode subtopic not yet reviewed
+- Customise Your Stage subtopic not yet reviewed
+
+**Known gaps still open:**
 - No **Playback** topic for standard playback without music
-- No dedicated topic for **transition duration** in non-music mode (how to set it, what the number means)
-- No topic for **importing a received file** (opening a .arrangeus file from Messages, Files, AirDrop)
-- No topic for **choreography description/notes field**
-- No topic explaining what happens when **a dancer is added mid-sequence**
+- No dedicated topic for **transition duration** in non-music mode
 - **Backstage** is mentioned but under-explained
-
-**Duplicate topics to clean up:**
-- "How do I add a comment to a formation?" exists in both Formations and Comments subtopics
-- "Split Formation" appears in both Music Mode and Formations subtopics
+- No topic for **choreography description/notes field**
 
 ---
 

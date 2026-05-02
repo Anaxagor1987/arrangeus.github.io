@@ -38,7 +38,8 @@ Collected while writing tutorials content. Grouped by theme.
 - **Playback controls for non-music mode** - no looping, speed control, or playback UI outside of Music Mode.
 - **Choreography notes / description field** - no dedicated place for free-form notes on a choreography. Useful for documenting intent, cast notes, or staging reminders.
 - **Rename choreography from the list** - currently requires opening the choreography to rename it.
-- **Adding a dancer mid-sequence** - behavior when a dancer is added partway through an existing sequence is not obvious. Clearer placement logic or a dedicated flow would help.
+- **Adding a dancer mid-sequence** - when a dancer is added to an existing choreography, they appear at the same position in all formations. There is no way to specify a starting formation or have them placed in backstage by default. A dedicated flow when adding late (e.g. "place in backstage for all formations before current") would avoid the manual cleanup work of adjusting every formation individually.
+- **Default backstage placement for late-added dancers** - a setting or prompt to automatically send a newly added dancer to backstage for all formations preceding the one you're currently editing, rather than placing them at the same stage position everywhere.
 
 ---
 
@@ -47,6 +48,9 @@ Collected while writing tutorials content. Grouped by theme.
 - **Custom stage shapes** - the stage is always rectangular. A freeform or polygon stage shape would help users working with non-rectangular venues.
 - **Backstage area** - currently mentioned in the app but under-developed. A defined offstage zone where dancers can be parked without affecting the visible layout would be useful.
 - **Global dancer color** - currently dancer color is per-formation, giving flexibility but making it tedious to keep one consistent color for a dancer throughout a whole piece. An option to apply a color to all formations at once would help.
+- **Apply position change to following formations** - moving a dancer currently only affects the current formation. An option to propagate the new position forward (similar to how other apps handle "apply forward") would save repetitive work when adjusting a dancer's position for the rest of a sequence.
+- **Live snap preview while dragging** - snap to grid currently applies only on drop. Showing a snap preview or ghost position while dragging would make placement more predictable, especially on dense stages.
+- **Auto-resnap after transform actions** - rotate, stretch, and flip can leave dancers off-grid. An option to automatically resnap after these actions would avoid the need to manually trigger Resnap positions each time.
 
 ---
 

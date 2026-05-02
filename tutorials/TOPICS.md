@@ -52,6 +52,56 @@
 
 ---
 
+## Working with Your Choreography
+
+- **Editor modes - edit mode vs Music Mode**
+- **Formations slider and music timeline**
+- **Undo and redo**
+- **How edits apply across formations (current vs. following)**
+
+---
+
+- Stage gestures (tap, drag, pinch, two-finger pan)
+- Editor states (default, dancer selected, playback, previews screen)
+- Actions bar symbols reference
+- Formation actions - add, duplicate, delete, reorder
+- Formation color and grouping
+- Multi-formation selection and bulk actions
+- Splitting a formation (Music Mode)
+- Comments - adding via panel vs. Add Comment action
+- Comments - editing and deleting
+- Comments - viewing, panel sizes, count badge
+- Comments in PDF export
+
+---
+
+## Dancers & Props
+
+- **Selecting dancers - tap, drag, area multi-select, Select All, Select Same Color/Shape**
+- **Moving dancers on stage**
+- **Adding new dancers**
+- **Deleting dancers**
+
+---
+
+- Selection tips (color/shape as group identifiers, fixing wrong taps, long press shortcut)
+- Dancer color and shape (per-formation)
+- Dancer name and short name
+- Display inside dancer shape (short name / index / solid)
+- Dancer name label visibility
+- Dancer and label size
+- Snap to grid - behavior and toggle
+- Resnap positions
+- Quick Position Actions - swap, rotate, stretch, flip, copy/paste positions, presets
+- Transition paths - how they work, showing paths, editing curves, 2-point paths, reset
+- Ghost dancers and future positions
+- Paths and stage changes (swap, resize, flip)
+- Props - types (stage vs. attachable), add, edit, position/size/rotation
+- Props - copy position, duplicate, delete
+- Props - creative uses (alignment references, custom dancer shapes)
+
+---
+
 ## Sharing & Backups
 
 - **What's the best format to share in?**
