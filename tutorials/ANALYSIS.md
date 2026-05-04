@@ -67,31 +67,22 @@ Last updated: 2026-04-29
 
 ### 3. Working with Your Choreography ✅ reviewed (partial)
 
-**Status:** General, Formations, Comments, and Dancers subtopics reviewed and corrected. Music Mode, Customise Your Stage not yet reviewed.
+**Status:** General, Formations, Comments reviewed. Music Mode, Customise Your Stage not yet reviewed.
 
 **Section restructure:**
-- Dancers, Quick Position Actions, Transition Paths & Ghost Dancers moved to new **Dancers & Props** top-level section
-- Props also moved to Dancers & Props
-- Working with Your Choreography now contains: General, Formations, Music Mode, Customise Your Stage, Comments
+- Dancers split into its own top-level section "Working with Dancers" (7 subtopics: Selection, Styling, Settings, Movement, Management, Quick Position Actions, Transition Paths & Ghost Dancers)
+- Dancers & Props section removed
+- Props moved back to Working with Your Choreography
+- Working with Your Choreography now contains: General, Formations, Music Mode, Customise Your Stage, Comments, Props
 
-**Fixed:**
+**Fixed (Working with Your Choreography):**
 - Added "How do formations slider and music timeline work?" topic to General
-- Dancers: merged 5 selection topics into 2 (mechanics + tips), corrected selection mechanics (long press for area select, Dancers section location, drag behavior, Select Same Color/Shape with multi-selection)
-- Dancers: rewrote Add dancer topic (Add New tap-to-place flow, default pink/circle, grid snapping on drop, all-formations placement caveat, backstage recommendation)
-- Dancers: rewrote Delete dancer topic (select then Dancers › Delete, confirm prompt, undo caveat, backstage alternative)
-- Dancers: rewrote Move dancers topic (selection reference, drop outside stage returns to original, copy/paste for propagating forward)
-- Dancers: rewrote Snap to grid topic (on by default, snaps on drop not drag, Settings › Snap to grid, free positioning use cases)
-- Dancers: rewrote Resnap topic (Dancers › Resnap positions, useful after freeform/rotation/stretch/presets)
-- Dancers: removed redundant "Is moving single dancer different from multiple?" topic
 - Comments: rewrote Add comment topic (two methods: panel vs. Add Comment action)
 - Comments: rewrote Edit comment topic (long press or ⋮, uses Add comment field)
 - Comments: merged "How do I view comments?" and "compact/full view" into one topic (drag to resize, never truncated)
 - Comments: updated comment count badge topic (edit mode only, formation pills)
-- Applied `Section › Action` shorthand pattern throughout Dancers topics
-- `Section › Action` pattern introduced: `Dancers › Add New`, `Dancers › Delete`, `Dancers › Select All`, `Dancers › Resnap positions`, `Settings › Snap to grid`
 
 **Still to fix:**
-- "How do I add a comment to a formation?" still exists in Formations subtopic (now a brief pointer - acceptable)
 - "Split Formation" appears in both Music Mode and Formations subtopics - still to deduplicate
 - Music Mode subtopic not yet reviewed
 - Customise Your Stage subtopic not yet reviewed
@@ -101,6 +92,21 @@ Last updated: 2026-04-29
 - No dedicated topic for **transition duration** in non-music mode
 - **Backstage** is mentioned but under-explained
 - No topic for **choreography description/notes field**
+
+---
+
+### Working with Dancers ✅ reviewed
+
+**Status:** All 7 subtopics reviewed and corrected.
+
+**Fixed:**
+- Selection: merged 5 topics into 2 (mechanics + tips), corrected area multi-select (long press + drag), Select Same Color/Shape, long press dancer shortcut
+- Styling: corrected color (picker, 3 shades, per-formation, quick access button), shape (8 triangles + circle/square/diamond, per-formation, quick access button), name/short name (Edit names action, index popup, name positions, emoji/code names, duplicate names allowed, inner text tip), apply color/shape across formation range
+- Settings: correct action names (Inner dancer text, Show names, Change dancers size, Change name text size), slider 0.4-2.0 default 0.7, 1.0 = one grid cell
+- Movement: snap on drop not drag, Settings › Snap to grid, resnap via Dancers › Resnap positions
+- Management: Add New tap-to-place, default pink/circle, all-formations placement caveat; Delete via Dancers › Delete with confirm and undo caveat
+- Quick Position Actions: all action names corrected to Positions › section, removed non-existent apply-forward from Swap, long press for range on Swap and Paste, flip extended options (range + flip center), rotate + stretch slider details, 2-finger rotate gesture, stretch axis button, presets template list (5 shapes), clockwise swap circular-only tip; consolidated from 7 to 5 topics
+- Transition Paths & Ghost Dancers: consolidated from 10 to 5 topics (merged edit/2-point/reset, merged stage changes)
 
 ---
 

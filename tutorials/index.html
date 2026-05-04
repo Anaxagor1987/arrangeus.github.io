@@ -139,9 +139,6 @@
             color: #cbd5e1;
         }
         .tip-question {
-            display: flex;
-            align-items: center;
-            gap: 6px;
             font-weight: 600;
             color: #fff;
             margin-bottom: 4px;
@@ -149,7 +146,7 @@
         .tip-question::before {
             content: "💡";
             font-size: 0.875rem;
-            flex-shrink: 0;
+            margin-right: 6px;
         }
         .tip strong {
             color: #fff;
@@ -852,7 +849,7 @@
                         <span class="text-2xl">🎬</span>
                         <div>
                             <p class="topic-title font-semibold text-white transition-colors duration-300">Working with Your Choreography</p>
-                            <p class="text-xs text-slate-400 mt-0.5">Deep dive into the choreography editor and its features · 5 subtopics</p>
+                            <p class="text-xs text-slate-400 mt-0.5">Deep dive into the choreography editor and its features · 6 subtopics</p>
                         </div>
                     </div>
                     <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -1499,6 +1496,104 @@
                             </details>
                         </div>
                     </details>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🪑</span>
+                                <div>
+                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Props</span>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Add objects to your stage layout · 9 topics</p>
+                                </div>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Basics</p>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What types of props are available?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">ArrangeUs has two types of props:</p>
+                                    <ul class="space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Stage props</strong> - freestanding objects placed on the stage, like chairs, tables, or set pieces. They stay fixed in position across formations unless you move them.</li>
+                                        <li><strong class="text-white">Attachable props</strong> - props linked to a specific dancer. They move with that dancer as they transition between formations.</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I add a prop to the stage?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p>Tap the <strong class="text-white">Props</strong> button in the editor toolbar and select <strong class="text-white">Add Prop</strong>. Choose a shape, set a label and color, then confirm. The prop appears on the stage and you can drag it into position. Props are added to the current formation and persist across all following formations by default.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I edit a prop?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p>Tap a prop on the stage to select it, then tap the <strong class="text-white">Edit</strong> option in the context menu. You can change its label, color, and shape. To rename or recolor quickly, tap the prop and use the inline controls that appear without opening the full editor.</p>
+                                </div>
+                            </details>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Working with Props</p>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I change a prop's position, size, and rotation?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p>Drag the prop to reposition it. Use the resize handles on the edges to change its size. Rotate using the rotation handle at the top. For precise control, tap the prop and use the numeric inputs in the property panel to enter exact values.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I copy and paste a prop's position?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p>Tap a prop and select <strong class="text-white">Copy Position</strong>. Navigate to the formation where you want to apply it, tap the same prop, and select <strong class="text-white">Paste Position</strong>. This is useful for snapping a prop back to a known position after it has been moved in an intermediate formation.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I duplicate or delete a prop?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p>Tap a prop to select it, then use the context menu to <strong class="text-white">Duplicate</strong> or <strong class="text-white">Delete</strong>. Duplicating creates an identical prop at a slight offset - useful when you need several matching objects. Deleting removes the prop from all formations.</p>
+                                </div>
+                            </details>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Creative Uses</p>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How can I use props as alignment references?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p>Place a prop - such as a thin line or rectangle - to mark a fixed point on stage like a spotlight position, a stage edge, or a prop table. Dancers can then be positioned relative to it, making spacing consistent without relying on grid alone. Since stage props don't move between formations, they act as a stable visual anchor throughout the choreography.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I use attachable props as custom dancer shapes?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p>Yes. Attaching a prop to a dancer and setting it to match the dancer's color can effectively give that dancer a custom visual shape on stage - useful for distinguishing roles, representing costumes, or marking specific performers in a complex cast. The prop moves with the dancer automatically, so no extra positioning work is needed.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
                 </div>
             </details>
 
@@ -1508,8 +1603,8 @@
                     <div class="flex items-center gap-4">
                         <span class="text-2xl">🕺</span>
                         <div>
-                            <p class="topic-title font-semibold text-white transition-colors duration-300">Dancers</p>
-                            <p class="text-xs text-slate-400 mt-0.5">Select, style, move, and manage dancers on stage · 5 subtopics</p>
+                            <p class="topic-title font-semibold text-white transition-colors duration-300">Working with Dancers</p>
+                            <p class="text-xs text-slate-400 mt-0.5">Selection, styling, movement, position actions, and transitions · 7 subtopics</p>
                         </div>
                     </div>
                     <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -1666,7 +1761,159 @@
                                     <p style="margin-bottom: 12px;">The <strong class="text-white">Name</strong> is used in lists, exports, and comments - keep it short enough that it doesn't get truncated in the UI. Names are displayed below the dancer's shape on stage, and above the dancer figure in 3D mode. The <strong class="text-white">Short name</strong> (1-3 characters) is displayed inside the dancer's shape on stage.</p>
                                     <p style="margin-bottom: 12px;">Short names are flexible - you can use initials, code names like D1/D2/D3, role codes, or even emoji to represent a role or a prop (like 🎹 for a pianist or 🪑 for a seated position). Both names and short names can be duplicated - only indexes are unique - so you can intentionally give the same short name to a whole group, useful for a shared section label or a role marker.</p>
                                     <p style="margin-bottom: 12px;">You can also set a dancer's short name to match their index number, which turns the shape into a numbered slot corresponding to a cast list.</p>
-                                    <div class="tip mt-2 text-xs text-slate-300 bg-white/5 border border-white/10 rounded-lg px-3 py-2">Short names are only visible on stage when the inner dancer text is set to <strong>Short name</strong>. The default is Index - switch it via <strong>Dancers › Inner dancer text</strong> to see your short names.</div>
+                                    <div class="tip">
+                                        <div class="tip-question">Short names are only visible on stage when the inner dancer text is set to <strong>Short name</strong>. The default is Index - switch it via <strong>Dancers › Inner dancer text</strong> to see your short names.</div>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">⚡</span>
+                                <div>
+                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Quick Position Actions</span>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Swap, rotate, stretch, flip, copy positions, and apply presets · 5 topics</p>
+                                </div>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I swap two dancers' positions?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Select exactly two dancers, then tap <strong class="text-white">Positions › Swap 2 positions</strong> in the actions bar. The two dancers exchange positions instantly in the current formation. A quick access swap button also appears on stage alongside the color and shape buttons - tap it for one-tap swapping without opening the actions bar.</p>
+                                    <p style="margin-bottom: 12px;">To apply the swap across multiple formations, long press either the actions bar button or the quick access button. A formation range picker appears where you can select which formations the swap should apply to.</p>
+                                    <p>Swapping is useful whenever manually dragging feels cumbersome - for example, when two dancers are close together and hard to drag precisely, when you want to try a different arrangement without disrupting the rest of the formation, or when mirroring an assignment between two roles across several formations at once.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I rotate or stretch a group of dancers?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Both actions require at least two dancers to be selected - they operate on the group as a whole, transforming positions relative to the group's collective center point.</p>
+                                    <p style="margin-bottom: 12px;"><strong class="text-white">Rotate</strong> - tap <strong class="text-white">Positions › Rotate</strong> in the actions bar. A slider appears - drag it to gradually set the rotation angle around the group's collective center point. Useful for spinning a circle formation or rotating a line to a diagonal without repositioning each dancer individually. You can also rotate directly on stage using a two-finger twist gesture.</p>
+                                    <p><strong class="text-white">Stretch</strong> - tap <strong class="text-white">Positions › Stretch</strong> in the actions bar. A slider appears along with a button to switch between horizontal, vertical, or both directions. Drag to spread dancers further apart or pull them closer together. Stretching in one axis lets you widen a formation without affecting depth, or compress it vertically while keeping horizontal spacing intact. Useful for tightening a loose cluster or opening up a compact group without losing the relative shape.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I flip or cycle positions?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;"><strong class="text-white">Flip</strong> - tap <strong class="text-white">Positions › Horizontal flip</strong> or <strong class="text-white">Positions › Vertical flip</strong>. The selected dancers are mirrored around the center of their group - useful for creating a mirror-image version of a phrase or correcting stage left/right orientation. Long pressing either flip action opens extended options to choose a formation range and the flip center - group center mirrors within their own footprint, stage center keeps positions relative to the full stage.</p>
+                                    <p style="margin-bottom: 12px;"><strong class="text-white">Clockwise / Anti-clockwise swap</strong> - tap <strong class="text-white">Positions › Swap clockwise</strong> or <strong class="text-white">Positions › Swap anti-clockwise</strong>. Each dancer shifts into the position of the next dancer in the circular order around the group's center - only positions are shuffled, not identities. Useful for cycling through role assignments or creating a rotation pattern across formations.</p>
+                                    <div class="tip">
+                                        <div class="tip-question">Clockwise / anti-clockwise swap is designed for circular formations. On a line, grid, or irregular shape the geometric ordering may not match your expectations and results can be hard to control.</div>
+                                    </div>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I copy and paste positions?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Select the dancers you want to copy, then tap <strong class="text-white">Positions › Copy positions</strong> in the actions bar. Navigate to a different formation and tap <strong class="text-white">Positions › Paste positions</strong> - no need to reselect the dancers, the copied positions are applied automatically. Long pressing <strong class="text-white">Paste positions</strong> lets you select a custom range of formations to paste into at once.</p>
+                                    <p>Useful for repeating an exact arrangement in a later formation, or for bringing dancers back to a known reference position after a sequence of moves.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do formation presets work?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Formation presets are template shapes available in their own section of the actions bar. The built-in templates are: <strong class="text-white">Circle</strong>, <strong class="text-white">Top half-circle</strong>, <strong class="text-white">Bottom half-circle</strong>, <strong class="text-white">Horizontal line</strong>, and <strong class="text-white">Vertical line</strong>.</p>
+                                    <p style="margin-bottom: 12px;">Select the dancers you want to arrange, then tap a preset. ArrangeUs maps each dancer to the nearest position in the preset shape, keeping the assignment as natural as possible. The size of the resulting shape adapts to how tightly the dancers are currently grouped - a compact selection produces a smaller preset, a spread-out one produces a larger one. It's a quick way to jump to a standard starting shape without repositioning each dancer manually.</p>
+                                    <p>More preset templates - and the ability to create and save your own - are planned for future releases.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
+                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">👻</span>
+                                <div>
+                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Transition Paths & Ghost Dancers</span>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Visualise and control how dancers move between formations · 5 topics</p>
+                                </div>
+                            </div>
+                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <div class="flex items-center gap-2 min-w-0">
+                                        <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do transitions work?</span>
+                                        <span class="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-[#E92E67]/10 text-[#E92E67] flex-shrink-0">Key</span>
+                                    </div>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">A transition is the movement that happens between two consecutive formations. ArrangeUs draws each dancer's path as a straight line from their position in the current formation to their position in the next one - you can see these paths on the stage as faint lines when a transition is in view.</p>
+                                    <p>The duration of each transition - how long dancers have to travel - is set on the formation card and can be adjusted independently for each formation pair. In Music Mode, transition duration is determined by the gap between formation blocks on the waveform timeline.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are ghost dancers and future dancer positions?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Ghost dancers are faded overlays of dancer positions from an adjacent formation, shown on the current stage view. They let you see where dancers were in the previous formation and where they will be in the next one - without switching between formations.</p>
+                                    <p>This makes it much easier to judge spacing and flow: you can see the full picture of where everyone is coming from and going to while you edit the current formation. Toggle ghosts on or off using the ghost icon in the editor toolbar.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are transition paths and how do I show them?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Transition paths are lines drawn on the stage showing the exact route each dancer will travel from their current position to their next one. By default the path is a straight line, but it can be curved. Each path exists per transition - each pair of adjacent formations has its own set. Paths are a visual editing aid and are not exported in PDFs.</p>
+                                    <p>Enable path display using the paths icon in the editor toolbar. Paths are shown per dancer and update live as you move dancers or edit the path shape.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I edit, curve, and reset a transition path?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">With paths visible, tap a dancer to select them, then tap their path line. Control points appear - drag them to reshape the curve. The path updates live. Control points can be dragged outside the stage boundary, though the path may look unusual beyond the visible area. Each dancer has an independent path.</p>
+                                    <p style="margin-bottom: 12px;">For more complex routes, switch to a <strong class="text-white">2-point path</strong> by selecting the 2-point option from the path controls. This adds a second control point, giving you an S-curve shape - useful for a dancer who takes a detour or loops before arriving at their destination.</p>
+                                    <p>To remove a custom curve, tap the path and tap <strong class="text-white">Reset Path</strong>. This returns it to a straight line between the dancer's start and end positions.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Do stage changes affect transition paths?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Path control points are stored as proportional coordinates, the same way dancer positions are, so they adapt automatically to most stage changes:</p>
+                                    <ul class="space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Resize</strong> - control points scale with the stage, preserving the visual shape of every curve.</li>
+                                        <li><strong class="text-white">Flip</strong> - control points are mirrored along with dancer positions. A path that swept left will sweep right after a horizontal flip.</li>
+                                        <li><strong class="text-white">Swap</strong> - when two dancers are swapped, their paths follow them, keeping movement routes associated with the correct performer.</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -1763,331 +2010,6 @@
                                     <p style="margin-bottom: 12px;">Select the dancers you want to remove, then tap <strong class="text-white">Dancers › Delete</strong> in the actions bar. The dancers are removed from all formations in the choreography.</p>
                                     <p style="margin-bottom: 12px;">Deletion can be undone, but the undo history can be overwritten by later actions or lost if you close the choreography - so treat it with care.</p>
                                     <p>If you only want dancers absent from certain formations rather than removed entirely, move them to the <strong class="text-white">backstage</strong> area instead. They stay in the choreography but are hidden from the visible stage for those formations.</p>
-                                </div>
-                            </details>
-                        </div>
-                    </details>
-                </div>
-            </details>
-
-            <!-- Topic: Dancers & Props -->
-            <details class="topic-details rounded-2xl overflow-hidden border border-white/10">
-                <summary class="topic-header flex items-center justify-between gap-4 px-6 py-5 cursor-pointer border-l-4 border-transparent transition-colors duration-300 hover:bg-white/5">
-                    <div class="flex items-center gap-4">
-                        <span class="text-2xl">🕺</span>
-                        <div>
-                            <p class="topic-title font-semibold text-white transition-colors duration-300">Dancers & Props</p>
-                            <p class="text-xs text-slate-400 mt-0.5">Position actions, transition paths, and props on stage · 3 subtopics</p>
-                        </div>
-                    </div>
-                    <svg class="topic-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </summary>
-                <div class="px-6 pb-4 pt-1 space-y-1 border-t border-white/5">
-                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
-                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
-                            <div class="flex items-center gap-3">
-                                <span class="text-xl">⚡</span>
-                                <div>
-                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Quick Position Actions</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Swap, rotate, stretch, flip, and copy positions across formations · 7 topics</p>
-                                </div>
-                            </div>
-                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I swap two dancers' positions?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Select exactly two dancers, then tap <strong class="text-white">Swap</strong> in the actions bar. The two dancers exchange positions instantly. This also works across multiple formations when using the apply-forward option, and their transition paths are swapped along with their positions.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I rotate a selected group of dancers?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Select the dancers you want to rotate, then tap <strong class="text-white">Rotate</strong> in the quick actions panel. Use the slider to set the rotation angle - the group rotates around its collective center point as you drag. This is useful for spinning a circle formation or rotating a line to a diagonal without repositioning each dancer individually.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I stretch a selected group of dancers?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Select the dancers, then tap <strong class="text-white">Stretch</strong> in the quick actions panel. Drag the slider to scale the group outward or inward from its center - spreading dancers further apart or pulling them closer together proportionally. Useful for tightening a loose cluster or opening up a compact group without losing the relative shape.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I flip formation positions?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Select the dancers you want to flip, then use <strong class="text-white">Flip Horizontal</strong> or <strong class="text-white">Flip Vertical</strong> from the quick actions panel. The selected dancers are mirrored around the center of their group. Flipping the full selection mirrors the entire formation layout - useful for creating a mirror-image version of a phrase or correcting stage left/right orientation.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do clockwise and anti-clockwise swaps work?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Select a group of dancers and tap <strong class="text-white">Rotate Positions Clockwise</strong> or <strong class="text-white">Anti-clockwise</strong>. This shifts each dancer into the position of the next dancer in the circular order - the dancer at the top moves to the right slot, the right moves to the bottom, and so on. The dancers themselves don't change identity, only their positions are shuffled around the group's center. Useful for cycling through role assignments or creating a rotation pattern across formations.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I copy and paste positions?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Select one or more dancers and tap <strong class="text-white">Copy Positions</strong>. Navigate to another formation, select the same dancers, and tap <strong class="text-white">Paste Positions</strong>. The dancers snap to the copied coordinates.</p>
-                                    <p>This is useful for repeating an exact arrangement in a later formation, or for bringing dancers back to a known reference position after a sequence of moves.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do the Presets actions work in the positions panel?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">The Presets section in the positions actions panel shows your saved formation presets. Applying a preset distributes the selected dancers into the preset's positions - ArrangeUs maps the currently selected dancers to the preset slots and places them accordingly.</p>
-                                    <p>You can save any current arrangement as a new preset using <strong class="text-white">Save as Preset</strong>. Presets are reusable across choreographies, making it quick to return to a standard starting shape like a line, arc, or grid without rebuilding it each time.</p>
-                                </div>
-                            </details>
-                        </div>
-                    </details>
-                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
-                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
-                            <div class="flex items-center gap-3">
-                                <span class="text-xl">👻</span>
-                                <div>
-                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Transition Paths & Ghost Dancers</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Visualise and control how dancers move between formations · 10 topics</p>
-                                </div>
-                            </div>
-                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <div class="flex items-center gap-2 min-w-0">
-                                        <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do transitions work?</span>
-                                        <span class="text-xs font-semibold px-1.5 py-0.5 rounded-full bg-[#E92E67]/10 text-[#E92E67] flex-shrink-0">Key</span>
-                                    </div>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">A transition is the movement that happens between two consecutive formations. ArrangeUs draws each dancer's path as a straight line from their position in the current formation to their position in the next one - you can see these paths on the stage as faint lines when a transition is in view.</p>
-                                    <p>The duration of each transition - how long dancers have to travel - is set on the formation card and can be adjusted independently for each formation pair. In Music Mode, transition duration is determined by the gap between formation blocks on the waveform timeline.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Understanding Ghosts</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are ghost dancers and future dancer positions?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Ghost dancers are faded overlays of dancer positions from an adjacent formation, shown on the current stage view. They let you see where dancers were in the previous formation and where they will be in the next one - without switching between formations.</p>
-                                    <p>This makes it much easier to judge spacing and flow: you can see the full picture of where everyone is coming from and going to while you edit the current formation. Toggle ghosts on or off using the ghost icon in the editor toolbar.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are transition paths and how do I show them?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Transition paths are lines drawn on the stage showing the exact route each dancer will travel from their current position to their next one. By default the path is a straight line, but it can be curved to represent a more realistic or intentional movement route.</p>
-                                    <p>Enable path display using the paths icon in the editor toolbar. Paths are shown per dancer and update live as you move dancers or edit the path shape.</p>
-                                </div>
-                            </details>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Editing Paths</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I edit a transition path?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>With paths visible, tap a dancer to select them, then tap their path line. Control points appear on the path - drag them to reshape the curve. The path updates live so you can see the new route immediately. Each dancer has an independent path that can be edited separately.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is a 2-point transition path?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">A 2-point path adds two control points to the path instead of one, giving you an S-curve shape. This allows you to model more complex movement routes - like a dancer who loops around an obstacle or takes a curved detour before arriving at their destination.</p>
-                                    <p>Switch to a 2-point path by tapping the path and selecting the 2-point option from the path controls that appear.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I reset a transition path?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the path to select it, then tap <strong class="text-white">Reset Path</strong> in the path controls. This removes any custom curve and returns the path to a straight line between the dancer's start and end positions.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Are there any limits to transition paths?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Paths are visual guides only - they don't enforce physical constraints or prevent dancers from overlapping. A few things to be aware of:</p>
-                                    <ul class="space-y-1 list-disc list-inside">
-                                        <li>Paths exist per transition - each pair of adjacent formations has its own set of paths.</li>
-                                        <li>Control points can be dragged outside the stage boundary, but the path may look unusual if it extends beyond the visible area.</li>
-                                        <li>Paths are not exported in PDFs - they are an editing aid only.</li>
-                                    </ul>
-                                </div>
-                            </details>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Stage Changes & Paths</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Does swapping dancers also swap their transition paths?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Yes. When you swap two dancers across multiple formations, their transition paths are swapped along with their positions. The paths follow the dancer, so the movement routes remain associated with the correct performer after the swap.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Does changing the stage size affect transition paths?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Yes. Path control points are stored as proportional coordinates, the same way dancer positions are. When the stage size changes, all control points scale with it - so custom curves are preserved and paths stay visually correct relative to the new stage dimensions.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Does flipping the stage affect transition paths?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Yes. When you flip the stage horizontally or vertically, transition path control points are mirrored along with dancer positions. A curved path that swept left will sweep right after a horizontal flip, keeping the movement route consistent with the new layout.</p>
-                                </div>
-                            </details>
-                        </div>
-                    </details>
-                    <details class="subtopic-details group rounded-xl border border-white/10 overflow-hidden">
-                        <summary class="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer bg-white/[0.02] hover:bg-white/5 transition-colors">
-                            <div class="flex items-center gap-3">
-                                <span class="text-xl">🪑</span>
-                                <div>
-                                    <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Props</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Add objects to your stage layout · 9 topics</p>
-                                </div>
-                            </div>
-                            <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </summary>
-                        <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Basics</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What types of props are available?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">ArrangeUs has two types of props:</p>
-                                    <ul class="space-y-1 list-disc list-inside">
-                                        <li><strong class="text-white">Stage props</strong> - freestanding objects placed on the stage, like chairs, tables, or set pieces. They stay fixed in position across formations unless you move them.</li>
-                                        <li><strong class="text-white">Attachable props</strong> - props linked to a specific dancer. They move with that dancer as they transition between formations.</li>
-                                    </ul>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I add a prop to the stage?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the <strong class="text-white">Props</strong> button in the editor toolbar and select <strong class="text-white">Add Prop</strong>. Choose a shape, set a label and color, then confirm. The prop appears on the stage and you can drag it into position. Props are added to the current formation and persist across all following formations by default.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I edit a prop?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap a prop on the stage to select it, then tap the <strong class="text-white">Edit</strong> option in the context menu. You can change its label, color, and shape. To rename or recolor quickly, tap the prop and use the inline controls that appear without opening the full editor.</p>
-                                </div>
-                            </details>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Working with Props</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I change a prop's position, size, and rotation?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Drag the prop to reposition it. Use the resize handles on the edges to change its size. Rotate using the rotation handle at the top. For precise control, tap the prop and use the numeric inputs in the property panel to enter exact values.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I copy and paste a prop's position?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap a prop and select <strong class="text-white">Copy Position</strong>. Navigate to the formation where you want to apply it, tap the same prop, and select <strong class="text-white">Paste Position</strong>. This is useful for snapping a prop back to a known position after it has been moved in an intermediate formation.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I duplicate or delete a prop?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap a prop to select it, then use the context menu to <strong class="text-white">Duplicate</strong> or <strong class="text-white">Delete</strong>. Duplicating creates an identical prop at a slight offset - useful when you need several matching objects. Deleting removes the prop from all formations.</p>
-                                </div>
-                            </details>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Creative Uses</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How can I use props as alignment references?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Place a prop - such as a thin line or rectangle - to mark a fixed point on stage like a spotlight position, a stage edge, or a prop table. Dancers can then be positioned relative to it, making spacing consistent without relying on grid alone. Since stage props don't move between formations, they act as a stable visual anchor throughout the choreography.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I use attachable props as custom dancer shapes?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Yes. Attaching a prop to a dancer and setting it to match the dancer's color can effectively give that dancer a custom visual shape on stage - useful for distinguishing roles, representing costumes, or marking specific performers in a complex cast. The prop moves with the dancer automatically, so no extra positioning work is needed.</p>
                                 </div>
                             </details>
                         </div>

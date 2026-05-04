@@ -75,7 +75,7 @@
 
 ---
 
-## Dancers & Props
+## Working with Dancers
 
 - **Selecting dancers - tap, drag, area multi-select, Select All, Select Same Color/Shape**
 - **Moving dancers on stage**
@@ -85,20 +85,21 @@
 ---
 
 - Selection tips (color/shape as group identifiers, fixing wrong taps, long press shortcut)
-- Dancer color and shape (per-formation)
-- Dancer name and short name
-- Display inside dancer shape (short name / index / solid)
+- Dancer color - picker, 3 shades per color, per-formation, quick access button
+- Dancer shape - 8-direction triangles, circle/square/diamond, per-formation, quick access button
+- Applying color or shape across multiple formations (current / all previous / all next / custom)
+- Dancer name and short name - Edit names action, index popup, name display positions (below shape / above figure in 3D)
+- Short name options - initials, code names, emoji, intentional duplicates, inner text setting tip
+- Display inside dancer shape (short name / index / solid) - unique indexes vs. duplicatable short names
 - Dancer name label visibility
-- Dancer and label size
-- Snap to grid - behavior and toggle
-- Resnap positions
-- Quick Position Actions - swap, rotate, stretch, flip, copy/paste positions, presets
-- Transition paths - how they work, showing paths, editing curves, 2-point paths, reset
-- Ghost dancers and future positions
-- Paths and stage changes (swap, resize, flip)
-- Props - types (stage vs. attachable), add, edit, position/size/rotation
-- Props - copy position, duplicate, delete
-- Props - creative uses (alignment references, custom dancer shapes)
+- Dancer and label size (1.0 = one grid cell)
+- Snap to grid - on by default, snaps on drop not drag, toggle via Settings › Snap to grid
+- Resnap positions - Dancers › Resnap positions, useful after freeform/rotation/stretch/presets
+- Quick Position Actions - Positions › section: Swap 2 positions (long press for range, quick access button), Rotate (slider + 2-finger gesture), Stretch (slider + axis button), Horizontal/Vertical flip (long press for range + flip center), Swap clockwise/anti-clockwise (circular formations only), Copy/Paste positions (long press paste for range), Presets (5 templates)
+- Transition paths - how they work, per-transition, not in PDF export, enable via toolbar
+- Editing paths - control points, 2-point S-curve, reset
+- Ghost dancers and future positions - toggle via toolbar
+- Paths and stage changes (resize scales, flip mirrors, swap follows dancer)
 
 ---
 
