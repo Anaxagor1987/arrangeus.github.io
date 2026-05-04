@@ -1863,8 +1863,9 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">A transition is the movement that happens between two consecutive formations. ArrangeUs draws each dancer's path as a straight line from their position in the current formation to their position in the next one - you can see these paths on the stage as faint lines when a transition is in view.</p>
-                                    <p>The duration of each transition - how long dancers have to travel - is set on the formation card and can be adjusted independently for each formation pair. In Music Mode, transition duration is determined by the gap between formation blocks on the waveform timeline.</p>
+                                    <p style="margin-bottom: 12px;">A transition is the movement that happens between two formations. ArrangeUs draws each dancer's path as a straight line from their position in one formation to their position in the next - you can see these paths on the stage as faint lines when a transition is in view.</p>
+                                    <p style="margin-bottom: 12px;">In edit mode, transitions always play at a default quick duration - there is no way to customise it. Custom transition durations are only available in Music Mode, where the duration is determined by the gap between formation blocks on the waveform timeline.</p>
+                                    <p>When navigating between non-consecutive formations - for example jumping from formation 1 to formation 5 - you will still see a transition animation. Dancers simply travel directly from their current positions to their positions in the target formation.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1874,8 +1875,9 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Ghost dancers are faded overlays of dancer positions from an adjacent formation, shown on the current stage view. They let you see where dancers were in the previous formation and where they will be in the next one - without switching between formations.</p>
-                                    <p>This makes it much easier to judge spacing and flow: you can see the full picture of where everyone is coming from and going to while you edit the current formation. Toggle ghosts on or off using the ghost icon in the editor toolbar.</p>
+                                    <p style="margin-bottom: 12px;">Ghost dancers are faded overlays shown on the current stage view. They display dancer positions, colors, and shapes from an adjacent formation - letting you see where dancers were in the previous formation or where they will be in the next one, without switching between formations.</p>
+                                    <p style="margin-bottom: 12px;">This makes it much easier to judge spacing and flow: you can see the full picture of where everyone is coming from and going to while you edit the current formation.</p>
+                                    <p>Toggle previous and next ghosts independently using <strong class="text-white">Ghost dancers › Previous ghosts</strong> and <strong class="text-white">Ghost dancers › Next ghosts</strong> in the actions bar. Both can also be toggled in the choreography settings screen.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1885,8 +1887,9 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Transition paths are lines drawn on the stage showing the exact route each dancer will travel from their current position to their next one. By default the path is a straight line, but it can be curved. Each path exists per transition - each pair of adjacent formations has its own set. Paths are a visual editing aid and are not exported in PDFs.</p>
-                                    <p>Enable path display using the paths icon in the editor toolbar. Paths are shown per dancer and update live as you move dancers or edit the path shape.</p>
+                                    <p style="margin-bottom: 12px;">Transition paths are dashed lines drawn from each dancer's current position to their position in the previous or next formation. Each path exists per transition - each pair of adjacent formations has its own independent set.</p>
+                                    <p style="margin-bottom: 12px;">To show paths, first enable ghost dancers using <strong class="text-white">Ghost dancers › Previous ghosts</strong> or <strong class="text-white">Ghost dancers › Next ghosts</strong>, then turn on <strong class="text-white">Ghost dancers › Ghost paths</strong> in the actions bar. All three options are also available in the choreography settings screen. Paths are shown per dancer and update live as you move dancers or edit the path shape.</p>
+                                    <p>Paths can be included when exporting as PDF.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1896,9 +1899,10 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">With paths visible, tap a dancer to select them, then tap their path line. Control points appear - drag them to reshape the curve. The path updates live. Control points can be dragged outside the stage boundary, though the path may look unusual beyond the visible area. Each dancer has an independent path.</p>
-                                    <p style="margin-bottom: 12px;">For more complex routes, switch to a <strong class="text-white">2-point path</strong> by selecting the 2-point option from the path controls. This adds a second control point, giving you an S-curve shape - useful for a dancer who takes a detour or loops before arriving at their destination.</p>
-                                    <p>To remove a custom curve, tap the path and tap <strong class="text-white">Reset Path</strong>. This returns it to a straight line between the dancer's start and end positions.</p>
+                                    <p style="margin-bottom: 8px;">To modify a path, select a dancer first. Then use the <strong class="text-white">Ghost dancers › Show path knobs</strong> action in the bottom actions bar (also available in the choreography settings screen) to make the curve knob visible.</p>
+                                    <p style="margin-bottom: 12px;">Drag the knob to reshape the curve - it cannot be dragged outside the stage. You can only edit one path at a time.</p>
+                                    <p style="margin-bottom: 12px;">For more complex routes, use <strong class="text-white">Ghost dancers › 2-point curve</strong> to add a second control point. This gives an S-curve shape - useful for a dancer who takes a detour or loops before arriving. This action can be applied to multiple selected dancers at once.</p>
+                                    <p>To return a path to a straight line, use <strong class="text-white">Ghost dancers › Reset paths</strong>. Also works with multiple dancers selected.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1912,7 +1916,7 @@
                                     <ul class="space-y-1 list-disc list-inside">
                                         <li><strong class="text-white">Resize</strong> - control points scale with the stage, preserving the visual shape of every curve.</li>
                                         <li><strong class="text-white">Flip</strong> - control points are mirrored along with dancer positions. A path that swept left will sweep right after a horizontal flip.</li>
-                                        <li><strong class="text-white">Swap</strong> - when two dancers are swapped, their paths follow them, keeping movement routes associated with the correct performer.</li>
+                                        <li><strong class="text-white">Swap</strong> - when two dancers are swapped across multiple formations at once, their paths follow them, keeping movement routes associated with the correct performer. A swap applied to a single formation only does not swap the paths.</li>
                                     </ul>
                                 </div>
                             </details>
