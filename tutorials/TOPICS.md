@@ -64,9 +64,13 @@
 - Stage gestures (tap, drag, pinch, two-finger pan)
 - Editor states (default, dancer selected, playback, previews screen)
 - Actions bar symbols reference
-- Formation actions - add, duplicate, delete, reorder
-- Formation color and grouping
-- Multi-formation selection and bulk actions
+- Formations - navigate between formations (slider pills, previews screen, Music Mode scrubbing, Navigation actions bar)
+- Formations - previews screen (thumbnail grid, pinch/⋮ zoom, long press actions, reorder mode)
+- Formations - Add formation pill (edit mode and Music Mode only, copies previous)
+- Formations - formation actions (copy, rename, color, add comment, delete) - 4 entry points; color not in previews screen
+- Formations - copy inherits positions/colors/shapes/formation color; no comments or name
+- Formations - reorder via slider long press or previews reorder mode; not in Music Mode; caution with curved paths and block durations
+- Formations - color as background of pill/block, border in previews screen; supports formation range
 - Splitting a formation (Music Mode)
 - Comments - adding via panel vs. Add Comment action
 - Comments - editing and deleting

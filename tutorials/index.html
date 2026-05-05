@@ -634,7 +634,7 @@
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <details class="qa-details group">
+                            <details class="qa-details group mt-2">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are tags for?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -961,21 +961,22 @@
                                 <span class="text-xl">🎞️</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Formations</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Create, manage, and organise the formations in your choreography · 12 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Create, manage, and organise the formations in your choreography · 6 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Navigating & Viewing</p>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1">Navigating & Viewing</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I switch between formations?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I navigate between formations?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Tap any formation card in the timeline to jump directly to it. You can also swipe left or right on the stage area or use the prev/next arrows to step through formations one at a time.</p>
-                                    <p>In Music Mode, tap a formation block in the waveform timeline to select it, or scrub the playhead to land on the formation at that timestamp. The stage updates instantly to show that formation.</p>
+                                    <p style="margin-bottom: 12px;">In edit mode, the formations slider shows a row of formation pills. Tap any pill to switch to that formation. You can also swipe left or right on the stage area to step through formations one at a time. Tapping a formation in the previews screen selects it and closes the previews screen.</p>
+                                    <p style="margin-bottom: 12px;">In Music Mode, scrub the playhead along the waveform timeline to move through the choreography. When the playhead is inside a formation block, the stage shows that formation. When scrubbing through a transition between two blocks, dancer positions are shown at the intermediate point - so you see them mid-movement rather than snapping between states.</p>
+                                    <p>The <strong class="text-white">Navigation</strong> section in the bottom actions bar has four actions: <strong class="text-white">Go to start</strong>, <strong class="text-white">Go to end</strong>, <strong class="text-white">Previous</strong>, and <strong class="text-white">Next</strong>. In edit mode, Previous and Next simply switch to the neighbouring formation. In Music Mode, they step to the center of the neighbouring transition or formation - letting you move through the piece in precise increments including the in-between states.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -985,17 +986,9 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>The previews screen shows all formations as thumbnail cards in a scrollable grid, giving you an overview of the entire choreography at a glance. Tap any card to jump to that formation and start editing. It's useful for finding a specific formation in a long piece, checking the overall visual flow, and performing batch actions like reordering, recoloring, or selecting a range.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I zoom out in the previews screen?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Pinch in on the previews screen to reduce thumbnail size and show more formations at once. Zooming out is useful for a bird's-eye view of the whole piece - you can check how colors are distributed, spot repeated patterns, or quickly scan for a specific formation without scrolling through them one by one.</p>
+                                    <p style="margin-bottom: 12px;">The previews screen shows all formations as thumbnail cards in a scrollable grid, giving you an overview of the entire choreography at a glance. Tap any card to jump to that formation and close the previews screen. It's useful for finding a specific formation in a long piece, checking the overall visual flow, and reordering formations.</p>
+                                    <p style="margin-bottom: 12px;">Pinch to zoom in or out and adjust how many thumbnails are visible at once. You can also use the <strong class="text-white">⋮</strong> button in the top navigation for zoom actions. Zooming out is useful for a bird's-eye view - you can check how colors are distributed, spot repeated patterns, or scan for a specific formation without scrolling.</p>
+                                    <p>Long press a formation card to access individual actions: <strong class="text-white">Duplicate</strong>, <strong class="text-white">Rename</strong>, <strong class="text-white">Delete</strong>, <strong class="text-white">Add comment</strong>, or start reordering. The <strong class="text-white">⋮</strong> button also has an option to start reordering.</p>
                                 </div>
                             </details>
                             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Managing Formations</p>
@@ -1005,37 +998,24 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the <strong class="text-white">+</strong> button in the timeline or previews screen. A new formation is inserted after the currently selected one, copying the dancer positions from it as a starting point. From there you can move dancers into the new arrangement.</p>
+                                    <p>Tap the <strong class="text-white">Add formation</strong> pill at the end of the formations slider. This works in both edit mode and Music Mode. A new formation is added after the current one, copying the dancer positions from it as a starting point. From there you can move dancers into the new arrangement.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I duplicate a formation?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What formation actions are available?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the <strong class="text-white">···</strong> menu on a formation card and select <strong class="text-white">Duplicate</strong>. The copy is inserted immediately after the original with identical dancer positions, stage setup, and comments. Useful when the next formation is a small variation of the current one - duplicate first, then adjust.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I delete a formation?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the <strong class="text-white">···</strong> menu on a formation card and select <strong class="text-white">Delete</strong>, or swipe left on the card in the timeline. Deletion is immediate - tap <strong class="text-white">Undo</strong> right away if you deleted by mistake.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I rename a formation?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the formation name on the card to edit it inline. Names like "Verse 1" or "Final pose" help you navigate quickly in a long piece and appear in the previews screen and in PDF exports.</p>
+                                    <p style="margin-bottom: 12px;">Formation actions are available by tapping the active formation pill in the slider, tapping a formation block twice in Music Mode, opening the <strong class="text-white">Formation actions</strong> section in the bottom actions bar, or long pressing a card in the previews screen. Color is not available from the previews screen.</p>
+                                    <ul class="space-y-2 list-disc list-inside">
+                                        <li><strong class="text-white">Copy</strong> - inserts a copy immediately after the current formation. Inherits dancer positions, colors, shapes, and formation color. Comments and the custom name are not carried over.</li>
+                                        <li><strong class="text-white">Rename</strong> - set a name like "Verse 1" or "Final pose". Names appear in the previews screen and in PDF exports.</li>
+                                        <li><strong class="text-white">Color</strong> - assign a color that appears as the pill/block background in the slider and Music Mode, and as a border in the previews screen. Supports a formation range selection.</li>
+                                        <li><strong class="text-white">Add comment</strong> - add a note to the formation. See the Comments subtopic for full details.</li>
+                                        <li><strong class="text-white">Delete</strong> - removes the formation immediately. Tap Undo right away if deleted by mistake.</li>
+                                    </ul>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1045,50 +1025,19 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>In the previews screen, long-press a formation card and drag it to a new position. In Music Mode, drag formation blocks along the waveform timeline to reposition them. Reordering also moves the formation's associated transition paths so the routing stays correct.</p>
+                                    <p style="margin-bottom: 12px;">In the formations slider, long press a formation pill and drag it to a new position. In the previews screen, first enable reordering mode (via long press on a card or the <strong class="text-white">⋮</strong> button), then drag cards to rearrange them. Reordering is not available in Music Mode.</p>
+                                    <p>If you have curved transition paths or Music Mode block durations set, be aware that reordering can leave curves in unpredictable positions and change which transitions the durations apply to - review both afterwards.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I add a comment to a formation?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I use formation colors to organise my choreography?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>The quickest way is to open the comments panel from the actions bar - it lets you write a comment while keeping the stage visible. For the full details, see the <strong class="text-white">Comments</strong> subtopic.</p>
-                                </div>
-                            </details>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Organising & Selecting</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I set a color on a formation and group by color?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Tap the <strong class="text-white">···</strong> menu on a formation card and select <strong class="text-white">Set Color</strong>. Choose a color from the palette - it appears as a colored stripe on the card in the timeline and previews screen.</p>
-                                    <p>Color is a lightweight grouping tool. You can give all chorus formations one color and all verse formations another, making the structure of the piece immediately readable at a glance. In the previews screen you can filter by color to show only formations in a specific group.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do range actions and custom formation selection work?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">In the previews screen, long-press any formation card to enter multi-select mode. Tap additional cards to build a custom selection, or drag from the first to the last card to select a contiguous range in one gesture.</p>
-                                    <p>With multiple formations selected you can delete, recolor, or apply other batch actions to all of them at once - useful for restructuring a long sequence or applying consistent styling to a whole section.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How does Split Formation work in Music Mode?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Split Formation divides one formation block into two at a point you choose. Both halves start with identical dancer positions - it's the same snapshot split in time. From there you can adjust the duration of each half independently and move dancers in either one without affecting the other.</p>
-                                    <p>To split, tap a formation block in the Music Mode timeline and select <strong class="text-white">Split</strong>. Drag the split point to where you want the divide, then confirm.</p>
+                                    <p style="margin-bottom: 12px;">Use the <strong class="text-white">Color</strong> formation action. The chosen color appears as the background of the formation pill in the slider and the formation block in Music Mode, and as a border on the card in the previews screen. You can select a formation range to apply the same color to multiple formations at once.</p>
+                                    <p>Giving all chorus formations one color and all verse formations another makes the structure of the piece immediately readable at a glance.</p>
                                 </div>
                             </details>
                         </div>
@@ -1105,7 +1054,7 @@
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Track Setup</p>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1">Track Setup</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is Music Mode and why is it useful?</span>
@@ -1286,7 +1235,7 @@
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <details class="qa-details group">
+                            <details class="qa-details group mt-2">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <div class="flex items-center gap-2 min-w-0">
                                         <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What should I configure on the stage first?</span>
@@ -1302,7 +1251,8 @@
                                         <li><strong class="text-white">Backstage config</strong> - adjust the off-stage areas to match how much wing space you actually need.</li>
                                         <li><strong class="text-white">Custom background</strong> - if you have a floor plan or venue photo, add it now. You can also take advantage of our standard backgrounds like basketball field or cheerleading mats. Each default background has its own recommended size, so we got you covered there.</li>
                                     </ul>
-                                    <p>Other stage settings won't affect existing dancer positions, so they can be adjusted at any time without disrupting your work.</p>
+                                    <p style="margin-bottom: 12px;">Other stage settings won't affect existing dancer positions, so they can be adjusted at any time without disrupting your work.</p>
+                                    <div class="tip"><span class="tip-emoji">💡</span> If you're working in a standard venue - a sports hall, a theatre stage, a cheerleading mat - check the built-in backgrounds first. Each comes with a recommended stage size already set, so you can skip the manual configuration entirely.</div>
                                 </div>
                             </details>
                             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Stage Size & Layout</p>
@@ -1906,7 +1856,7 @@
                                     <p style="margin-bottom: 12px;">Drag the knob to reshape the curve - it cannot be dragged outside the stage. You can only edit one path at a time.</p>
                                     <p style="margin-bottom: 12px;">For more complex routes, use <strong class="text-white">Ghost dancers › 2-point curve</strong> to add a second control point. This gives an S-curve shape - useful for a dancer who takes a detour or loops before arriving. This action can be applied to multiple selected dancers at once.</p>
                                     <p style="margin-bottom: 12px;">To return a path to a straight line, use <strong class="text-white">Ghost dancers › Reset paths</strong>. Also works with multiple dancers selected.</p>
-                                    <p>Curved paths are not automatically adjusted when you flip formations, apply a clockwise swap, use a position preset, or perform similar bulk position actions. After these operations, review your curves and reset or re-edit any paths that no longer look correct.</p>
+                                    <p>Curved paths are not automatically adjusted when you flip formations, apply a clockwise swap, use a position preset, reorder formations, or perform similar bulk actions. After these operations, review your curves and reset or re-edit any paths that no longer look correct.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -2050,7 +2000,7 @@
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Formats</p>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1">Formats</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What's the best format to share in?</span>
@@ -2193,7 +2143,7 @@
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">How it works</p>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1">How it works</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <div class="flex items-center gap-2 min-w-0">
@@ -2425,7 +2375,7 @@
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Your Plan</p>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1">Your Plan</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I check my current plan and renewal date?</span>

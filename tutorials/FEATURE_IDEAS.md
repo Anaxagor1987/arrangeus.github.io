@@ -32,6 +32,34 @@ Collected while writing tutorials content. Grouped by theme.
 
 ---
 
+## Comments
+
+- **Resolve / mark as done** - comments accumulate with no way to mark one as addressed. A resolved state (dimmed or hidden) would help track what's been actioned during rehearsal feedback rounds.
+- **Comment threads / replies** - currently each comment is standalone. Being able to reply to a comment would make back-and-forth feedback between choreographers cleaner.
+- **Pin a comment** - keep an important note always visible at the top of the panel regardless of how many others are added.
+- **Filter formations by comments** - no way to quickly jump to all formations that have comments. A filter in the previews screen or slider would help when reviewing feedback.
+- **Comment indicators in the previews screen** - the count badge is on the slider pill but not on previews screen cards. A small indicator on the card would make annotated formations easier to spot at a glance.
+- **Mention a dancer in a comment** - type @ to link a comment to a specific dancer, useful for role-specific notes.
+- **Comment categories or colors** - distinguish between staging notes, music cues, and costume notes without relying on text prefixes.
+- **Comments on transitions** - currently comments attach to formations only. A note on the transition itself (e.g. "this move takes 4 counts") would be useful for timing and choreography notes.
+- **Timeline comments (timestamp-anchored)** - a comment pinned to a specific second in the music timeline rather than a formation. Useful for music cues, sound effects, or lighting notes that fall mid-transition.
+- **Duration comments** - a comment that spans a range of time on the timeline (e.g. "build tension here" covering several formations). Gives context for a whole section rather than a single moment.
+- **Stage position comments** - a note placed at a specific coordinate on the stage, like an annotation directly on the floor plan. Useful for marking spike tape positions, lighting pools, or hazards.
+- **Stage area comments** - a comment attached to a region of the stage (a rectangle or zone) rather than a point. Useful for labelling areas like "wing entrance", "platform", or "avoid this corner".
+
+---
+
+## Formations
+
+- **Multi-select formations and bulk actions** - currently formations can only be acted on one at a time from the previews screen. Selecting a range or custom set of formations to delete, recolor, or apply other batch actions at once would help when restructuring a long sequence.
+- **Recolor formations from the previews screen** - formation color can only be set from the editor. Being able to set or change color directly from the previews screen would make it faster to organise a long piece visually without switching back and forth.
+- **Named sections / chapters** - a way to group a range of formations under a named label (e.g. "Intro", "Verse 1", "Chorus"), visible as headers in the slider and previews screen. Would give structure to long pieces and replace the color-as-grouping workaround for many users.
+- **Filter by color in the previews screen** - formation color is currently only useful for visual scanning. Being able to filter the previews screen to show only formations of a given color would make it a proper grouping and navigation tool.
+- **Collapse a color group in the slider** - in a long piece the slider becomes crowded. Collapsing all formations of one color into a single pill would reduce clutter and let users jump between sections more quickly.
+- **Section-level actions** - once named sections exist: duplicate a whole section, reorder sections as a unit, apply color or name changes to all formations in a section at once.
+
+---
+
 ## Choreography workflow
 
 - **Transition duration in non-music mode** - currently there is no way to set transition duration without attaching music. A simple duration field per transition would fill this gap.

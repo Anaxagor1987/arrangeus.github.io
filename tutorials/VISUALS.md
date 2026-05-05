@@ -45,6 +45,17 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 
 ---
 
+## Formations
+
+| Topic | Visual suggestion |
+|---|---|
+| What is the formation previews screen? | Screenshot of the previews screen showing the thumbnail grid, zoom levels, and a long press context menu - users often don't know this screen exists |
+| How do I navigate between formations? | Annotated screenshot of the Navigation actions bar showing all 4 actions (Go to start, Go to end, Previous, Next) - easy to miss |
+| How do I use formation colors? | Screenshot showing the same formation in all three contexts: colored pill in slider, colored block in Music Mode, colored border in previews screen |
+| Music Mode scrubbing | GIF showing playhead scrubbing through a transition with dancers at an intermediate position - the mid-movement preview is a key Music Mode benefit |
+
+---
+
 ## Comments
 
 | Topic | Visual suggestion |

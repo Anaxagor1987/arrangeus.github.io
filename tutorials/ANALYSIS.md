@@ -82,8 +82,20 @@ Last updated: 2026-04-29
 - Comments: merged "How do I view comments?" and "compact/full view" into one topic (drag to resize, never truncated)
 - Comments: updated comment count badge topic (edit mode only, formation pills)
 
+**Fixed (Formations subtopic):**
+- Renamed "How do I switch between formations?" → "How do I navigate between formations?"; expanded to cover slider pills, previews screen tap, Music Mode scrubbing with intermediate positions, Navigation actions bar (Go to start/end, Previous/Next - edit mode vs Music Mode behaviour)
+- Previews screen topic expanded: pinch + ⋮ zoom, long press actions (duplicate/rename/delete/add comment/reorder), reorder mode
+- Create formation: corrected to Add formation pill at end of slider; works in edit mode and Music Mode; not in previews screen
+- Merged duplicate/delete/rename/color/comment into single "What formation actions are available?" topic; listed all 4 entry points; noted color not available from previews screen
+- Copy action: clarified what is and isn't carried over (positions/colors/shapes/formation color yes; comments/name no)
+- Reorder: corrected to slider long press or previews reorder mode; not available in Music Mode; caution with curved paths and block durations
+- Color: corrected appearance (pill/block background in slider+Music Mode, border in previews screen); supports formation range
+- Removed "How do I add a comment to a formation?" (signpost only - covered in Comments subtopic)
+- ~~"Split Formation" appears in both Music Mode and Formations subtopics~~ - removed from Formations, kept in Music Mode only
+- Reduced from 12 to 6 topics; removed lone "Organising & Selecting" group header
+- Moved multi-select formations and recolor-from-previews to FEATURE_IDEAS.md
+
 **Still to fix:**
-- "Split Formation" appears in both Music Mode and Formations subtopics - still to deduplicate
 - Music Mode subtopic not yet reviewed
 - Customise Your Stage subtopic not yet reviewed
 
