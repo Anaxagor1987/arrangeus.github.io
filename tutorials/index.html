@@ -1864,7 +1864,8 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">A transition is the movement that happens between two formations. ArrangeUs draws each dancer's path as a straight line from their position in one formation to their position in the next - you can see these paths on the stage as faint lines when a transition is in view.</p>
+                                    <p style="margin-bottom: 12px;">A transition is the movement that happens between two formations. ArrangeUs draws each dancer's path from their current position to their position in the next formation (or from the previous one). By default this is a straight line, but it becomes a curve if the path has been edited. When all the relevant settings are enabled, these paths are drawn on the stage at all times while you are editing - they don't require any special mode to be active.</p>
+                                    <p style="margin-bottom: 12px;">When you switch between formations, the paths gradually appear or disappear based on the direction dancers are moving - giving a smooth visual sense of the transition as you navigate.</p>
                                     <p style="margin-bottom: 12px;">In edit mode, transitions always play at a default quick duration - there is no way to customise it. Custom transition durations are only available in Music Mode, where the duration is determined by the gap between formation blocks on the waveform timeline.</p>
                                     <p>When navigating between non-consecutive formations - for example jumping from formation 1 to formation 5 - you will still see a transition animation. Dancers simply travel directly from their current positions to their positions in the target formation.</p>
                                 </div>
@@ -1888,9 +1889,10 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Transition paths are dashed lines drawn from each dancer's current position to their position in the previous or next formation. Each path exists per transition - each pair of adjacent formations has its own independent set.</p>
+                                    <p style="margin-bottom: 12px;">Transition paths are dashed lines drawn from each dancer's current position to their position in the previous or next formation. Each path exists per transition - each pair of adjacent formations has its own independent set. Paths are only shown for neighbouring formations - not when jumping to a non-adjacent one.</p>
                                     <p style="margin-bottom: 12px;">To show paths, first enable ghost dancers using <strong class="text-white">Ghost dancers › Previous ghosts</strong> or <strong class="text-white">Ghost dancers › Next ghosts</strong>, then turn on <strong class="text-white">Ghost dancers › Ghost paths</strong> in the actions bar. All three options are also available in the choreography settings screen. Paths are shown per dancer and update live as you move dancers or edit the path shape.</p>
-                                    <p>Paths can be included when exporting as PDF.</p>
+                                    <p style="margin-bottom: 12px;">Paths are shown in 2D view only. In 3D mode the dashed lines are not visible, but dancers still follow their curved routes when travelling between formations. Paths are also shown while music is playing or when scrubbing the music timeline.</p>
+                                    <p>Paths can be included when exporting as PDF. Transition paths are currently only available for dancers - not for props.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1903,7 +1905,8 @@
                                     <p style="margin-bottom: 8px;">To modify a path, select a dancer first. Then use the <strong class="text-white">Ghost dancers › Show path knobs</strong> action in the bottom actions bar (also available in the choreography settings screen) to make the curve knob visible.</p>
                                     <p style="margin-bottom: 12px;">Drag the knob to reshape the curve - it cannot be dragged outside the stage. You can only edit one path at a time.</p>
                                     <p style="margin-bottom: 12px;">For more complex routes, use <strong class="text-white">Ghost dancers › 2-point curve</strong> to add a second control point. This gives an S-curve shape - useful for a dancer who takes a detour or loops before arriving. This action can be applied to multiple selected dancers at once.</p>
-                                    <p>To return a path to a straight line, use <strong class="text-white">Ghost dancers › Reset paths</strong>. Also works with multiple dancers selected.</p>
+                                    <p style="margin-bottom: 12px;">To return a path to a straight line, use <strong class="text-white">Ghost dancers › Reset paths</strong>. Also works with multiple dancers selected.</p>
+                                    <p>Curved paths are not automatically adjusted when you flip formations, apply a clockwise swap, use a position preset, or perform similar bulk position actions. After these operations, review your curves and reset or re-edit any paths that no longer look correct.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>

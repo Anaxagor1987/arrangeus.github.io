@@ -41,6 +41,17 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 | What are ghost dancers and future dancer positions? | Screenshot showing faded ghost overlay alongside solid current positions |
 | What are transition paths and how do I show them? | Screenshot showing dashed lines on stage, ideally with a curved path visible |
 | How do I edit, curve, and reset a transition path? | GIF showing drag on knob → curve forms; second frame showing S-curve from 2-point mode |
+| How do I adjust the size of dancers on stage? | Side-by-side showing small (0.4), default (0.7), and large (1.0+) sizes with the grid visible - makes the scale and the "1.0 = one grid cell" reference concrete |
+
+---
+
+## Comments
+
+| Topic | Visual suggestion |
+|---|---|
+| How do I add a comment to a formation? | Screenshot or split view showing both entry points - panel vs. Add Comment action - making it clear both lead to the same result |
+| How do I view comments? | GIF showing the panel being dragged from compact to full size - the resize behaviour is non-obvious |
+| Comment count badge | Annotated screenshot of formation pills in the slider with the badge visible - easy to miss without a pointer |
 
 ---
 

@@ -125,6 +125,10 @@ Last updated: 2026-04-29
 - Management: Add New tap-to-place, default pink/circle, all-formations placement caveat; Delete via Dancers › Delete with confirm and undo caveat
 - Quick Position Actions: all action names corrected to Positions › section, removed non-existent apply-forward from Swap, long press for range on Swap and Paste, flip extended options (range + flip center), rotate + stretch slider details, 2-finger rotate gesture, stretch axis button, presets template list (5 shapes), clockwise swap circular-only tip; consolidated from 7 to 5 topics
 - Transition Paths & Ghost Dancers: consolidated from 10 to 5 topics (merged edit/2-point/reset, merged stage changes)
+- Transition paths: corrected 3D behaviour (paths not visible in 3D but curved movement still followed); added neighbour-formations-only note; paths visible during music playback and timeline scrubbing; always visible during editing when settings enabled; paths gradually appear/disappear when switching formations; not available for props
+- Editing paths: corrected Show path knobs as action (not toolbar icon); knob cannot leave stage; one path at a time; no auto-adjust after flip/swap/preset bulk actions
+- Ghost dancers: corrected toggle to Ghost dancers › Previous ghosts / Next ghosts actions; shows position/color/shape from adjacent formation
+- Stage changes: clarified swap only follows paths when applied across multiple formations
 
 ---
 

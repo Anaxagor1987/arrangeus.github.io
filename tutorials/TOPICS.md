@@ -102,10 +102,16 @@
 - Snap to grid - on by default, snaps on drop not drag, toggle via Settings › Snap to grid
 - Resnap positions - Dancers › Resnap positions, useful after freeform/rotation/stretch/presets
 - Quick Position Actions - Positions › section: Swap 2 positions (long press for range, quick access button), Rotate (slider + 2-finger gesture), Stretch (slider + axis button), Horizontal/Vertical flip (long press for range + flip center), Swap clockwise/anti-clockwise (circular formations only), Copy/Paste positions (long press paste for range), Presets (5 templates)
-- Transition paths - how they work, per-transition, not in PDF export, enable via toolbar
-- Editing paths - control points, 2-point S-curve, reset
-- Ghost dancers and future positions - toggle via toolbar
-- Paths and stage changes (resize scales, flip mirrors, swap follows dancer)
+- Transition paths - straight line by default or curve if edited, per-transition, visible in 2D only (curved movement still followed in 3D), neighbour formations only, not for props
+- Transition paths - always visible during editing when settings enabled, gradually appear/disappear when switching formations
+- Transition paths - visible during music playback and timeline scrubbing
+- Transition paths - can be included in PDF export
+- Transition paths - enable via Ghost dancers › Previous/Next ghosts + Ghost dancers › Ghost paths
+- Editing paths - Ghost dancers › Show path knobs, drag knob (cannot leave stage), one path at a time
+- Editing paths - Ghost dancers › 2-point curve (S-curve, multiple dancers), Ghost dancers › Reset paths (multiple dancers)
+- Editing paths - not auto-adjusted after flip, clockwise swap, preset apply or similar bulk actions
+- Ghost dancers - Previous ghosts / Next ghosts toggle, settings screen, shows position/color/shape
+- Paths and stage changes - resize scales, flip mirrors, swap follows dancer (multi-formation swap only)
 
 ---
 
