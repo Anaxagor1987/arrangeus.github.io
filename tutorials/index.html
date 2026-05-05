@@ -1502,24 +1502,36 @@
                                 <span class="text-xl">🪑</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Props</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Add objects to your stage layout · 9 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Add objects to your stage layout · 7 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Basics</p>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1">Basics</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What types of props are available?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">ArrangeUs has two types of props:</p>
-                                    <ul class="space-y-1 list-disc list-inside">
-                                        <li><strong class="text-white">Stage props</strong> - freestanding objects placed on the stage, like chairs, tables, or set pieces. They stay fixed in position across formations unless you move them.</li>
-                                        <li><strong class="text-white">Attachable props</strong> - props linked to a specific dancer. They move with that dancer as they transition between formations.</li>
+                                    <p style="margin-bottom: 12px;">Currently ArrangeUs supports stage props - freestanding objects placed on the stage. Three shapes are available: <strong class="text-white">rectangle</strong>, <strong class="text-white">circle</strong>, and <strong class="text-white">triangle</strong>. Color, transparency, position, rotation, and size are all per-formation, so a prop can move and change appearance as the choreography progresses.</p>
+                                    <p>Once you place a prop, its shape cannot be changed. To use a different shape you would need to delete it and add a new one.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">When are props useful?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <ul class="space-y-2 list-disc list-inside" style="margin-bottom: 12px;">
+                                        <li><strong class="text-white">Set pieces</strong> - chairs, tables, platforms, or any object dancers interact with or move around. A prop can stay fixed or be moved between formations to reflect real staging changes.</li>
+                                        <li><strong class="text-white">Stage markers</strong> - mark fixed reference points like spotlight positions, stage edges, or zone boundaries. Dancers can then be positioned relative to a prop, giving consistent spacing without relying on the grid alone.</li>
+                                        <li><strong class="text-white">Stage zones</strong> - a large transparent rectangle can outline a section of the stage (a performance area, a ramp, or an elevated platform) as a visual guide throughout the choreography.</li>
                                     </ul>
+                                    <p>Add props early in your process. A prop exists across all formations from the point it is added, so adding one later means manually setting its position and appearance in every preceding formation.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1529,37 +1541,43 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the <strong class="text-white">Props</strong> button in the editor toolbar and select <strong class="text-white">Add Prop</strong>. Choose a shape, set a label and color, then confirm. The prop appears on the stage and you can drag it into position. Props are added to the current formation and persist across all following formations by default.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I edit a prop?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap a prop on the stage to select it, then tap the <strong class="text-white">Edit</strong> option in the context menu. You can change its label, color, and shape. To rename or recolor quickly, tap the prop and use the inline controls that appear without opening the full editor.</p>
+                                    <p>Use <strong class="text-white">Props › Add rectangle</strong>, <strong class="text-white">Props › Add ellipse</strong>, or <strong class="text-white">Props › Add triangle</strong> from the bottom actions bar. The prop appears at the center of the stage with a default size - drag it into position and resize as needed. It will be present across all formations.</p>
                                 </div>
                             </details>
                             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Working with Props</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I change a prop's position, size, and rotation?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I select and edit a prop?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Drag the prop to reposition it. Use the resize handles on the edges to change its size. Rotate using the rotation handle at the top. For precise control, tap the prop and use the numeric inputs in the property panel to enter exact values.</p>
+                                    <p style="margin-bottom: 12px;">Tap a prop on stage to select it. You can only select one prop at a time. To change color or transparency, use the <strong class="text-white">Props › Edit prop</strong> action. You can select a formation range directly from there, the same way as with dancer color and shape.</p>
+                                    <p style="margin-bottom: 12px;">Position, size, and rotation are adjusted directly on stage. To apply them across multiple formations, use the copy and paste action. All properties are per-formation.</p>
+                                    <p>The prop's shape cannot be changed after it has been placed.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I copy and paste a prop's position?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I move, resize, and rotate a prop?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap a prop and select <strong class="text-white">Copy Position</strong>. Navigate to the formation where you want to apply it, tap the same prop, and select <strong class="text-white">Paste Position</strong>. This is useful for snapping a prop back to a known position after it has been moved in an intermediate formation.</p>
+                                    <ul class="space-y-2 list-disc list-inside">
+                                        <li><strong class="text-white">Move</strong> - drag the prop to reposition it. On release, the center of the prop snaps to the nearest grid point.</li>
+                                        <li><strong class="text-white">Resize</strong> - drag the resize handles. Size snaps in half-grid-cell increments. The height of a prop is fixed and cannot be changed independently.</li>
+                                        <li><strong class="text-white">Rotate</strong> - use the rotation handle.</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I copy and paste a prop's configuration?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p>Select a prop and use <strong class="text-white">Props › Copy position</strong>, then navigate to another formation and use <strong class="text-white">Props › Paste position</strong>. Unlike dancer position copying, this also carries over the prop's <strong class="text-white">rotation</strong> and <strong class="text-white">size</strong>. Long press the paste action to apply across a range of formations at once - useful when a prop needs to hold a fixed configuration for a whole section of the choreography.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1569,27 +1587,10 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap a prop to select it, then use the context menu to <strong class="text-white">Duplicate</strong> or <strong class="text-white">Delete</strong>. Duplicating creates an identical prop at a slight offset - useful when you need several matching objects. Deleting removes the prop from all formations.</p>
-                                </div>
-                            </details>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Creative Uses</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How can I use props as alignment references?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Place a prop - such as a thin line or rectangle - to mark a fixed point on stage like a spotlight position, a stage edge, or a prop table. Dancers can then be positioned relative to it, making spacing consistent without relying on grid alone. Since stage props don't move between formations, they act as a stable visual anchor throughout the choreography.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I use attachable props as custom dancer shapes?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Yes. Attaching a prop to a dancer and setting it to match the dancer's color can effectively give that dancer a custom visual shape on stage - useful for distinguishing roles, representing costumes, or marking specific performers in a complex cast. The prop moves with the dancer automatically, so no extra positioning work is needed.</p>
+                                    <ul class="space-y-2 list-disc list-inside">
+                                        <li><strong class="text-white">Props › Duplicate prop</strong> - creates a copy with the same shape, color, size, and rotation, placed next to the original. Useful when you need several identical objects on stage.</li>
+                                        <li><strong class="text-white">Props › Delete prop</strong> - removes the prop from all formations. If you might need it again, consider moving it off stage instead of deleting.</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>

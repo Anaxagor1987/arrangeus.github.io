@@ -72,6 +72,12 @@
 - Comments - editing and deleting
 - Comments - viewing, panel sizes, count badge
 - Comments in PDF export
+- Props - rectangle, ellipse, triangle shapes
+- Props - per-formation color, transparency, position, size, rotation
+- Props - Props › Edit prop (color/transparency with formation range), move/resize/rotate on stage
+- Props - Props › Copy position / Paste position (carries rotation + size, long press for range)
+- Props - Props › Duplicate prop / Delete prop
+- Props - add early advice (exists across all formations from point of addition)
 
 ---
 

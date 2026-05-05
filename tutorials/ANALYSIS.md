@@ -87,6 +87,24 @@ Last updated: 2026-04-29
 - Music Mode subtopic not yet reviewed
 - Customise Your Stage subtopic not yet reviewed
 
+#### Props subtopic ✅ reviewed
+
+**Fixed:**
+- Removed non-existent "Attachable props" and "Can I use attachable props as custom dancer shapes?" topics
+- Rewrote types topic: rectangle, ellipse, triangle only; shape immutable after placing
+- Added "When are props useful?" topic covering set pieces, stage markers, stage zones; add-early advice
+- Corrected add topic: separate Props › Add rectangle / Add ellipse / Add triangle actions; no label; placed at stage center
+- Corrected select/edit topic: Props › Edit prop for color/transparency (supports formation range); position/size/rotation adjusted on stage
+- Corrected copy/paste topic: Props › Copy position / Props › Paste position; carries rotation + size; long press paste for range
+- Corrected duplicate/delete topic: Props › Duplicate prop / Props › Delete prop
+- Noted fixed prop height limitation in resize topic
+- Clarified all properties (color, transparency, position, rotation, size) are per-formation
+
+**Moved to FEATURE_IDEAS.md:**
+- Attachable props
+- Configurable prop height
+- Multi-select props, lock prop, show/hide per formation, layer order, more shapes, text label prop, image prop, apply forward, prop group
+
 **Known gaps still open:**
 - No **Playback** topic for standard playback without music
 - No dedicated topic for **transition duration** in non-music mode

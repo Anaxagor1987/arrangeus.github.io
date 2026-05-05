@@ -44,6 +44,16 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 
 ---
 
+## Props
+
+| Topic | Visual suggestion |
+|---|---|
+| When are props useful? | Screenshot showing a prop used as a stage marker alongside dancer positions - illustrates the reference point concept |
+| How do I move, resize, and rotate a prop? | Screenshot with resize handles and rotation handle visible on a selected prop |
+| How do I select and edit a prop? | Screenshot of the formation range selector when editing prop color/transparency - not obvious this exists |
+
+---
+
 ## Sharing & Backups
 
 | Topic | Visual suggestion |

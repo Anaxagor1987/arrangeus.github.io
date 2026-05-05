@@ -81,6 +81,22 @@ Collected while writing tutorials content. Grouped by theme.
 
 ---
 
+## Props
+
+- **Attachable props** - props linked to a specific dancer that move with them as they transition between formations. Currently all props are freestanding stage objects; attachable props would allow representing handheld items or costume elements that follow a performer automatically.
+- **Multi-select props** - currently only one prop can be selected at a time. Selecting multiple props would allow moving a set of furniture together as a group.
+- **Lock a prop** - prevent accidental moves when a prop is set and should stay fixed. Useful for stage markers and reference objects that should never shift.
+- **Show/hide prop per formation** - a prop carried off mid-show currently requires manual repositioning in every following formation. A per-formation visibility toggle would handle this cleanly.
+- **Prop layer order** - control whether a prop sits in front of or behind dancers. A floor marking should sit under dancers; a table or platform should appear on top.
+- **Configurable prop height** - props currently have a fixed height (slightly taller than one third of a dancer). Being able to set height independently from width would allow representing objects of different scales more accurately.
+- **More shapes** - a line or arrow shape would be especially useful for marking stage edges, runways, or movement directions.
+- **Text label prop** - a visible annotation placed directly on stage (zone name, area label) rather than relying on a small prop with a short label.
+- **Image prop** - import a floor plan or venue diagram as a background layer to trace or reference when positioning dancers.
+- **Apply prop configuration to a formation range** - copy/paste already supports pasting across multiple formations, but there is no way to propagate a prop's current position forward in one step without visiting each formation. A dedicated "apply to following" action would cover this gap.
+- **Prop group** - name a set of props (e.g. "Stage left furniture") to move, lock, or hide them together as a unit.
+
+---
+
 ## Export
 
 - **Video export** - currently the only option is device screen recording. A built-in export that renders transitions as a video (with or without music) would be more shareable and consistent.
