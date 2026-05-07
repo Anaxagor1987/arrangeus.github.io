@@ -75,8 +75,17 @@ Last updated: 2026-04-29
 - Props moved back to Working with Your Choreography
 - Working with Your Choreography now contains: General, Formations, Music Mode, Customise Your Stage, Comments, Props
 
-**Fixed (Working with Your Choreography):**
-- Added "How do formations slider and music timeline work?" topic to General
+**Fixed (Working with Your Choreography — General subtopic):**
+- Added "How is the editor screen laid out?" topic (navigation bar, hint label, context actions, stage, toolbar, timeline, actions bar; key concept: dancers/props always exist, never appear/disappear)
+- Merged "How do formations slider and music timeline work?" into "What modes and views are available in the editor?" and removed as separate topic
+- "What are the different states and modes of the editor screen?" renamed → "What modes and views are available in the editor?"
+- "How do multiple formation actions work?" renamed → "How do I apply a change across multiple formations?"
+- 3D mode expanded: all colors/shapes/names visible; useful for audience-perspective preview
+- Music Mode expanded: compact mode is navigation only; default waveform view is for editing durations
+- Added closing note: all three dimensions (stage view, timeline mode, orientation) are independent and combinable
+- Topic order: layout → modes/views → gestures → undo → multiple formations
+- Topic count: 5 (was 5 after slider/timeline merge)
+- Added "How do formations slider and music timeline work?" topic to General (now merged/removed)
 - Comments: rewrote Add comment topic (two methods: panel vs. Add Comment action)
 - Comments: rewrote Edit comment topic (long press or ⋮, uses Add comment field)
 - Comments: merged "How do I view comments?" and "compact/full view" into one topic (drag to resize, never truncated)

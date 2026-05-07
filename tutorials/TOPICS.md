@@ -54,16 +54,15 @@
 
 ## Working with Your Choreography
 
-- **Editor modes - edit mode vs Music Mode**
-- **Formations slider and music timeline**
+- **Editor screen layout (navigation bar, hint label, context actions, stage, toolbar, timeline, actions bar)**
+- **Editor modes - edit mode vs Music Mode, formations slider, music timeline**
+- **Stage view - 2D vs 3D; screen orientation - portrait vs landscape**
 - **Undo and redo**
-- **How edits apply across formations (current vs. following)**
+- **How edits apply across multiple formations (formation range selector, long press actions)**
 
 ---
 
-- Stage gestures (tap, drag, pinch, two-finger pan)
-- Editor states (default, dancer selected, playback, previews screen)
-- Actions bar symbols reference
+- Stage gestures (tap, drag, pinch, area select, swipe, two-finger rotate, long press dancer, path knob, prop handles)
 - Formations - navigate between formations (slider pills, previews screen, Music Mode scrubbing, Navigation actions bar)
 - Formations - previews screen (thumbnail grid, pinch/⋮ zoom, long press actions, reorder mode)
 - Formations - Add formation pill (edit mode and Music Mode only, copies previous)

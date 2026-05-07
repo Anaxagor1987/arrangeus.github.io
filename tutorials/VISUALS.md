@@ -15,6 +15,15 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 
 ---
 
+## Working with Your Choreography
+
+| Topic | Visual suggestion |
+|---|---|
+| How is the editor screen laid out? | Annotated screenshot of the full editor with labeled callouts for each area (navigation bar, hint label, context actions, stage, toolbar, timeline, actions bar) |
+| What modes and views are available in the editor? | Side-by-side showing edit mode (pills slider) vs Music Mode (waveform timeline) - makes the switch immediately clear |
+
+---
+
 ## Managing Your Choreographies
 
 | Topic | Visual suggestion |

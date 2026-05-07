@@ -4,6 +4,13 @@ Collected while writing tutorials content. Grouped by theme.
 
 ---
 
+## Editor Interface
+
+- **Tap hint label to deselect all** - the hint label already shows the selection count, but tapping it does nothing. A tap-to-deselect shortcut there would be a natural and discoverable way to clear a selection without tapping empty stage space.
+- **Access actions bar from stage-only landscape mode** - in stage-only landscape orientation the actions bar is completely hidden with no way to reach it without switching orientation. A swipe-up gesture or a floating button to temporarily reveal the actions bar would avoid the need to leave the mode.
+
+---
+
 ## Collaboration & Accounts
 
 - **User accounts with cross-device sync** - biggest missing piece. Currently choreographies, crews, and presets are all device-local. Accounts would unify backups, sync, and cross-platform access automatically. *(in development)*
@@ -73,6 +80,7 @@ Collected while writing tutorials content. Grouped by theme.
 
 ## Stage & Dancers
 
+- **Editing in 3D mode** - 3D mode is currently view-only. Even basic position adjustment (dragging dancers) while in the perspective view would let choreographers tweak spacing while seeing how it looks from the audience's perspective without switching back to 2D.
 - **Custom stage shapes** - the stage is always rectangular. A freeform or polygon stage shape would help users working with non-rectangular venues.
 - **Backstage area** - currently mentioned in the app but under-developed. A defined offstage zone where dancers can be parked without affecting the visible layout would be useful.
 - **Global dancer color** - currently dancer color is per-formation, giving flexibility but making it tedious to keep one consistent color for a dancer throughout a whole piece. An option to apply a color to all formations at once would help.
@@ -111,6 +119,7 @@ Collected while writing tutorials content. Grouped by theme.
 
 ## Props
 
+- **Context actions bar for props** - when a prop is selected, no quick-access action row appears (unlike dancers). Adding a context actions bar for props with shortcuts to Edit prop, Duplicate prop, and Delete prop would make prop editing more consistent with the dancer experience.
 - **Attachable props** - props linked to a specific dancer that move with them as they transition between formations. Currently all props are freestanding stage objects; attachable props would allow representing handheld items or costume elements that follow a performer automatically.
 - **Multi-select props** - currently only one prop can be selected at a time. Selecting multiple props would allow moving a set of furniture together as a group.
 - **Lock a prop** - prevent accidental moves when a prop is set and should stay fixed. Useful for stage markers and reference objects that should never shift.

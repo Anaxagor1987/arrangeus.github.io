@@ -861,7 +861,7 @@
                                 <span class="text-xl">🧭</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">General</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Core concepts and interface basics for the choreography editor · 6 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Core concepts and interface basics for the choreography editor · 5 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -869,46 +869,75 @@
                         <div class="border-t border-white/5 px-2 pb-2 space-y-1">
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How is the editor screen laid out?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">The editor is made up of several areas, from top to bottom:</p>
+                                    <ul class="space-y-2 list-disc list-inside" style="margin-bottom: 12px;">
+                                        <li><strong class="text-white">Navigation bar</strong> - shows the choreography name. Buttons here open a quick-start guide, the Previews screen, and the choreography settings.</li>
+                                        <li><strong class="text-white">Hint label</strong> - a label just below the navigation bar. Shows how many dancers are currently selected, and may also display context hints depending on the current action.</li>
+                                        <li><strong class="text-white">Context actions</strong> - when one or more dancers are selected, a row of quick-access action buttons appears below the navigation bar for common operations.</li>
+                                        <li><strong class="text-white">Stage</strong> - the main area where dancers and props are placed. All dancers and props always exist on stage or in the backstage area - they are never hidden or absent without being explicitly placed there. Nothing appears from nowhere or disappears between formations.</li>
+                                        <li><strong class="text-white">Toolbar</strong> - a row of controls above the timeline: undo and redo buttons, the edit/Music Mode toggle, and the orientation toggle.</li>
+                                        <li><strong class="text-white">Timeline</strong> - shows either the formations slider (edit mode) or the music timeline (Music Mode), depending on the current mode.</li>
+                                        <li><strong class="text-white">Actions bar</strong> - the bottom bar containing all editing actions, grouped into sections. The bar can be scrolled sideways to reveal all sections. When dancers or props are selected, relevant actions in the bar become active; others are dimmed.</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What modes and views are available in the editor?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 pb-2" style="margin-top: 4px;">Stage view</p>
+                                    <ul class="space-y-1 list-disc list-inside" style="margin-bottom: 16px;">
+                                        <li><strong class="text-white">2D mode</strong> - the standard editing view. All changes to dancers, formations, and props are made here.</li>
+                                        <li><strong class="text-white">3D mode</strong> - a perspective view for previewing the choreography. All dancer colors, shapes, and names are shown as in 2D. Useful for getting a sense of depth and spacing on stage - how the formation looks from an audience perspective rather than a top-down plan. Viewing only - no editing in 3D.</li>
+                                    </ul>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 pb-2">Timeline mode</p>
+                                    <ul class="space-y-1 list-disc list-inside" style="margin-bottom: 16px;">
+                                        <li><strong class="text-white">Edit mode</strong> - formations slider at the bottom: a row of pills, one per formation, with an add button at the end. Tapping a pill makes that formation active on stage. Tapping the active pill again opens the formation actions menu.</li>
+                                        <li><strong class="text-white">Music Mode</strong> - the formations slider is replaced by a music timeline showing a seconds ruler, the waveform, and formation and transition blocks. Each block's width represents its duration - drag block edges to adjust. Scrub the playhead or press play to navigate; when the playhead is inside a transition block, the stage shows intermediate positions between the two surrounding formations. A compact mode is also available, showing a single track line with a thumb scrubber and colored sections reflecting formation colors. Compact mode is for navigation only - duration editing requires the default waveform view.</li>
+                                    </ul>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 pb-2">Screen orientation</p>
+                                    <ul class="space-y-1 list-disc list-inside" style="margin-bottom: 16px;">
+                                        <li><strong class="text-white">Portrait</strong> - standard layout with stage, timeline, and actions bar all visible.</li>
+                                        <li><strong class="text-white">Landscape</strong> - three levels of compactness: standard (everything visible), compact (actions bar hidden), and stage-only (only the stage is shown).</li>
+                                    </ul>
+                                    <p>All three dimensions - stage view, timeline mode, and screen orientation - are independent and can be combined freely. For example, you can use 3D mode with Music Mode in landscape.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
                                     <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What gestures work on the stage?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">The stage supports a few core gestures:</p>
-                                    <ul class="space-y-1 list-disc list-inside">
-                                        <li><strong class="text-white">Tap</strong> - select a dancer or deselect by tapping empty space.</li>
-                                        <li><strong class="text-white">Drag a dancer</strong> - move the selected dancer (or the whole selection if multiple are selected).</li>
-                                        <li><strong class="text-white">Drag empty space</strong> - draw an area selection rectangle to select all dancers within it.</li>
-                                        <li><strong class="text-white">Pinch</strong> - zoom the stage view in or out. Stage zoom is a display setting only - it doesn't affect dancer positions or the actual stage size.</li>
-                                        <li><strong class="text-white">Two-finger drag</strong> - pan the stage view when zoomed in.</li>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 pb-2" style="margin-top: 4px;">View</p>
+                                    <ul class="space-y-1 list-disc list-inside" style="margin-bottom: 16px;">
+                                        <li><strong class="text-white">Pinch</strong> - zoom the stage in or out. Display only - doesn't affect dancer positions or stage size.</li>
+                                        <li><strong class="text-white">Double tap</strong> - toggle between zoomed in and fully zoomed out.</li>
+                                        <li><strong class="text-white">Drag empty space</strong> - pan the stage when zoomed in.</li>
+                                        <li><strong class="text-white">Swipe left or right</strong> (when fully zoomed out) - switch to the previous or next formation.</li>
                                     </ul>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What are the different states and modes of the editor screen?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">The editor operates in a few distinct states depending on what you're doing:</p>
-                                    <ul class="space-y-1 list-disc list-inside">
-                                        <li><strong class="text-white">Default</strong> - no selection, stage is visible, timeline at the bottom. Ready to select dancers or navigate formations.</li>
-                                        <li><strong class="text-white">Dancer selected</strong> - one or more dancers are highlighted, the actions bar shows options specific to the selection.</li>
-                                        <li><strong class="text-white">Music Mode</strong> - the waveform timeline replaces the standard formation timeline. Formation blocks are shown on the waveform and can be resized or dragged.</li>
-                                        <li><strong class="text-white">Playback</strong> - the choreography animates through formations. Editing is disabled during playback; tap anywhere to stop.</li>
-                                        <li><strong class="text-white">Previews screen</strong> - all formations shown as a thumbnail grid. Tap a card to return to that formation in the editor.</li>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 pb-2">Selection</p>
+                                    <ul class="space-y-1 list-disc list-inside" style="margin-bottom: 16px;">
+                                        <li><strong class="text-white">Tap a dancer or prop</strong> - select it. Tap again to deselect.</li>
+                                        <li><strong class="text-white">Tap empty stage space</strong> - clear any current selection.</li>
+                                        <li><strong class="text-white">Long press empty space, then drag</strong> - draw an area rectangle to select all dancers within it.</li>
                                     </ul>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do the formations slider and music timeline work?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">In the default <strong class="text-white">edit mode</strong>, the bottom of the screen shows the formations slider - a horizontal row of pills, one per formation, with an add button at the end. Tapping a pill makes that formation active: it is highlighted and its dancer positions load on stage. Only one formation can be active at a time. Tapping the active pill again does not deselect it - to move to a different formation, tap another pill.</p>
-                                    <p>When <strong class="text-white">Music Mode</strong> is active, the formations slider is replaced by the music timeline. This shows a seconds ruler, the music waveform, and a set of formation and transition blocks placed along the timeline - each block's width represents its duration. Instead of tapping pills to switch formations, you scroll the timeline: as the playhead moves through a formation block, that formation's positions are shown on stage. When the playhead is inside a transition block, the stage shows the intermediate positions between the two surrounding formations.</p>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 pb-2">Actions</p>
+                                    <ul class="space-y-1 list-disc list-inside">
+                                        <li><strong class="text-white">Drag a dancer</strong> - move the selected dancer, or the whole group if multiple are selected.</li>
+                                        <li><strong class="text-white">Two-finger rotate</strong> - rotate a group of selected dancers around their center.</li>
+                                        <li><strong class="text-white">Long press a dancer</strong> - jump directly to the Dancers section of the actions bar.</li>
+                                        <li><strong class="text-white">Drag a transition path knob</strong> - reshape the curve of a transition path (knobs must be enabled first).</li>
+                                        <li><strong class="text-white">Drag prop resize handles</strong> - resize a selected prop. Use the rotation knob to change its rotation.</li>
+                                    </ul>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -918,38 +947,37 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Tap the <strong class="text-white">↩ Undo</strong> or <strong class="text-white">↪ Redo</strong> buttons in the editor toolbar to step backwards or forwards through your changes. Undo covers dancer moves, formation additions and deletions, property edits, stage configuration changes, and most other editing actions.</p>
-                                    <p>The history is per-session - it resets when you close the choreography, so there is no undo across separate editing sessions. Autosave means your last state is always preserved, but once you reopen a choreography, prior history is gone.</p>
+                                    <p style="margin-bottom: 12px;">Tap the <strong class="text-white">↩ Undo</strong> or <strong class="text-white">↪ Redo</strong> buttons in the editor toolbar to step backwards or forwards through your changes.</p>
+                                    <p style="margin-bottom: 12px;">What is tracked in the undo stack:</p>
+                                    <ul class="space-y-1 list-disc list-inside" style="margin-bottom: 12px;">
+                                        <li>Dancer position changes, including all quick position actions</li>
+                                        <li>Dancers added or removed</li>
+                                        <li>Dancer color or shape changes</li>
+                                        <li>Formation added, duplicated, color changed, reordered, or deleted</li>
+                                        <li>Formation or transition duration changed</li>
+                                        <li>Transition curve changes</li>
+                                        <li>Prop added, removed, or duplicated</li>
+                                        <li>Prop position, size, rotation, color, or transparency changed</li>
+                                    </ul>
+                                    <p style="margin-bottom: 12px;">What is <strong class="text-white">not</strong> tracked: stage settings (size, grid, backgrounds), dancer name changes, and music track addition or removal.</p>
+                                    <p style="margin-bottom: 12px;">If you undo several steps and then make new changes, the undone steps are lost - they get overwritten by the new history branch.</p>
+                                    <p>The undo stack only lives while the choreography is open. Closing the choreography or the app clears it entirely - there is no undo across sessions.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do multiple formation actions work?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I apply a change across multiple formations?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">By default, any edit you make - moving a dancer, changing a color - affects only the current formation. To propagate a change forward, use <strong class="text-white">Apply to following formations</strong>, which appears in the actions bar after certain edits. This carries the change from the current formation to the end of the sequence, leaving earlier formations untouched.</p>
-                                    <p>Some actions offer a scope choice when triggered - you can apply them to just the current formation, a selected range, or all formations. The scope prompt appears before the action is committed so you can make the right call each time.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What do the different symbols in the actions bar mean?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">The actions bar at the bottom of the editor changes based on what is selected. Common symbols you'll see:</p>
+                                    <p style="margin-bottom: 12px;">By default, any edit you make affects only the current formation. Certain actions support applying to a range of formations - these are marked with a finger icon indicating you can long press them to get a scope selector. Supported actions include:</p>
                                     <ul class="space-y-1 list-disc list-inside">
-                                        <li><strong class="text-white">↩ / ↪</strong> - undo and redo.</li>
-                                        <li><strong class="text-white">⇄ Swap</strong> - swap positions of two selected dancers.</li>
-                                        <li><strong class="text-white">↔ / ↕ Flip</strong> - flip selected dancers horizontally or vertically.</li>
-                                        <li><strong class="text-white">⟳ Rotate</strong> - rotate selected dancers around their center.</li>
-                                        <li><strong class="text-white">⤢ Stretch</strong> - scale the spacing of selected dancers in or out.</li>
-                                        <li><strong class="text-white">⊙ Select all</strong> - select all dancers in the current formation.</li>
-                                        <li><strong class="text-white">→ Apply forward</strong> - propagate the last change to all following formations.</li>
-                                        <li><strong class="text-white">··· More</strong> - additional actions for the current selection or formation.</li>
+                                        <li>Dancer color and shape change</li>
+                                        <li>Prop color and transparency change</li>
+                                        <li>Formation color change</li>
+                                        <li>Paste positions (dancers and props)</li>
+                                        <li>Swap 2 positions and flips</li>
                                     </ul>
                                 </div>
                             </details>
