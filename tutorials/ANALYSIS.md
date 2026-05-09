@@ -106,7 +106,24 @@ Last updated: 2026-04-29
 
 **Still to fix:**
 - Music Mode subtopic not yet reviewed
-- Customise Your Stage subtopic not yet reviewed
+
+#### Customise Your Stage subtopic ✅ reviewed
+
+**Fixed:**
+- Reduced from 11 to 7 topics via merges: stage size + position scaling merged; grid show/cell size/subdivisions merged; distance markers + center markers + scene direction labels merged into "What stage overlays are available?"
+- Merged Background group into Stage Setup; Grid and Overlays & Indicators merged into Grid & Overlays
+- Section order changed: subtopic moved to position 2 in Working with Your Choreography (was position 4)
+- "What should I configure on the stage first?" moved into Stage Setup group
+- Stage size: action corrected to Choreography Settings → Edit stage size; added Resnap positions tip after resize
+- Backstage: action corrected to Edit backstage config; sides always equal, whole units only; background image reversal behaviour noted
+- Background: topic renamed "How do I configure the stage background?"; full rewrite covering Change stage background screen, live preview, opacity, fill/fit/stretch modes, backstage around image, removal via default grid, custom image included in .arrus file
+- Grid: action names corrected (Show Grid, Show subdivisions both in Stage settings bar + Choreography Settings; Edit stage grid cell size has dedicated preview screen with subdivisions toggle); cell size minimum 1, whole units only; subdivisions clarified as less prominent grid layer
+- Overlays: all three merged into "What stage overlays are available?"; action names added (Show distances, Show helper indicators, Show directions, Invert directions); all available in Stage settings bar + Choreography Settings
+- Flip stage: complete rewrite; Stage settings › Flip stage; structural flip covering orientation, backstage, all dancer/prop positions, paths, all formations; background not flipped; use cases added
+
+**Known gaps resolved:**
+- ~~Backstage is mentioned but under-explained~~ ✅ fully covered in backstage topic
+- ~~No topic for choreography description/notes field~~ ✅ covered in General → "What is in the choreography settings?"
 
 #### Props subtopic ✅ reviewed
 

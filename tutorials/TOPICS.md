@@ -57,12 +57,20 @@
 - **Editor screen layout (navigation bar, hint label, context actions, stage, toolbar, timeline, actions bar)**
 - **Editor modes - edit mode vs Music Mode, formations slider, music timeline**
 - **Stage view - 2D vs 3D; screen orientation - portrait vs landscape**
+- **Choreography settings overview (general, your dancers, dancers display, stage, actions)**
 - **Undo and redo**
 - **How edits apply across multiple formations (formation range selector, long press actions)**
 
 ---
 
 - Stage gestures (tap, drag, pinch, area select, swipe, two-finger rotate, long press dancer, path knob, prop handles)
+- Customise Your Stage - what to configure first (stage size, backstage, background before placing dancers)
+- Customise Your Stage - stage size (Edit stage size, 1 unit ≈ 1 meter, positions scale proportionally, Resnap after resize)
+- Customise Your Stage - backstage (Edit backstage config, sides equal, whole units, carved from stage unless background image set)
+- Customise Your Stage - background (Change stage background screen, standard/custom/default grid, opacity, fill/fit/stretch, included in .arrus on share)
+- Customise Your Stage - grid (Show Grid + Show subdivisions in Stage settings bar + Choreography Settings; Edit stage grid cell size has preview screen; min cell size 1, whole units)
+- Customise Your Stage - overlays (Show distances, Show helper indicators, Show directions + Invert directions; all in Stage settings bar + Choreography Settings)
+- Customise Your Stage - flip stage (Stage settings › Flip stage; structural flip of orientation/backstage/dancers/props/paths across all formations; background not flipped)
 - Formations - navigate between formations (slider pills, previews screen, Music Mode scrubbing, Navigation actions bar)
 - Formations - previews screen (thumbnail grid, pinch/⋮ zoom, long press actions, reorder mode)
 - Formations - Add formation pill (edit mode and Music Mode only, copies previous)

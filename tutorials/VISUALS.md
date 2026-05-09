@@ -21,6 +21,12 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 |---|---|
 | How is the editor screen laid out? | Annotated screenshot of the full editor with labeled callouts for each area (navigation bar, hint label, context actions, stage, toolbar, timeline, actions bar) |
 | What modes and views are available in the editor? | Side-by-side showing edit mode (pills slider) vs Music Mode (waveform timeline) - makes the switch immediately clear |
+| What is in the choreography settings? | Screenshot of the Choreography Settings screen with section labels visible - users won't know what's there without opening it |
+| How do I configure the stage background? | Screenshot of the Change stage background screen showing live preview, opacity slider, and background options |
+| How do I configure the backstage areas? | Screenshot showing the stage with a visible backstage zone and dimmed dancers parked in it - the concept of "off-stage but still placed" is non-obvious |
+| How do I configure the grid? | Side-by-side of the same stage with cell size 1 vs cell size 2 vs cell size 1 with subdivisions - makes the difference between the three settings immediately clear |
+| What stage overlays are available? | Screenshot showing all overlays active at once: distance markers along the bottom, center markers, and Backstage/Audience labels - gives users a preview of what each option looks like before enabling it |
+| How do I flip the stage? | Before/after pair showing a formation before and after Flip stage - useful to show that dancer positions, paths, and backstage all flip together |
 
 ---
 
@@ -29,6 +35,7 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 | Topic | Visual suggestion |
 |---|---|
 | Choreographies list structure | Annotated screenshot of the home screen - card anatomy (name, preview, tags, counts) |
+| Archive vs Trash | Diagram or annotated screenshot distinguishing the two - users frequently confuse them |
 | How does tag filtering work? | Screenshot of the filter row with a tag active |
 | Can I filter by multiple tags at once? | Screenshot of the AND/OR selection UI - users won't find this without a hint |
 | What is a Crew? | Simple diagram: Crew roster → used to create multiple choreographies |
@@ -51,6 +58,10 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 | What are transition paths and how do I show them? | Screenshot showing dashed lines on stage, ideally with a curved path visible |
 | How do I edit, curve, and reset a transition path? | GIF showing drag on knob → curve forms; second frame showing S-curve from 2-point mode |
 | How do I adjust the size of dancers on stage? | Side-by-side showing small (0.4), default (0.7), and large (1.0+) sizes with the grid visible - makes the scale and the "1.0 = one grid cell" reference concrete |
+| How do I change a dancer's shape? | Screenshot of the shape picker showing all 8 triangle directions + circle/square/diamond - the variety is surprising |
+| How do I rotate or stretch a group? | Screenshot of the stretch action showing the axis toggle - horizontal vs vertical stretch looks very different |
+| How do I flip or cycle positions? | Before/after on a clockwise swap applied to a circular formation - the circular-only restriction lands harder with a visual |
+| How do I copy and paste positions? | Screenshot of the long-press paste scope selector - same range pattern as color/shape but not obvious on paste |
 
 ---
 
@@ -59,6 +70,8 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 | Topic | Visual suggestion |
 |---|---|
 | What is the formation previews screen? | Screenshot of the previews screen showing the thumbnail grid, zoom levels, and a long press context menu - users often don't know this screen exists |
+| What formation actions are available? | Screenshot of the formation actions menu that appears when tapping the active pill - 4 entry points is non-obvious |
+| How do I split a formation? | Before/after showing one Music Mode block split into two with independent durations |
 | How do I navigate between formations? | Annotated screenshot of the Navigation actions bar showing all 4 actions (Go to start, Go to end, Previous, Next) - easy to miss |
 | How do I use formation colors? | Screenshot showing the same formation in all three contexts: colored pill in slider, colored block in Music Mode, colored border in previews screen |
 | Music Mode scrubbing | GIF showing playhead scrubbing through a transition with dancers at an intermediate position - the mid-movement preview is a key Music Mode benefit |
@@ -90,6 +103,7 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 | Topic | Visual suggestion |
 |---|---|
 | How does PDF export work? | Example page from a PDF export, or screenshot of the export options panel |
+| How do I open a choreography file I received via Apple Messages? | Screenshot of the share sheet workaround - this is the most common point of confusion for new users |
 | How do backups work on iOS? | Screenshot of the Backups screen showing last backup timestamp and Back Up Now button |
 | How do I restore choreographies from a backup? | Screenshot of the restore/device picker screen |
 

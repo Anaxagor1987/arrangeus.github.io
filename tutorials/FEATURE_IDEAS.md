@@ -78,6 +78,17 @@ Collected while writing tutorials content. Grouped by theme.
 
 ---
 
+## Stage Configuration
+
+- **Flip background image with Flip stage** - the background image is currently excluded from the Flip stage action and must be flipped manually outside the app and re-imported. An option to include it in the flip would make the action fully complete.
+- **Independent backstage size per side** - left and right backstage are always equal. Full per-side control would help asymmetric venues where wing depth differs on each side.
+- **Fractional cell size** - grid cell size currently requires whole unit values with a minimum of 1. Fractional values (e.g. 0.5) would help users working in feet or needing finer grid spacing.
+- **Background image positioning** - the image always fills, fits, or stretches to the full stage area with no offset control. Being able to reposition or scale the image independently of the stage size would help when a floor plan doesn't perfectly match the stage proportions.
+- **Distance markers on all sides** - currently distance markers are only shown along the bottom edge of the stage. Showing them on all four sides (or at least the left/right edges as well) would make it easier to read positions in both dimensions at a glance.
+- **Full stage direction labels** - scene directions currently only label the top and bottom edges (Backstage and Audience). Adding Stage Left and Stage Right labels to the side edges would give a complete orientation reference, especially useful for users new to stage direction conventions.
+
+---
+
 ## Stage & Dancers
 
 - **Editing in 3D mode** - 3D mode is currently view-only. Even basic position adjustment (dragging dancers) while in the perspective view would let choreographers tweak spacing while seeing how it looks from the audience's perspective without switching back to 2D.
