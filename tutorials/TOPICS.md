@@ -78,7 +78,16 @@
 - Formations - copy inherits positions/colors/shapes/formation color; no comments or name
 - Formations - reorder via slider long press or previews reorder mode; not in Music Mode; caution with curved paths and block durations
 - Formations - color as background of pill/block, border in previews screen; supports formation range
-- Splitting a formation (Music Mode)
+- Music Mode - what it is, note icon toggle, prompts to add track if none attached
+- Music Mode - adding a track (3 methods: Import from Files preferred, Import from iTunes Library, Extract from video; supported formats MP3/AAC/M4A/WAV/AIFF; Mac: local folder only)
+- Music Mode - change/remove track (Settings › Change music; imported tracks list; swipe to rename/delete; removing preserves durations)
+- Music Mode - multiple tracks / trimming (one track only; no in-app trim or start offset; prepare externally in GarageBand)
+- Music Mode - does music travel with choreography (no - legal reasons; share separately)
+- Music Mode - setting duration (tap block to select; drag left/right edges; snaps to playhead; min 0.1s, no max; zoom for precision)
+- Music Mode - ripple vs non-ripple (left edge always non-ripple; right edge has toggle; ripple shifts all following; non-ripple shares with neighbour)
+- Music Mode - delete/insert formation (delete: duration added to previous transition; insert: default 5.0s/2.0s, shifts everything - use Split instead)
+- Music Mode - Split Formation (splits at playhead; both halves identical positions; transition = 0.1s; Formation actions › Split Formation; no timeline shift)
+- Music Mode - playback controls (play from playhead; Settings › Change music speed; timeline zoom; timeline length follows longer of music or formations)
 - Comments - adding via panel vs. Add Comment action
 - Comments - editing and deleting
 - Comments - viewing, panel sizes, count badge

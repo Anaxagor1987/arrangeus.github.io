@@ -78,6 +78,17 @@ Collected while writing tutorials content. Grouped by theme.
 
 ---
 
+## Music Mode
+
+- **Text field for block duration** - currently block duration can only be set by dragging edges on the timeline. A text input to type an exact value directly would make precise adjustments much faster, especially for users who know their cue points in advance.
+- **Track start offset** - currently the full track always plays from the beginning. A setting to specify a start offset would let users skip an intro or align the waveform to a specific cue point without needing to trim the audio externally first.
+- **Multiple music tracks** - currently only one track per choreography is supported. Allowing multiple tracks would cover medleys and performances where different sections use different music, without requiring users to pre-combine audio externally.
+- **Non-ripple insert** - inserting a new formation currently always shifts everything that follows. An option to absorb the new block from the surrounding formation's time instead would keep the total timeline length unchanged, similar to what Split Formation does but triggered from the insert flow.
+- **Configurable default block durations** - new formation and transition blocks always start at 5.0s and 2.0s regardless of context. Letting users set preferred defaults, or defaulting to the average duration of existing blocks in the choreography, would reduce the adjustment work after every insert.
+- **Insert formation at playhead** - new formations are currently added at the end of the slider. An option to insert at the playhead position while in Music Mode would let users work entirely in the timeline view without switching to the slider.
+
+---
+
 ## Stage Configuration
 
 - **Flip background image with Flip stage** - the background image is currently excluded from the Flip stage action and must be flipped manually outside the app and re-imported. An option to include it in the flip would make the action fully complete.

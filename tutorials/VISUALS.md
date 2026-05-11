@@ -78,6 +78,17 @@ Topics that would benefit from images, GIFs, or diagrams. Grouped by section.
 
 ---
 
+## Music Mode
+
+| Topic | Visual suggestion |
+|---|---|
+| How do I set the duration of a formation or transition? | Screenshot of a block selected in the timeline with the selection frame visible, left and right edge handles labeled, and the ripple toggle icon on the right handle - the toggle symbol is impossible to describe without a visual |
+| What is ripple vs non-ripple editing? | Before/after pair showing the same right-edge drag in ripple mode (all following blocks shift) vs non-ripple mode (only the neighbouring block changes) - the difference is hard to grasp from text alone |
+| How does the Split Formation action work? | Before/after showing one block split into two at the playhead position, with the 0.1s transition between them visible |
+| What playback and timeline controls are available? | Side-by-side showing formations longer than the track (grey space after music ends) vs formations shorter than the track (extra space extending the timeline to full music length) |
+
+---
+
 ## Comments
 
 | Topic | Visual suggestion |

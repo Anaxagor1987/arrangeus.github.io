@@ -1214,7 +1214,7 @@
                                 <span class="text-xl">🎵</span>
                                 <div>
                                     <span class="subtopic-title text-sm font-semibold text-slate-200 transition-colors">Music Mode</span>
-                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Add music, set formation timing, and sync your choreography to a track · 14 topics</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 font-normal">Add music, set formation timing, and sync your choreography to a track · 10 topics</p>
                                 </div>
                             </div>
                             <svg class="subtopic-chevron w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -1228,7 +1228,8 @@
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p style="margin-bottom: 12px;">Music Mode lets you attach a music track to your choreography and sync formations to specific timestamps in the song. Instead of guessing how long each formation should last, you can see the waveform and position each formation exactly where it needs to land relative to the music.</p>
-                                    <p>This makes it much easier to plan transitions that hit on beats, build up to a drop, or hold through a slower section. When you play back the choreography, dancers animate in sync with the track - so what you see is close to what you'll experience in a real rehearsal.</p>
+                                    <p style="margin-bottom: 12px;">This makes it much easier to plan transitions that hit on beats, build up to a drop, or hold through a slower section. When you play back the choreography, dancers animate in sync with the track - so what you see is close to what you'll experience in a real rehearsal.</p>
+                                    <p>The toggle between edit mode and Music Mode is always visible in the editor toolbar as a note icon. If no track is attached yet, tapping it will prompt you to add one first.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1241,8 +1242,13 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Open your choreography and switch to <strong class="text-white">Music Mode</strong> using the toggle in the editor toolbar. Tap <strong class="text-white">Add Music</strong> and pick a track from your device's music library. The waveform will appear in the timeline at the bottom once the track is loaded.</p>
-                                    <p>Music Mode requires <strong class="text-white">Premium</strong>. The track is linked to the choreography - it plays back whenever you preview the piece and is included when you share the file.</p>
+                                    <p style="margin-bottom: 12px;">Tap the note icon in the editor toolbar to switch to Music Mode. If no track is attached yet, the music selection screen opens automatically. There are three ways to import a track:</p>
+                                    <ul class="space-y-2 list-disc list-inside" style="margin-bottom: 12px;">
+                                        <li><strong class="text-white">Import from Files</strong> - the recommended way. Pick any audio file stored on your device or in iCloud Drive. On Mac, the file must be saved in a local folder rather than a cloud-only location to be accessible.</li>
+                                        <li><strong class="text-white">Import from iTunes Library</strong> - browse tracks from your iTunes library. The track must be downloaded locally on the device. Tracks purchased from the iTunes Store work fine. Apple Music subscription tracks and other streaming services are DRM-protected and not accessible.</li>
+                                        <li><strong class="text-white">Extract audio from video</strong> - import a video file and ArrangeUs will extract the audio track from it.</li>
+                                    </ul>
+                                    <p style="margin-bottom: 12px;">Supported formats: <strong class="text-white">MP3, AAC, M4A, WAV, and AIFF</strong>. Once loaded, the waveform appears in the timeline.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1252,7 +1258,9 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>In Music Mode, tap the track name or the music settings area in the timeline and select <strong class="text-white">Change Track</strong>. Pick a new track from your library. Your existing formation timestamps are kept - so if the new track has the same structure you may only need minor adjustments.</p>
+                                    <p style="margin-bottom: 12px;">Open <strong class="text-white">Settings › Change music</strong> from the bottom actions bar. This opens a list of tracks you've previously imported - tap one to switch, or import a new file. Your existing formation timestamps are kept, so if the new track has the same structure you may only need minor adjustments.</p>
+                                    <p style="margin-bottom: 12px;">To rename or delete a track from the list, swipe the row.</p>
+                                    <p>If you remove the music entirely, the waveform timeline is replaced by the standard formations slider and you can no longer scrub through formations. All block durations are preserved though - they will still be there when you attach a new track.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1263,84 +1271,7 @@
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
                                     <p style="margin-bottom: 12px;">ArrangeUs supports one track per choreography. If your performance uses multiple songs or you need a specific section of a track, you'll need to prepare the audio beforehand - combine or trim it in a separate app like GarageBand, then import the result into ArrangeUs.</p>
-                                    <p>For trimming a single track to start from a specific point, you can also adjust the start offset in the music settings so playback begins where you need it.</p>
-                                </div>
-                            </details>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Timing & Editing</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I set the duration of a formation or transition?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">In Music Mode, drag the edge of a formation block in the timeline to extend or shorten it. The block snaps to the waveform so you can align it precisely to a beat or phrase. You can also tap a formation block and enter an exact duration manually.</p>
-                                    <p>Without music, duration can be set directly on each formation card by tapping the time value shown on it.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is ripple vs non-ripple editing?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">When you resize a formation block in the timeline, the behavior depends on the editing mode:</p>
-                                    <ul class="space-y-1 list-disc list-inside">
-                                        <li><strong class="text-white">Ripple mode</strong> - changing the duration of one formation shifts all following formations along the timeline automatically. Useful when you're still adjusting the overall structure and want everything to stay in sync.</li>
-                                        <li><strong class="text-white">Non-ripple mode</strong> - changing one formation only affects that block. Following formations stay exactly where they are. Useful for fine-tuning a specific moment without disturbing the rest.</li>
-                                    </ul>
-                                    <p class="mt-3">Toggle between modes using the ripple icon in the Music Mode toolbar.</p>
-                                </div>
-                            </details>
-                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Playback</p>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I change the music playback speed?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Tap the playback speed indicator in the Music Mode toolbar and select a speed - options include 0.5x, 0.75x, 1x, and faster. Slowing down is useful for rehearsals where dancers are still learning the sequence and need more time to move between positions. The speed change affects playback only and does not alter your formation timestamps.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I zoom the timeline in or out?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Pinch in or out on the timeline to change the zoom level. Zooming in stretches the waveform so each second takes up more space - useful for precise editing around a specific beat. Zooming out compresses the view so you can see more of the track at once, which helps when adjusting the overall structure of longer choreographies.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I preview the full performance with music?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>Yes - tap the play button in Music Mode to run the full playback from the current position. The stage animates through each formation in sync with the track, so you can see how the whole piece flows together. Use the playback speed control to slow it down if you want to review a specific section more carefully.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What audio formats are supported?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p>ArrangeUs supports the standard audio formats available on iOS - <strong class="text-white">MP3, AAC, M4A, WAV, and AIFF</strong>. If a track isn't importing, check the file format first. Files must be stored locally on your device or in iCloud Drive - tracks from streaming services can't be imported directly.</p>
-                                </div>
-                            </details>
-                            <div class="border-t border-white/5"></div>
-                            <details class="qa-details group">
-                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">Can I use Apple Music or Spotify tracks?</span>
-                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                                </summary>
-                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Streaming tracks from Apple Music and Spotify are DRM-protected, which means third-party apps like ArrangeUs can't access them directly. You'll need a locally stored file instead.</p>
-                                    <p>The easiest workaround is to use a track you own (purchased from iTunes or imported from a CD), download a DRM-free version, or use a royalty-free track. If you already own the track, it may be available in your local music library - just make sure it's downloaded to the device, not streaming-only.</p>
+                                    <p>ArrangeUs does not currently support trimming or setting a start offset within the app - the full track plays from the beginning. If you need playback to start from a specific point, trim the audio in an external app like GarageBand before importing.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1350,8 +1281,32 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">No - music is not included in shared <strong class="text-white">.arrus</strong> files or backups for legal reasons. The choreography file contains the formation data and timestamps, but the music track itself must be shared separately. The recipient will need to have the same track on their device and attach it manually.</p>
-                                    <p>Custom stage backgrounds, however, are included in the file - the recipient gets the background image automatically without any extra steps.</p>
+                                    <p>No - music is not included in shared <strong class="text-white">.arrus</strong> files or backups for legal reasons. The choreography file contains the formation data and timestamps, but the music track itself must be shared separately. The recipient will need to have the same track on their device and attach it manually.</p>
+                                </div>
+                            </details>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Timing & Editing</p>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I set the duration of a formation or transition?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Tap a formation or transition block in the Music Mode timeline to select it - a selection frame appears with draggable left and right edges. Drag either edge to extend or shorten the block. The block can snap to the playhead, which stays fixed at the center of the timeline - scroll the timeline to bring the playhead to the beat you want to align to, then drag the block edge to meet it. Zoom in first for more precise adjustments. Tapping a block that already has the selection frame opens the formation actions menu instead.</p>
+                                    <p>The minimum duration for any formation or transition block is 0.1 seconds. There is no maximum limit. At maximum zoom, short blocks are easier to select and fine-tune precisely. At minimum zoom, more blocks are visible at once - useful for getting an overview of the full sequence structure.</p>
+                                </div>
+                            </details>
+                            <div class="border-t border-white/5"></div>
+                            <details class="qa-details group">
+                                <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What is ripple vs non-ripple editing?</span>
+                                    <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
+                                    <p style="margin-bottom: 12px;">Dragging the <strong class="text-white">left edge</strong> of a block always behaves as non-ripple - it adjusts the start of the selected block and shares the change with the preceding block. The <strong class="text-white">right edge</strong> has a toggle between the two modes. The toggle is on the right edge handle itself - a single arrow means non-ripple is active, an arrow with a parallel line means ripple is active. Tap it to switch.</p>
+                                    <ul class="space-y-2 list-disc list-inside">
+                                        <li><strong class="text-white">Ripple mode</strong> - extending or shortening a block shifts all following blocks along the timeline. Useful when adjusting overall structure and you want everything downstream to stay in sync.</li>
+                                        <li><strong class="text-white">Non-ripple mode</strong> - the change is shared between the selected block and its neighbouring block. Making a formation longer shortens the adjacent transition, and vice versa. Useful for fine-tuning timing at a specific point without moving anything else on the timeline.</li>
+                                    </ul>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1361,8 +1316,8 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;"><strong class="text-white">Deleting a formation</strong> - the block is removed from the timeline and all following formations shift left to close the gap. Their timestamps update automatically so they stay in the same relative position against each other, but the overall choreography becomes shorter.</p>
-                                    <p><strong class="text-white">Inserting a formation</strong> - when you add a new formation between two existing ones, a new block is inserted at that position. Following formations shift right to make room, preserving their timestamps relative to the end of the sequence. The new formation gets a default duration which you can then adjust.</p>
+                                    <p style="margin-bottom: 12px;"><strong class="text-white">Deleting a formation</strong> - the block is removed and its duration is added to the transition time of the previous formation. All other formations stay exactly where they were on the timeline.</p>
+                                    <p><strong class="text-white">Inserting a formation</strong> - a new block is inserted with default durations of 5.0 seconds for the formation and 2.0 seconds for the transition. This shifts everything that follows, so if your timings are already set, using <strong class="text-white">Split Formation</strong> is a better option - it divides an existing block without affecting anything else on the timeline.</p>
                                 </div>
                             </details>
                             <div class="border-t border-white/5"></div>
@@ -1372,19 +1327,27 @@
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Split Formation divides one formation block into two at a point you choose. The dancer positions in both halves are identical - it's the same snapshot split in time. This is useful when you realise a formation needs to hold longer in one part, or when you want to insert a transition in the middle of what was originally one static moment.</p>
-                                    <p>To split, tap a formation block in the timeline and select <strong class="text-white">Split</strong>. Drag the split point to where you want the divide, then confirm. You can then adjust the duration of each half independently and move dancers in either one without affecting the other.</p>
+                                    <p style="margin-bottom: 12px;">Split Formation divides one formation block into two at the position of the playhead. The dancer positions in both halves are identical - it's the same snapshot split in time. The transition between the two new blocks is set to the minimum 0.1 seconds. This is useful when you realise a formation needs to hold longer in one part, or when you want to insert a transition in the middle of what was originally one static moment.</p>
+                                    <p>To split, position the playhead over the formation you want to divide, then use <strong class="text-white">Formation actions › Split Formation</strong> from the bottom actions bar. You can then adjust the duration of each half independently and move dancers in either one without affecting the other. Unlike inserting a new formation, splitting does not shift anything else on the timeline.</p>
                                 </div>
                             </details>
-                            <div class="border-t border-white/5"></div>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 px-2 pt-4 pb-1 border-t border-white/10 mt-2">Playback</p>
                             <details class="qa-details group">
                                 <summary class="flex items-center justify-between gap-4 py-4 cursor-pointer px-2">
-                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">How do I sync a formation to a specific timestamp?</span>
+                                    <span class="qa-question text-sm font-medium text-slate-300 transition-colors duration-200">What playback and timeline controls are available?</span>
                                     <svg class="qa-chevron w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                 </summary>
                                 <div class="qa-answer pb-4 text-sm text-slate-400 leading-relaxed px-2">
-                                    <p style="margin-bottom: 12px;">Drag a formation block in the timeline until its start edge aligns with the waveform at the moment you want. The timestamp shown on the block updates live as you drag, so you can place it precisely. Zooming in on the timeline first makes fine adjustments easier.</p>
-                                    <p>You can also tap a formation block and enter the start time directly. This is useful when you know the exact timestamp - for example, a chorus that always starts at 0:32.</p>
+                                    <ul class="space-y-2 list-disc list-inside" style="margin-bottom: 12px;">
+                                        <li><strong class="text-white">Play</strong> - tap the play button to start playback from the current playhead position. Formations and transitions animate in sync with the music track.</li>
+                                        <li><strong class="text-white">Playback speed</strong> - use <strong class="text-white">Settings › Change music speed</strong> from the bottom actions bar. Slowing down is useful for rehearsals where dancers are still learning the sequence. Does not alter your formation timestamps.</li>
+                                        <li><strong class="text-white">Timeline zoom</strong> - pinch in or out on the timeline. Zooming in gives more space per second for precise beat-level editing; zooming out shows more of the track at once for structural adjustments.</li>
+                                    </ul>
+                                    <p style="margin-bottom: 6px;">The timeline length depends on which is longer - the music or your formations:</p>
+                                    <ul class="space-y-2 list-disc list-inside">
+                                        <li>If formations are <strong class="text-white">longer than the track</strong> - music plays to its end and stops, but you can keep scrolling through the remaining formations.</li>
+                                        <li>If formations are <strong class="text-white">shorter than the track</strong> - extra space is added to the timeline so the full track length remains visible.</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>

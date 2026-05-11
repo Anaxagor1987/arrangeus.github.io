@@ -10,7 +10,7 @@ Last updated: 2026-04-29
 |---|---|---|
 | 1 | Getting Started | Start Here, Create Your First Choreography, Bring Your Formations to Life, What's Next |
 | 2 | Managing Your Choreographies | Browse & Navigate, Keep Your Library Tidy, Choreography Actions, Organising with Tags, Crews, Presets |
-| 3 | Working with Your Choreography | General, Formations, Dancers, Transition Paths & Ghost Dancers, Music Mode, Customise Your Stage, Props, Comments |
+| 3 | Working with Your Choreography | General, Customise Your Stage, Formations, Music Mode, Comments, Props |
 | 4 | Sharing & Backups | Sharing, Backups |
 | 5 | Subscription Management | About Premium, Plans & Pricing, Managing Your Subscription, Access Across Devices, Help & Troubleshooting |
 | 6 | Frequently Asked Questions | (flat, 4 groups) |
@@ -105,7 +105,28 @@ Last updated: 2026-04-29
 - Moved multi-select formations and recolor-from-previews to FEATURE_IDEAS.md
 
 **Still to fix:**
-- Music Mode subtopic not yet reviewed
+- ~~Music Mode subtopic not yet reviewed~~ ✅
+
+#### Music Mode subtopic ✅ reviewed
+
+**Structure:** 9 topics, 3 groups (Track Setup / Timing & Editing / Playback)
+
+**Fixed:**
+- Added "What is Music Mode?" topic: note icon toggle always visible, prompts to add track if none attached
+- Rewrote add track topic: 3 import methods (Files preferred, iTunes Library, Extract from video); supported formats listed; Mac local folder requirement; iTunes DRM clarified (purchased tracks work, subscription tracks don't)
+- Rewrote change/replace topic: correct action Settings › Change music; imported tracks list; swipe to rename/delete; removing music preserves durations
+- Removed "What music can I use?" topic - DRM detail folded into iTunes Library bullet in add topic
+- "Can I use multiple tracks or trim?" - added clarification that full track always plays from beginning, no in-app trim or start offset
+- "Does music travel with choreography?" - removed incorrect background image note
+- Duration topic: corrected snap behavior (snaps to playhead, not waveform); removed non-existent exact timestamp input; added 0.1s min, no max; zoom tips
+- Ripple topic: left edge always non-ripple; right edge has toggle; correct toggle symbol descriptions; non-ripple affects selected + neighbour block
+- Delete/insert topic: delete adds duration to previous transition, nothing else shifts; insert uses 5.0s/2.0s defaults, shifts everything, Split recommended instead
+- Split Formation topic: split point is playhead position; transition = 0.1s minimum; correct trigger (Formation actions › Split Formation, no tap-select needed); no timeline shift
+- Playback topic: correct speed action (Settings › Change music speed); timeline length behavior (formations longer = music stops, scroll continues; formations shorter = extra space added)
+- Moved "What happens to timeline on delete/insert?" and "Split Formation" from ungrouped into Timing & Editing group
+- Moved "What music can I use?" and "Does music travel?" into Track Setup group
+- Removed "Music Mode requires Premium" mention (inconsistent with rest of page)
+- Added to FEATURE_IDEAS.md: text field for duration, track start offset, non-ripple insert, configurable default durations, insert at playhead
 
 #### Customise Your Stage subtopic ✅ reviewed
 
