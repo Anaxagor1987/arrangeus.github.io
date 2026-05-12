@@ -53,6 +53,14 @@
             mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
             -webkit-mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
         }
+
+        details[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        details[open] summary span {
+            color: #E92E67;
+        }
     </style>
 </head>
 
@@ -67,6 +75,10 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="#features"
                     class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
+                <a href="#faq"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
+                <a href="/tutorials"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Tutorials</a>
                 <a href="#download"
                     class="px-5 py-2.5 bg-[#E92E67] text-white font-semibold rounded-full hover:bg-[#d12259] transition-colors text-sm">Get
                     App</a>
@@ -201,6 +213,111 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="py-24 border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+            <p class="text-slate-400 text-center text-lg mb-14">Everything you need to know about ArrangeUs. For detailed guides and how-tos, visit our <a href="/tutorials" class="text-white hover:text-[#E92E67] transition-colors">tutorials page</a>. Can't find the answer you're looking for? <a href="mailto:support@arrangeus.app?subject=Question%20about%20ArrangeUs&body=Hi%20ArrangeUs%20team%2C%0A%0A" class="text-white hover:text-[#E92E67] transition-colors">Reach out to us.</a></p>
+            <div class="space-y-3" id="faq-list">
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">Is ArrangeUs free to use?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Yes - ArrangeUs is free to download and use. Create choreographies, move and style dancers, build formations, and export to PDF without spending anything. Premium adds Music Mode, unlimited choreographies, props, crews, custom stage backgrounds, and more - with a free trial to explore it all first.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">Is there a way to log in and sync my data across devices?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        You can transfer your choreographies between devices using the built-in backup system - it's quick and keeps everything intact. Full cross-device sync with user accounts is coming soon, and we can't wait to release it.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">What apps can I use to share an ArrangeUs file?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Any app that can send a file attachment works - WhatsApp, Telegram, Google Drive, Dropbox, email, or AirDrop when you're in the same room. The recipient taps the file to open it directly in ArrangeUs.
+                        <p class="mt-3">If you're using <strong class="text-white">Apple Messages</strong>, don't tap the file in the chat itself - it won't open in ArrangeUs. Instead, tap the contact name at the top to open chat details, scroll to the Documents section, and open the file from there.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">Can I collaborate on a choreography with my colleagues?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Sharing a choreography file directly with a colleague works great today - they can open it, make changes, and send it back. Real-time collaboration is coming soon and we can't wait to share it.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">Can I get ArrangeUs on my computer?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        ArrangeUs is built for mobile first - so your choreographies are always with you and ready to edit on the go. On Macs with Apple M1 or later you can also download it directly from the Mac App Store. On Windows, ArrangeUs can be run via an Android emulator. A dedicated web version is in the works for the future.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">How do I restore my purchase on a new device?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Sign in with the same Apple ID or Google account you used to purchase Premium, open ArrangeUs, and tap <strong class="text-white">Already paid?</strong> on the paywall screen. The app will verify your subscription and unlock Premium at no extra charge.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">My music won't play on Mac - how do I fix it?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        On Mac, the audio file needs to be saved in a local folder - not a cloud-only location like iCloud Drive. Move the file to a local folder first, then re-import it into ArrangeUs from there.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">How do I change the music track in my choreography?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Open your choreography and use <strong class="text-white">Settings › Change music</strong> from the bottom actions bar to pick a different track. Your existing formation timestamps are kept when you switch.
+                    </div>
+                </details>
+
+                <details class="faq-item group border border-white/10 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+                        <span class="font-medium text-white transition-colors group-hover:text-[#E92E67]">How many dancers can I add?</span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        The free plan supports up to 60 dancers per choreography. Premium raises that to 100. If you're working with a larger cast, <a href="mailto:support@arrangeus.app?subject=Large%20cast%20inquiry&body=Hi%20ArrangeUs%20team%2C%0A%0A" class="text-[#E92E67] hover:underline">reach out to us</a> and we'll help you out.
+                    </div>
+                </details>
+
+
+            </div>
+
+            <p class="text-center text-slate-500 mt-10">Still have questions? <a href="mailto:support@arrangeus.app?subject=Question%20about%20ArrangeUs&body=Hi%20ArrangeUs%20team%2C%0A%0A" class="text-white hover:text-[#E92E67] transition-colors">Contact us</a> and we'll be happy to help.</p>
+        </div>
+    </section>
+
     <!-- Download CTA -->
     <section id="download" class="py-24 border-t border-white/5 overflow-hidden"
         style="background: radial-gradient(ellipse at 30% 100%, rgba(233,46,103,0.08) 0%, transparent 70%), #1a1a1c;">
@@ -237,6 +354,17 @@
     <script src="footer.js"></script>
 
     <script>
+        // FAQ accordion — close others when one opens
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('toggle', () => {
+                if (item.open) {
+                    document.querySelectorAll('.faq-item').forEach(other => {
+                        if (other !== item) other.removeAttribute('open');
+                    });
+                }
+            });
+        });
+
         // Sticky Image Logic
         document.addEventListener('DOMContentLoaded', () => {
             const features = document.querySelectorAll('.feature-item');

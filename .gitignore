@@ -1,2 +1,8 @@
 # macOS
 .DS_Store
+
+# Internal docs
+tutorials/TOPICS.md
+tutorials/ANALYSIS.md
+tutorials/VISUALS.md
+tutorials/FEATURE_IDEAS.md
